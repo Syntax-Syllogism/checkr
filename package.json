@@ -1,7 +1,7 @@
 {
   "name": "checkr",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Versioned record checklists with save gates for Salesforce, as an unlocked 2GP package with manually prefixed CKR_ API names.",
   "license": "MIT",
   "engines": {

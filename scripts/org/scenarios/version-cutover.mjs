@@ -42,7 +42,7 @@ export default {
       CKR_ChecklistInstanceCreateResult created=((CKR_IChecklistInstanceService)CKR_AppFactory.getInstance(CKR_IChecklistInstanceService.class)).createFromTemplate(request);
       System.Assert.isTrue(created.success,String.join(created.messages,'; '));
       CKR_ChecklistInstanceItem__c item=[SELECT Id FROM CKR_ChecklistInstanceItem__c WHERE CKR_ChecklistInstance__c=:created.checklistInstanceId LIMIT 1];
-      CKR_ChecklistViewerController.updateChecklistItem(item.Id,true,null,null,null,null,null,null);
+      CKR_ChecklistItemUpdateRequest itemUpdate=new CKR_ChecklistItemUpdateRequest(); itemUpdate.checklistItemId=item.Id; itemUpdate.checkboxValue=true; CKR_ChecklistViewerController.updateChecklistItem(itemUpdate);
       System.Assert.isTrue([SELECT CKR_IsComplete__c FROM CKR_ChecklistInstance__c WHERE Id=:created.checklistInstanceId].CKR_IsComplete__c,'Complete v1 before cutover');
       CKR_ChecklistTemplateVersion__c v2=new CKR_ChecklistTemplateVersion__c(CKR_ChecklistTemplate__c=template.Id,CKR_Status__c='Draft',CKR_VersionNumber__c=2,CKR_CompletionAccessMode__c='EditAccess'); insert v2;
       insert new CKR_ChecklistTemplateItem__c(CKR_ChecklistTemplateVersion__c=v2.Id,CKR_Label__c='Stricter review',CKR_Required__c=true,CKR_ExplanationInputType__c='Text');

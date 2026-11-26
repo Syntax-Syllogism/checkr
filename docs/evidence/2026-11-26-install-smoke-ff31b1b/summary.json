@@ -1,0 +1,66 @@
+{
+  "scenario": "install-smoke",
+  "startedAt": "2026-11-26T08:02:15.049Z",
+  "finishedAt": "2026-11-26T08:07:38.832Z",
+  "commit": "ff31b1bc1e55115f519a4f41386495a4166109d7",
+  "dirty": true,
+  "packageVersion": "0.1.2.1",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://momentum-fun-1969-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [
+    {
+      "key": "worker-028da126",
+      "license": "Salesforce",
+      "permissionSets": [
+        "CKR_User"
+      ]
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "package version installed",
+      "outcome": "passed",
+      "detail": "0.1.2.1 04tfj000000ntszAAA"
+    },
+    {
+      "name": "packaged permission sets exist",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "packaged LWCs exist",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_SupportedObject__mdt ships the Account record",
+      "outcome": "passed",
+      "detail": "Account"
+    },
+    {
+      "name": "reference trigger shim deployed post-install",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_User blocked with exact gate error",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_User save succeeds after completion",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {
+    "exactError": "CKREvidence6be310303ae54058a05249a511835756 requires completion"
+  }
+}

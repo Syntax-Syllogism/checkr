@@ -167,7 +167,7 @@ test("dry run checks git and prints the plan without calling sf", async () => {
     output,
     /sf package version create --package checkr --installation-key-bypass --code-coverage --tag abcdef0123456789abcdef0123456789abcdef01 --wait 60 --target-dev-hub hub --json/
   );
-  assert.match(output, /release\/beta-<version>/);
+  assert.match(output, /chore\/package-<version>/);
 });
 
 test("dirty tree or a non-master HEAD stops before any sf call", async () => {
@@ -225,7 +225,7 @@ test("a successful create writes version.json and commits on a release branch", 
   assert.deepEqual(create.slice(-3), ["--target-dev-hub", "devHub", "--json"]);
   assert.ok(
     calls.some(
-      (call) => call.join(" ") === "git switch -c release/beta-0.1.0.1"
+      (call) => call.join(" ") === "git switch -c chore/package-0.1.0.1"
     )
   );
   assert.ok(calls.some((call) => call[0] === "git" && call[1] === "commit"));

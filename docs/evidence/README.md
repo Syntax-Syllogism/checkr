@@ -21,7 +21,7 @@ dedicated development org with no conflicting Account rules or automation.
 | `gate-block-pass`  | CKR_User blocked, then allowed after checklist completion           | [latest](2026-10-20-gate-block-pass-b3c31cf/README.md)   |
 | `insert-gating`    | Before-insert baseline: inserts are not gated                       | [latest](2026-10-20-insert-gating-fd6de64-2/README.md)   |
 | `bulk-200`         | 200 updates, three rules, 100 blocked, SOQL and CPU                 | [latest](2026-10-20-bulk-200-b3c31cf/README.md)          |
-| `install-smoke`    | Clean package install, packaged metadata, shim, gate block/pass     | [latest](2026-10-20-install-smoke-0bf4aa2/README.md)     |
+| `install-smoke`    | Clean package install, packaged metadata, shim, gate block/pass     | [latest](2026-11-26-install-smoke-ff31b1b/README.md) |
 | `install-upgrade`  | Beta-to-beta upgrade keeps checklist data; gate still enforces      | [latest](2026-10-20-install-upgrade-93563c6/README.md)   |
 | `version-cutover`  | Version lifecycle cutover, completed v1, blocked v2, immutable rule | [latest](2026-10-20-version-cutover-fd6de64-2/README.md) |
 | `bypass`           | Permission + setting saves, source precedence, audit integrity      | [latest](2026-10-20-bypass-ef9f45b/README.md)            |

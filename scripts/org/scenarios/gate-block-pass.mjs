@@ -72,7 +72,7 @@ export default {
       CKR_ChecklistInstanceCreateResult created=((CKR_IChecklistInstanceService)CKR_AppFactory.getInstance(CKR_IChecklistInstanceService.class)).createFromTemplate(request);
       System.Assert.isTrue(created.success, String.join(created.messages,'; '));
       CKR_ChecklistInstanceItem__c item=[SELECT Id FROM CKR_ChecklistInstanceItem__c WHERE CKR_ChecklistInstance__c=:created.checklistInstanceId LIMIT 1];
-      CKR_ChecklistViewerController.updateChecklistItem(item.Id,true,null,null,null,null,null,null);
+      CKR_ChecklistItemUpdateRequest itemUpdate=new CKR_ChecklistItemUpdateRequest(); itemUpdate.checklistItemId=item.Id; itemUpdate.checkboxValue=true; CKR_ChecklistViewerController.updateChecklistItem(itemUpdate);
       CKR_ChecklistInstance__c instance=[SELECT CKR_IsComplete__c FROM CKR_ChecklistInstance__c WHERE Id=:created.checklistInstanceId];
       System.Assert.isTrue(instance.CKR_IsComplete__c, 'Completion must reach the gate');
     `);
