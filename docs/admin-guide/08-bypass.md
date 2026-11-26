@@ -1,4 +1,6 @@
-# Bypass for data loads and integrations
+---
+title: "Bypass for data loads and integrations"
+---
 
 Gate bypass lets a user's saves through gates that would block them. It is off
 by default, and **every bypassed save is recorded** as a Gate Bypass Event in

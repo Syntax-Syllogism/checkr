@@ -1,4 +1,6 @@
-# Apex architecture
+---
+title: "Apex architecture"
+---
 
 ## Layers and data-access seams
 

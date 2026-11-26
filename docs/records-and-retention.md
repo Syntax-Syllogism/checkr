@@ -1,4 +1,6 @@
-# Records and retention
+---
+title: "Records and retention"
+---
 
 `CKR_ChecklistAuditEvent__c` records checklist activity, actor, time and changes.
 `CKR_GateBypassEvent__c` records blocked saves allowed by an operational bypass.

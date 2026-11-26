@@ -1,4 +1,6 @@
-# Runbook: users can't save records because of a gate
+---
+title: "Runbook: users can't save records because of a gate"
+---
 
 Use this runbook when users report that a record will not save and the error
 comes from a CheckR gate. It gets you from the report to a fix: **Identify**

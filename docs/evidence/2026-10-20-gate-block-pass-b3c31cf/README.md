@@ -1,4 +1,6 @@
-# Org evidence: gate-block-pass
+---
+title: "Org evidence: gate-block-pass"
+---
 
 Outcome: **passed**
 

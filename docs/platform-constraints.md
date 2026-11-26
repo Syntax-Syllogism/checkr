@@ -1,4 +1,6 @@
-# Platform constraints
+---
+title: "Platform constraints"
+---
 
 The Salesforce and tooling limits an admin or developer will run into with
 CheckR, and how CheckR behaves at each one. Object details are in the

@@ -1,4 +1,6 @@
-# Org evidence: apex-local-tests
+---
+title: "Org evidence: apex-local-tests"
+---
 
 Outcome: **passed**
 

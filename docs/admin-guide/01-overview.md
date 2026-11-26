@@ -1,4 +1,6 @@
-# Overview
+---
+title: "Overview"
+---
 
 CheckR is a checklist framework for Salesforce records. Admins define
 checklists declaratively; users complete them on the record page; and, where an

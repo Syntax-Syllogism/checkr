@@ -1,4 +1,6 @@
-# Authoring a template
+---
+title: "Authoring a template"
+---
 
 You need `CKR_Admin`. Work in the **CheckR** app.
 

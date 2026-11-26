@@ -1,4 +1,6 @@
-# CheckR documentation
+---
+title: "CheckR documentation"
+---
 
 CheckR attaches versioned checklists to Salesforce records and gates record
 saves on them. Start with the [project README](../README.md) for setup, then use

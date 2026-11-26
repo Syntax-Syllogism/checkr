@@ -1,4 +1,6 @@
-# Gate bypass operations
+---
+title: "Gate bypass operations"
+---
 
 Assign `CKR_GateBypass` only to trusted data-load operators or integration users
 for a defined maintenance window. `CKR_Admin` does not enable bypass. Normal

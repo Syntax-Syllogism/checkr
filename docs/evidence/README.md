@@ -1,4 +1,6 @@
-# Org evidence
+---
+title: "Org evidence"
+---
 
 This explicit harness replaces the former scratch-org integration workflow.
 It does not run in CI. The latest run of each scenario is linked below.

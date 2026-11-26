@@ -1,4 +1,6 @@
-# Gate rules
+---
+title: "Gate rules"
+---
 
 A gate rule blocks a change to a field on the parent record while the record's
 checklist is incomplete. Rules live on a template version, alongside its items,

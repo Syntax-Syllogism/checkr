@@ -1,4 +1,6 @@
-# Org evidence: install-smoke
+---
+title: "Org evidence: install-smoke"
+---
 
 Outcome: **passed**
 

@@ -1,4 +1,6 @@
-# Org evidence: insert-gating
+---
+title: "Org evidence: insert-gating"
+---
 
 Outcome: **passed**
 

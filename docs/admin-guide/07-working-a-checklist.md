@@ -1,4 +1,6 @@
-# Working a checklist
+---
+title: "Working a checklist"
+---
 
 This chapter is the user's side, in brief, so you know what to tell them. Users
 need `CKR_User` and access to the record.

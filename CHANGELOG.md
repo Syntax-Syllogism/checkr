@@ -6,6 +6,12 @@ All notable changes to CheckR are recorded here. The format follows
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-11-26
+
+### Added
+
+- Starlight-based documentation site for CheckR
+
 ## [0.1.1] - 2026-11-26
 
 ### Added

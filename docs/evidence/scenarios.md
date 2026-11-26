@@ -1,4 +1,6 @@
-# Scenario details
+---
+title: "Scenario details"
+---
 
 Run from the project root with an authenticated administrator org alias.
 Salesforce CLI, AER, and dependencies must be installed. Harness unit tests use

@@ -1,4 +1,6 @@
-# Releases
+---
+title: "Releases"
+---
 
 How CheckR versions reach you. Installing is covered in
 [installation](installation.md); building a package version is covered in

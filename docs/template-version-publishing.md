@@ -1,4 +1,6 @@
-# Publishing checklist template versions
+---
+title: "Publishing checklist template versions"
+---
 
 Use the **Publish Version** action on a Checklist Template Version record in
 CheckR. The supplied version record page includes the action; if you use a custom

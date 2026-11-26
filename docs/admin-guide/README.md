@@ -1,4 +1,6 @@
-# CheckR admin guide
+---
+title: "CheckR admin guide"
+---
 
 This guide is for Salesforce administrators who set up and run CheckR: enabling
 an object, authoring checklist templates and gate rules, publishing versions,

@@ -1,4 +1,6 @@
-# CheckR runbooks
+---
+title: "CheckR runbooks"
+---
 
 Step-by-step procedures for operational incidents. Each one is a checklist you
 can follow under pressure; the background is in the

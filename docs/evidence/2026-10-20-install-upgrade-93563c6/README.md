@@ -1,4 +1,6 @@
-# Org evidence: install-upgrade
+---
+title: "Org evidence: install-upgrade"
+---
 
 Outcome: **passed**
 

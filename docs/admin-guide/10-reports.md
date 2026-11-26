@@ -1,4 +1,6 @@
-# Reports
+---
+title: "Reports"
+---
 
 ## Operational reporting
 

@@ -1,4 +1,6 @@
-# Install and permission sets
+---
+title: "Install and permission sets"
+---
 
 ## Install
 

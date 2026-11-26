@@ -1,4 +1,6 @@
-# Installation, upgrade, and uninstall
+---
+title: "Installation, upgrade, and uninstall"
+---
 
 CheckR ships as the unlocked package `checkr`, with no namespace. This guide
 covers installing it, enabling an object, upgrading, and removing it. For the

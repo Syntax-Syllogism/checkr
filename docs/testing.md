@@ -1,4 +1,6 @@
-# Testing, gate, and CI
+---
+title: "Testing, gate, and CI"
+---
 
 How CheckR is verified without an org, how the gate and CI run the same checks,
 and which tool versions they depend on. The test tiers and what each covers are

@@ -1,4 +1,6 @@
-# Security
+---
+title: "Security"
+---
 
 This page answers the questions a Salesforce security reviewer asks about
 CheckR: who gets which access, how records are shared, where Apex runs in

@@ -99,3 +99,7 @@ scripts/release.test.mjs
 
 # Maintainer-only docs
 docs/maintainer/
+
+# Docs site build output
+docs-site/dist/
+docs-site/.astro/

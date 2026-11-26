@@ -1,4 +1,6 @@
-# Enabling an object
+---
+title: "Enabling an object"
+---
 
 An object needs two things before CheckR gates it: a supported-object record,
 which an admin creates, and a trigger shim, which a developer deploys. Without

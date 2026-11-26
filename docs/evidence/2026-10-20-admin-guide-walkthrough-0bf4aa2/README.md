@@ -1,4 +1,6 @@
-# Admin guide walkthrough: beta 0.1.0-1
+---
+title: "Admin guide walkthrough: beta 0.1.0-1"
+---
 
 - **Date:** 2026-10-20
 - **Org:** scratch org with `checkr` 0.1.0.1 (`04tfj000000duWzAAI`) installed

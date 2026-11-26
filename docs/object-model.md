@@ -1,4 +1,6 @@
-# Object model
+---
+title: "Object model"
+---
 
 This is an as-built reference for the CheckR schema in
 `sfdx-source/checkr/main/schema`. It covers every `CKR_` custom object, the

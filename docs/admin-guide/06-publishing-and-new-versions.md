@@ -1,4 +1,6 @@
-# Publishing and new versions
+---
+title: "Publishing and new versions"
+---
 
 ## Publish v1
 

@@ -1,4 +1,6 @@
-# Packaging and beta releases
+---
+title: "Packaging and beta releases"
+---
 
 How the `checkr` package is built and versioned, and what a beta needs before
 anyone installs it. Admins installing CheckR want

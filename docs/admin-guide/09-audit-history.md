@@ -1,4 +1,6 @@
-# Audit history and retention
+---
+title: "Audit history and retention"
+---
 
 CheckR keeps two kinds of history.
 
