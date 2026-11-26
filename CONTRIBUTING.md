@@ -28,7 +28,8 @@ Everyone taking part is expected to follow the
 
 Local development needs Node 22+, [afmt](https://github.com/xixiaofinland/afmt)
 1.0.0, and the [AER](https://aertest.com) binary pinned in
-`.github/workflows/ci.yml`. Run `npm ci` once to install dependencies and the
+`scripts/gate.mjs`. AER needs a license in `AER_LICENSE_KEY` to run
+the full Apex suite; without one it stops at 100 test methods. Run `npm ci` once to install dependencies and the
 commit hooks.
 
 [Testing, gate, and CI](docs/testing.md) describes each command. The

@@ -12,7 +12,7 @@
  * It must never depend on org connectivity. Real-org checks run through the explicit org evidence harness.
  */
 import { execSync } from "node:child_process";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 
 function run(cmd) {
   process.stdout.write(`\n$ ${cmd}\n`);
@@ -44,15 +44,14 @@ try {
   process.exit(1);
 }
 
-// CI pins the AER binary via the aer-dist action's `version` input. Warn when
-// the local binary differs so a local pass means the same thing as a CI pass.
-const pinned = readFileSync(".github/workflows/ci.yml", "utf8").match(
-    /aer-dist@[^\n]*\n(?:\s+[^\n]*\n)*?\s+version:\s*(v[\d.]+)/
-  )?.[1],
+// The pinned AER version. v1.6.23 passes the full suite at API 67.0 and counts
+// System.runAs as a DML statement like a real org; see docs/testing.md. Warn
+// when the local binary differs.
+const pinned = "v1.6.23",
   local = localAer.match(/v[\d.]+/)?.[0];
-if (pinned && local !== pinned) {
+if (local !== pinned) {
   console.warn(
-    `WARNING: local aer is ${local} but CI pins ${pinned}; results may differ.`
+    `WARNING: local aer is ${local} but the pinned version is ${pinned}; results may differ.`
   );
 }
 run("npm run test:apex");

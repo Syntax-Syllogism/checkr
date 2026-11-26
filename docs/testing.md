@@ -20,11 +20,11 @@ in [org evidence](evidence/README.md).
    in band.
 5. `npm run lint:md`: markdownlint-cli2 over all Markdown.
 6. `npm run test:org-harness`, `test:reporting`, `test:object-model`,
-   `test:docs-images`, `test:system-mode`, `test:permission-sets`,
-   `test:aer-cap`, and `test:release`: Node tests for the evidence harness,
+   `test:docs-images`, `test:system-mode`, `test:permission-sets`, and
+   `test:release`: Node tests for the evidence harness,
    reporting metadata, the object-model doc, the admin-guide images, the
    system-mode sites table in `docs/architecture.md`, permission set class
-   access, the CI test selection in `scripts/aer-capped.mjs`, the public-tree
+   access, the public-tree
    release check, and the beta-release script (`create-beta.mjs`) against a
    stubbed `sf` and `git`.
 7. `npm run test:analyzer` checks analyzer command construction, optional
@@ -73,44 +73,30 @@ classes document their class-level exception to the PMD `runAs` rule.
    CLI or an installed analyzer plugin is absent. A JIT-only listing means the
    plugin still needs installation.
 4. Checks that `aer` is on `PATH`.
-5. Warns if the local `aer` version differs from the `version:` pinned in
-   `.github/workflows/ci.yml`.
+5. Warns if the local `aer` version differs from the version pinned in
+   `scripts/gate.mjs`.
 6. Runs `npm run test:apex` against both `sfdx-source/checkr` and
    `sfdx-source/reference` with `-p CKR_Admin`, with no skips.
 
-The gate never calls an org. Local AER uses an unlimited developer license;
-CI runs only `sfdx-source/checkr`, capped at 100 tests (see below).
+The gate never calls an org. Using AER requires a license: without one it stops
+at 100 test methods, and the suite has more. Set `AER_LICENSE_KEY` (never
+commit it). AER does not run in CI, because the license does not cover it, so
+run the gate before you open a pull request.
 
 ## CI: `.github/workflows/ci.yml`
 
 The `lint-and-test` job runs on `ubuntu-latest` with Node 22 and the npm cache.
 
-1. Check out with full history (`fetch-depth: 0`).
+1. Check out the repository.
 2. `npm ci`.
 3. Download afmt 1.0.0 and add it to `GITHUB_PATH`.
 4. `npm test`.
-5. Download the pinned AER binary and run `node scripts/aer-capped.mjs
---print-flags` to pick the tests.
-6. Run the `octoberswimmer/aer-dist` action against `sfdx-source/checkr` with
-   those flags, `AER_LICENSE_KEY` from secrets, and the AER binary pinned by
-   `version:`.
+
+CI does not run the Apex tests; they run only in the local gate.
 
 The `code-analyzer` job uses Node 22, Temurin Java 17, Salesforce CLI
 `2.158.7`, and Code Analyzer `5.13.0`. It runs `npm run analyze` after
 installing dependencies. Each pull request must pass both checks.
-
-AER runs up to 100 tests in CI.
-`scripts/aer-capped.mjs` counts the `sfdx-source/checkr` tests with
-`aer test --dry-run`. When they fit, it passes only `-p CKR_Admin`. When they
-do not, it keeps whole test classes, newest first by the date git first added
-the file (uncommitted classes count as newest), adds a `--filter-path` for each,
-and logs the classes it skipped. The local gate still runs every test in both
-packages. Set `AER_TEST_CAP` to try a different cap locally, for example
-`AER_TEST_CAP=90 node scripts/aer-capped.mjs`.
-
-The action tag (`@v1.5.8`) is not the AER version. The binary version is the
-`version:` input, currently v1.6.23, and `scripts/gate.mjs` compares against that
-input. The "Install AER" step's `AER_VERSION` must match it.
 
 The former scratch-org `integration.yml` was removed in `fd6de64`. Real-org
 checks run only through `npm run org:evidence`, so CI does not print
@@ -150,7 +136,7 @@ human-readable `sf` test output and does not need DevHub secrets.
 | -------------- | ------------------------------------------------------------- | ---------------------------------- |
 | Node           | 22 or later (`engines.node` is `>=22`)                        | `package.json`, `ci.yml`           |
 | afmt           | 1.0.0 on `PATH`                                               | `ci.yml`, [README](../README.md)   |
-| AER            | v1.6.23 in CI; the local binary must match                    | `ci.yml` `version:`, `aer upgrade` |
+| AER            | v1.6.23; the local binary must match                          | `scripts/gate.mjs`, `aer upgrade`  |
 | Salesforce API | 67.0 for `sourceApiVersion` and every metadata `<apiVersion>` | `sfdx-project.json`, `sfdx-source` |
 
 ## AER pin and known tool issues
@@ -162,7 +148,7 @@ human-readable `sf` test output and does not need DevHub secrets.
   Assigning permission sets to the already running user is not reflected by
   AER. Audit fixtures are created as the admin before switching users.
 
-- CI pins AER v1.6.23, the latest stable release. Keep the local binary on the
+- The gate pins AER v1.6.23, the latest stable release. Keep the local binary on the
   same version with `aer upgrade`, or install it with
   `brew install octoberswimmer/tap/aer`.
 - On 2026-11-25 at API 67.0, v1.6.23 passed all 113 Apex tests, including the

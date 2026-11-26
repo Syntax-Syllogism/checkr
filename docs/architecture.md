@@ -119,7 +119,7 @@ Recorder methods: `when`, `whenSequence` (ordered responses, last repeats), `whe
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Node (no org)     | `npm test` (lint, SLDS, prettier, afmt, LWC Jest, markdownlint, and the `test:*` suites; full list in [testing](testing.md#no-org-suite-npm-test)) | Static checks and LWC unit tests, plus report and report-type XML, evidence-harness units, object-model and security docs against metadata, the system-mode inventory, and admin-guide images. |
 | Analyzer (no org) | `npm run analyze` (the gate runs it with `--if-installed`; CI job `code-analyzer`)                                                                 | Salesforce Code Analyzer v5 over `sfdx-source/checkr` and `scripts`: zero findings at every severity and no engine errors.                                                                     |
-| AER (no org)      | `npm run test:apex` (checkr + reference, with no skips), run by `node scripts/gate.mjs`; CI runs checkr only                                       | Unit tests and DB-backed `*IT` / selector tests, in the AER in-memory database.                                                                                                                |
+| AER (no org)      | `npm run test:apex` (checkr + reference, with no skips), run by `node scripts/gate.mjs`; not run in CI                                             | Unit tests and DB-backed `*IT` / selector tests, in the AER in-memory database.                                                                                                                |
 | Real org          | `npm run org:evidence` ([evidence](evidence/README.md)); ad hoc `sf`/`sfq` apex run                                                                | Real sharing, `UserRecordAccess`, permission-set enforcement, Playwright e2e.                                                                                                                  |
 
 Commands, the CI job, hooks, and toolchain pins are in [testing](testing.md).
@@ -128,7 +128,7 @@ Notes on AER:
 
 - `-p CKR_Admin` assigns the permission set to the test user. Without it, user-mode queries fail with "No such column" because FLS hides every field.
 - AER treats master-detail fields as FLS-gated, unlike Salesforce.
-- The free tier allows 100 test methods. Local runs use an unlimited developer license; CI runs checkr only, capped at 100 tests by `scripts/aer-capped.mjs`. Never commit `AER_LICENSE_KEY`.
+- AER requires a license: without one it stops at 100 test methods, and the suite has more. Set `AER_LICENSE_KEY` locally and never commit it. AER does not run in CI.
 - Behaviour AER cannot confirm (`UserRecordAccess` in user mode, `countQueryWithBinds(AccessLevel)` at API 66, sharing rules) needs a real-org run; see [org evidence](evidence/README.md).
 
 ## Template version lifecycle and gate evaluation

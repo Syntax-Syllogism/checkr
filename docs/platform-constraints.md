@@ -108,10 +108,10 @@ and may be used together with the set.
 The no-org Apex tier runs in [AER](https://aertest.com), an in-memory Apex
 runtime. It is fast and needs no org, but it is not Salesforce:
 
-- CI is capped at **100 test methods** because the AER license does not cover
-  it. `scripts/aer-capped.mjs` runs the newest test classes that fit; the local
-  gate runs everything under the developer license (`AER_LICENSE_KEY`; never
-  commit it). See [testing](testing.md#ci-githubworkflowsciyml).
+- Using AER requires a license. Without one it runs at most **100 test
+  methods**, and the suite has more. Local runs read it from
+  `AER_LICENSE_KEY` (never commit it); AER does not run in CI. See
+  [testing](testing.md#ci-githubworkflowsciyml).
 - Tests run with `-p CKR_Admin`; without it, user-mode queries fail because
   field-level security hides every field.
 - AER treats master-detail fields as FLS-gated, unlike Salesforce.

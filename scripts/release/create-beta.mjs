@@ -15,7 +15,8 @@
  *   the Dev Hub.
  */
 import { execFileSync } from "node:child_process";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { latestReleased, mmp } from "./versions.mjs";
 import { join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -56,6 +57,26 @@ export function assertOnMaster({ head, containing, allowBranch }) {
 }
 
 // "0.1.0.2" -> { major: 0, minor: 1, patch: 0, build: 2 }
+// A promoted major.minor.patch can't take another promoted build, so a beta
+// of it could never ship: bump versionNumber in sfdx-project.json first.
+export function assertVersionBumped(root) {
+  const projectFile = join(root, "sfdx-project.json");
+  if (!existsSync(projectFile)) return;
+  const project = JSON.parse(readFileSync(projectFile, "utf8"));
+  const packaged = project.packageDirectories?.find(
+    (dir) => dir.package === PACKAGE
+  );
+  const released = latestReleased(root);
+  if (
+    packaged &&
+    released &&
+    mmp(packaged.versionNumber) === mmp(released.version)
+  )
+    throw new Error(
+      `${mmp(released.version)} is already promoted; bump versionNumber and versionName in sfdx-project.json first`
+    );
+}
+
 export function parseVersion(version) {
   const match = /^(\d+)\.(\d+)\.(\d+)\.(\d+)$/.exec(String(version ?? ""));
   if (!match) throw new Error(`Unexpected package version: ${version}`);
@@ -176,6 +197,7 @@ export async function main(
   const devHub = env.DEVHUB_ALIAS ?? "devHub";
 
   assertCleanTree(git(["status", "--porcelain"]));
+  assertVersionBumped(root);
   git(["fetch", "--quiet", "origin", "master"]);
   const commit = git(["rev-parse", "HEAD"]);
   assertOnMaster({
@@ -192,7 +214,9 @@ export async function main(
     );
     log("  write docs/evidence/releases/<version>/version.json");
     if (options.branch)
-      log("  commit sfdx-project.json and the evidence on chore/package-<version>");
+      log(
+        "  commit sfdx-project.json and the evidence on chore/package-<version>"
+      );
     return 0;
   }
 

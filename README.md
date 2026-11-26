@@ -11,7 +11,7 @@ The public repository is
 
 ## Status
 
-CheckR 0.1.2 is a released package version and installs in production,
+CheckR 0.1.3 is a released package version and installs in production,
 sandboxes, and scratch orgs. Until 1.0, the data model and Apex APIs may still
 change between minor versions; the [changelog](CHANGELOG.md) lists each version
 and its changes. Feedback is welcome; see [Feedback](#feedback).
@@ -63,12 +63,12 @@ in the [object model](docs/object-model.md).
 ## Install
 
 CheckR installs as the unlocked package `checkr`, with no namespace. The
-current version is 0.1.2 (`04tfj000000ntszAAA`); each version's `04t` ID is in
+current version is 0.1.3 (`04tfj000000nuPFAAY`); each version's `04t` ID is in
 the [changelog](CHANGELOG.md). Open the install link while logged in to the
 target org:
 
 ```text
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000ntszAAA
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000nuPFAAY
 ```
 
 For a sandbox, use `test.salesforce.com` in place of `login.salesforce.com`.
@@ -76,7 +76,7 @@ For a sandbox, use `test.salesforce.com` in place of `login.salesforce.com`.
 or install with the CLI:
 
 ```bash
-sf package install --package 04tfj000000ntszAAA --target-org <your-org-alias> --security-type AdminsOnly --wait 20 --json
+sf package install --package 04tfj000000nuPFAAY --target-org <your-org-alias> --security-type AdminsOnly --wait 20 --json
 ```
 
 Installing for admins grants the System Administrator profile gate bypass and
@@ -147,7 +147,8 @@ to records with the quick action. If users are blocked by a gate, use the
 
 Local development needs Node 22+, [afmt](https://github.com/xixiaofinland/afmt)
 1.0.0, and the [AER](https://aertest.com) binary pinned in
-`.github/workflows/ci.yml`. Metadata targets API 67.0.
+`scripts/gate.mjs`. AER needs a license in `AER_LICENSE_KEY` to run
+the full Apex suite; without one it stops at 100 test methods. Metadata targets API 67.0.
 
 ```bash
 npm ci                                   # dependencies and commit hooks

@@ -10,25 +10,45 @@ All notable changes to CheckR are recorded here. The format follows
 
 ### Added
 
-- Promote package version 0.1.2 (`checkr@0.1.2-1`), the first released version of the unlocked `checkr` package. It installs in production, sandboxes, and scratch orgs, and is built from the v0.1.2 source
-  - Subscriber package version: `04tfj000000ntszAAA` (94% code coverage)
-  - Install link: <https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000ntszAAA> (use `test.salesforce.com` for a sandbox)
-  - Install evidence: [install-smoke](docs/evidence/2026-11-26-install-smoke-ff31b1b/README.md)
+- Promote package version 0.1.3 (`checkr@0.1.3-1`)
+  - Subscriber package version: `04tfj000000nuPFAAY` (94% code coverage)
+  - Install link: <https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000nuPFAAY> (use `test.salesforce.com` for a sandbox)
+  - Install evidence: [install-upgrade from 0.1.2](docs/evidence/2026-11-26-install-upgrade-3ca4df6/README.md). No separate `install-smoke` run for this version
+- Add `npm run check:versions` (part of `npm test`) that checks that the package version, source version, changelog, and install `04t` agree. New `release:record` and `release:publish` scripts make the release order in [packaging](docs/packaging.md#keep-versions-in-sync) repeatable, and `release:beta` refuses a `versionNumber` that is already promoted
 
-### Changed
+### Removed
 
-- Remove beta wording from the README, installation guide, and release docs, and document promotion in [packaging](docs/packaging.md#promote-a-version)
-- `npm run release:beta` commits on a `chore/package-<version>` branch. The old `release/beta-<version>` name clashed with the `release` branch
+- Remove the AER Apex tests from CI, along with `scripts/aer-capped.mjs`, the workaround that ran only the newest test classes that fit under AER's 100-test cap. The AER license does not cover CI, so Apex tests run only in the local gate, and the docs note that using AER requires a license (`AER_LICENSE_KEY`). The AER version pin moves to `scripts/gate.mjs`
 
 ### Fixed
 
-- Call `updateChecklistItem` with a request object in the `gate-block-pass` and `version-cutover` org scenarios
+- Render Mermaid diagrams on the docs site
 
 ## [0.1.2] - 2026-11-26
 
 ### Added
 
 - Starlight-based documentation site for CheckR
+- Promote package version 0.1.2 (`checkr@0.1.2-1`), the first released version
+  of the unlocked `checkr` package. It installs in production, sandboxes, and
+  scratch orgs.
+  - Subscriber package version: `04tfj000000ntszAAA` (built from `4b303f0`, 94%
+    code coverage).
+  - Install link: <https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000ntszAAA>
+    (use `test.salesforce.com` for a sandbox).
+  - Install evidence: [install-smoke](docs/evidence/2026-11-26-install-smoke-ff31b1b/README.md).
+
+### Changed
+
+- Remove beta wording from the README, installation guide, and release docs,
+  and document promotion in [packaging](docs/packaging.md#promote-a-version).
+- `npm run release:beta` commits on a `chore/package-<version>` branch. The old
+  `release/beta-<version>` name clashed with the `release` branch.
+
+### Fixed
+
+- Call `updateChecklistItem` with a request object in the `gate-block-pass` and
+  `version-cutover` org scenarios.
 
 ## [0.1.1] - 2026-11-26
 
