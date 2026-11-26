@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CKR_ChecklistInstance__c$Name</field>
+    </columns>
+    <columns>
+        <field>CKR_ChecklistInstance__c$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>CKR_ChecklistInstance__c$CKR_PercentComplete__c</field>
+    </columns>
+    <columns>
+        <field>CKR_ChecklistInstance__c$CKR_DueDate__c</field>
+    </columns>
+    <description
+  >One row per incomplete checklist, including instances without items. Age bands are calendar days since creation.</description>
+    <filter>
+        <criteriaItems>
+            <column>CKR_ChecklistInstance__c$CKR_IsComplete__c</column>
+            <operator>equals</operator>
+            <value>false</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CKR_ChecklistInstance__c$CKR_ChecklistTemplate__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CKR_ChecklistInstance__c$CKR_AgeBand__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open checklists by template and age</name>
+    <reportType>CKR_Instances__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CKR_ChecklistInstance__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

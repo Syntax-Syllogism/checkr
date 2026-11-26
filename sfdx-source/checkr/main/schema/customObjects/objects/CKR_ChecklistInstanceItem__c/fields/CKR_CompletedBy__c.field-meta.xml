@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_CompletedBy__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description
+  >Last user who caused the checklist item to become complete.</description>
+    <label>Completed By</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Completed Checklist Instance Items</relationshipLabel>
+    <relationshipName>CompletedChecklistInstanceItems</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

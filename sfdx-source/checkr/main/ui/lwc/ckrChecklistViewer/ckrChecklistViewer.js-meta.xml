@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>67.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>CheckR Checklist Viewer</masterLabel>
+    <description
+  >Displays checklist instances attached to the current record.</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig
+      targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage"
+    >
+            <property
+        name="title"
+        type="String"
+        label="Title"
+        default="CheckR Checklist Viewer"
+      />
+            <property
+        name="useMockData"
+        type="Boolean"
+        label="Use Mock Data"
+        default="false"
+      />
+            <property
+        name="showMockDataToggle"
+        type="Boolean"
+        label="Show Mock Data Toggle"
+        default="false"
+      />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,15 @@
+[
+  {
+    "attributes": {
+      "type": "CKR_GateBypassEvent__c",
+      "url": "/services/data/v68.0/sobjects/CKR_GateBypassEvent__c/a07RK0000BVsqgcYQB"
+    },
+    "CKR_Actor__c": "005RK00000igDHFYA2",
+    "CKR_RecordId__c": "001RK00002nDuaEYAS",
+    "CKR_ObjectApiName__c": "Account",
+    "CKR_GateRule__c": "a01RK00002nE8LiYAK",
+    "CKR_Source__c": "CustomSetting",
+    "CKR_OccurredOn__c": "2026-10-20T01:49:14.000+0000",
+    "CKR_Details__c": "CKREvidence746fe49dd65f41a5aadc968a5dd09a6a requires completion"
+  }
+]

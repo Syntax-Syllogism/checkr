@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>CKR_DraftVersionOnly</fullName><active>true</active>
+  <description
+  >Configure items and rules before publishing their version.</description>
+  <errorConditionFormula
+  >NOT(ISPICKVAL(CKR_ChecklistTemplateVersion__r.CKR_Status__c, "Draft"))</errorConditionFormula>
+  <errorMessage
+  >Items and rules on Published or Historical versions are read-only.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description
+  >Person-account lookup back to the provisioned User. Surfaces on Account as `CKR_User__pc`, which is what the smokePersonAccount relationship writes `{ "from": "user.Id" }` into. Smoke-only.</description>
+    <label>User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Smoke Contacts</relationshipLabel>
+    <relationshipName>CKR_Smoke_Contacts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,61 @@
+{
+  "scenario": "apex-local-tests",
+  "startedAt": "2026-10-20T15:08:57.167Z",
+  "finishedAt": "2026-10-20T15:10:48.669Z",
+  "commit": "b0091a52a5deaf6eee8fa7df8412f7d229f657ad",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "failed",
+  "checks": [
+    {
+      "name": "AER suite completed",
+      "outcome": "passed",
+      "detail": "100 tests; exit 0"
+    },
+    {
+      "name": "Local Apex tests",
+      "outcome": "passed",
+      "detail": "103 tests; Passed"
+    },
+    {
+      "name": "Overall Apex coverage >= 75%",
+      "outcome": "failed",
+      "detail": "62%"
+    }
+  ],
+  "metrics": {
+    "aerTestsPassed": 100,
+    "aerTestsFailed": 0,
+    "aerTestsRan": 100,
+    "testsPassed": 103,
+    "testsFailed": 0,
+    "aerDifferences": [
+      {
+        "name": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_GateBypassIT.assignedPermissionUpdatesGatedAccount_integrationHappyPath",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_InsertGatingIT.insertingMatchingRecordIsNotGatedByDesign",
+        "org": true,
+        "aer": "missing"
+      }
+    ],
+    "coveragePercent": 62,
+    "testsRan": 103
+  }
+}

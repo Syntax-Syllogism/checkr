@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_CompletionAccessMode__c</fullName>
+    <description
+  >Determines which users may complete checklist items created from this template version.</description>
+    <label>Completion Access Mode</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ReadAccess</fullName>
+                <default>true</default>
+                <label>Read Access</label>
+            </value>
+            <value>
+                <fullName>EditAccess</fullName>
+                <default>false</default>
+                <label>Edit Access</label>
+            </value>
+            <value>
+                <fullName>CustomPermission</fullName>
+                <default>false</default>
+                <label>Custom Permission</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

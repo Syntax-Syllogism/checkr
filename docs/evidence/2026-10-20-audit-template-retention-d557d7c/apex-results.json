@@ -1,0 +1,61 @@
+{
+  "orgAlias": "checkr-evidence",
+  "sourceBaseCommit": "d557d7c",
+  "dirty": true,
+  "deployment": {
+    "status": "Succeeded",
+    "componentsDeployed": 215,
+    "componentErrors": 0
+  },
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 7,
+    "passing": 7,
+    "failing": 0,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "FullName": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath",
+      "Outcome": "Pass",
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "CKR_AuditRecordGuardTest.blocksEveryRowWithoutPermission",
+      "Outcome": "Pass",
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedInstances",
+      "Outcome": "Pass",
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedItems",
+      "Outcome": "Pass",
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyBypassReferencedParents",
+      "Outcome": "Pass",
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "CKR_AuditRecordGuardTest.referencedGateRuleDeletion_integrationHappyPath",
+      "Outcome": "Pass",
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "CKR_AuditRecordGuardTest.triggersAndSystemInsert_integrationHappyPath",
+      "Outcome": "Pass",
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

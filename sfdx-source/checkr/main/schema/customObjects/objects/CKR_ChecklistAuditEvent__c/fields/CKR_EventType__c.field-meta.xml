@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_EventType__c</fullName>
+    <description>Type of checklist audit event.</description>
+    <label>Event Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ItemCompleted</fullName>
+                <default>true</default>
+                <label>Item Completed</label>
+            </value>
+            <value>
+                <fullName>ItemUncompleted</fullName>
+                <default>false</default>
+                <label>Item Uncompleted</label>
+            </value>
+            <value>
+                <fullName>AnswerChanged</fullName>
+                <default>false</default>
+                <label>Answer Changed</label>
+            </value>
+            <value>
+                <fullName>ExplanationChanged</fullName>
+                <default>false</default>
+                <label>Explanation Changed</label>
+            </value>
+            <value>
+                <fullName>AssigneeChanged</fullName>
+                <default>false</default>
+                <label>Assignee Changed</label>
+            </value>
+            <value>
+                <fullName>AdHocItemAdded</fullName>
+                <default>false</default>
+                <label>Ad Hoc Item Added</label>
+            </value>
+            <value>
+                <fullName>AdHocItemRemoved</fullName>
+                <default>false</default>
+                <label>Ad Hoc Item Removed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

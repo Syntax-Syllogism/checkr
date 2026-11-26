@@ -1,0 +1,980 @@
+[
+  {
+    "command": [
+      "org",
+      "display",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "id": "00DEm00000YAPZRMA5",
+      "devHubId": "[REDACTED USER]",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://java-computing-7003-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "status": "Active",
+      "expirationDate": "2026-10-23",
+      "createdBy": "[REDACTED USER]",
+      "edition": "Developer",
+      "orgName": "Syntax & Syllogism",
+      "createdDate": "2026-10-20T19:31:28.000+0000",
+      "signupUsername": "[REDACTED]",
+      "alias": "checkr-install"
+    },
+    "warnings": [
+      "Secrets are now hidden from 'sf org display' command output. Use the 'sf org auth' commands instead. As a temporary workaround, you can set SF_TEMP_SHOW_SECRETS=true to render these secrets. This workaround will be removed in an upcoming release."
+    ]
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Organization",
+            "url": "/services/data/v68.0/sobjects/Organization/00DEm00000YAPZRMA5"
+          },
+          "Id": "00DEm00000YAPZRMA5",
+          "OrganizationType": "Developer Edition",
+          "IsSandbox": true
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "package",
+      "install",
+      "--package"
+    ],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfEm000004cv1NKAQ"
+      },
+      "Id": "0HfEm000004cv1NKAQ",
+      "IsDeleted": false,
+      "CreatedDate": "2026-10-20T19:32:31.000+0000",
+      "CreatedById": "005Em00000n0GQOIA2",
+      "LastModifiedDate": "2026-10-20T19:32:31.000+0000",
+      "LastModifiedById": "005Em00000n0GQOIA2",
+      "SystemModstamp": "2026-10-20T19:32:31.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000duWzAAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "IN_PROGRESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "package",
+      "install",
+      "report"
+    ],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfEm000004cv1NKAQ"
+      },
+      "Id": "0HfEm000004cv1NKAQ",
+      "IsDeleted": false,
+      "CreatedDate": "2026-10-20T19:32:31.000+0000",
+      "CreatedById": "005Em00000n0GQOIA2",
+      "LastModifiedDate": "2026-10-20T19:32:31.000+0000",
+      "LastModifiedById": "005Em00000n0GQOIA2",
+      "SystemModstamp": "2026-10-20T19:32:31.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000duWzAAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "IN_PROGRESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "package",
+      "install",
+      "report"
+    ],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfEm000004cv1NKAQ"
+      },
+      "Id": "0HfEm000004cv1NKAQ",
+      "IsDeleted": false,
+      "CreatedDate": "2026-10-20T19:32:31.000+0000",
+      "CreatedById": "005Em00000n0GQOIA2",
+      "LastModifiedDate": "2026-10-20T19:32:31.000+0000",
+      "LastModifiedById": "005Em00000n0GQOIA2",
+      "SystemModstamp": "2026-10-20T19:32:31.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000duWzAAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "IN_PROGRESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "package",
+      "install",
+      "report"
+    ],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfEm000004cv1NKAQ"
+      },
+      "Id": "0HfEm000004cv1NKAQ",
+      "IsDeleted": false,
+      "CreatedDate": "2026-10-20T19:32:31.000+0000",
+      "CreatedById": "005Em00000n0GQOIA2",
+      "LastModifiedDate": "2026-10-20T19:32:31.000+0000",
+      "LastModifiedById": "005Em00000n0GQOIA2",
+      "SystemModstamp": "2026-10-20T19:32:31.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000duWzAAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "IN_PROGRESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "package",
+      "install",
+      "report"
+    ],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfEm000004cv1NKAQ"
+      },
+      "Id": "0HfEm000004cv1NKAQ",
+      "IsDeleted": false,
+      "CreatedDate": "2026-10-20T19:32:31.000+0000",
+      "CreatedById": "005Em00000n0GQOIA2",
+      "LastModifiedDate": "2026-10-20T19:32:31.000+0000",
+      "LastModifiedById": "005Em00000n0GQOIA2",
+      "SystemModstamp": "2026-10-20T19:32:31.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000duWzAAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "IN_PROGRESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "package",
+      "install",
+      "report"
+    ],
+    "status": 0,
+    "result": {
+      "attributes": {
+        "type": "PackageInstallRequest",
+        "url": "/services/data/v68.0/tooling/sobjects/PackageInstallRequest/0HfEm000004cv1NKAQ"
+      },
+      "Id": "0HfEm000004cv1NKAQ",
+      "IsDeleted": false,
+      "CreatedDate": "2026-10-20T19:32:31.000+0000",
+      "CreatedById": "005Em00000n0GQOIA2",
+      "LastModifiedDate": "2026-10-20T19:32:31.000+0000",
+      "LastModifiedById": "005Em00000n0GQOIA2",
+      "SystemModstamp": "2026-10-20T19:32:31.000+0000",
+      "SubscriberPackageVersionKey": "04tfj000000duWzAAI",
+      "NameConflictResolution": "Block",
+      "SecurityType": "None",
+      "PackageInstallSource": "U",
+      "ProfileMappings": null,
+      "Password": "[REDACTED]",
+      "EnableRss": false,
+      "UpgradeType": "mixed-mode",
+      "ApexCompileType": "all",
+      "SkipHandlers": null,
+      "Status": "SUCCESS",
+      "Errors": null
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "org",
+      "display",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "id": "00DEm00000YAPZRMA5",
+      "devHubId": "[REDACTED USER]",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://java-computing-7003-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "status": "Active",
+      "expirationDate": "2026-10-23",
+      "createdBy": "[REDACTED USER]",
+      "edition": "Developer",
+      "orgName": "Syntax & Syllogism",
+      "createdDate": "2026-10-20T19:31:28.000+0000",
+      "signupUsername": "[REDACTED]",
+      "alias": "checkr-install"
+    },
+    "warnings": [
+      "Secrets are now hidden from 'sf org display' command output. Use the 'sf org auth' commands instead. As a temporary workaround, you can set SF_TEMP_SHOW_SECRETS=true to render these secrets. This workaround will be removed in an upcoming release."
+    ]
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "org",
+      "assign",
+      "permset"
+    ],
+    "status": 0,
+    "result": {
+      "successes": [
+        {
+          "name": "[REDACTED]",
+          "value": "CKR_Admin"
+        }
+      ],
+      "failures": []
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Profile",
+            "url": "/services/data/v68.0/sobjects/Profile/00eEm00000D4cMKIAZ"
+          },
+          "Id": "00eEm00000D4cMKIAZ",
+          "UserLicense": {
+            "attributes": {
+              "type": "UserLicense",
+              "url": "/services/data/v68.0/sobjects/UserLicense/100Em00000qRi8jIAC"
+            },
+            "Name": "Salesforce"
+          }
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "org",
+      "create",
+      "user"
+    ],
+    "status": 0,
+    "result": {
+      "orgId": "00DEm00000YAPZRMA5",
+      "permissionSetAssignments": [],
+      "fields": {
+        "id": "005Em00000n2GZ7IAM",
+        "username": "[REDACTED]",
+        "alias": "ckrevid",
+        "email": "[REDACTED]",
+        "emailencodingkey": "UTF-8",
+        "languagelocalekey": "en_US",
+        "localesidkey": "en_US",
+        "profileid": "00eEm00000D4cMKIAZ",
+        "lastname": "Checkr Evidence",
+        "timezonesidkey": "America/New_York"
+      }
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "org",
+      "display",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "id": "00DEm00000YAPZRMA5",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://java-computing-7003-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "connectedStatus": "Connected"
+    },
+    "warnings": [
+      "Secrets are now hidden from 'sf org display' command output. Use the 'sf org auth' commands instead. As a temporary workaround, you can set SF_TEMP_SHOW_SECRETS=true to render these secrets. This workaround will be removed in an upcoming release."
+    ]
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "org",
+      "assign",
+      "permset"
+    ],
+    "status": 0,
+    "result": {
+      "successes": [
+        {
+          "name": "[REDACTED]",
+          "value": "CKR_User"
+        }
+      ],
+      "failures": []
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "package",
+      "installed",
+      "list"
+    ],
+    "status": 0,
+    "result": [
+      {
+        "Id": "0A3Em00000526b8KAA",
+        "SubscriberPackageId": "033fj000000mueDAAQ",
+        "SubscriberPackageName": "checkr",
+        "SubscriberPackageNamespace": null,
+        "SubscriberPackageVersionId": "04tfj000000duWzAAI",
+        "SubscriberPackageVersionName": "ver 0.1",
+        "SubscriberPackageVersionNumber": "0.1.0.1",
+        "VersionSettings": ""
+      }
+    ],
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSEm00000DSpEbOAL"
+          },
+          "Name": "CKR_Admin"
+        },
+        {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSEm00000DSpEcOAL"
+          },
+          "Name": "CKR_AuditMaintenance"
+        },
+        {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSEm00000DSpEdOAL"
+          },
+          "Name": "CKR_GateBypass"
+        },
+        {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSEm00000DSpEeOAL"
+          },
+          "Name": "CKR_ReadOnly"
+        },
+        {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSEm00000DSpEfOAL"
+          },
+          "Name": "CKR_User"
+        }
+      ],
+      "totalSize": 5,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--use-tooling-api"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "LightningComponentBundle",
+            "url": "/services/data/v68.0/tooling/sobjects/LightningComponentBundle/0RbEm000007H7c9KAC"
+          },
+          "DeveloperName": "ckrChecklistCreateAction"
+        },
+        {
+          "attributes": {
+            "type": "LightningComponentBundle",
+            "url": "/services/data/v68.0/tooling/sobjects/LightningComponentBundle/0RbEm000007H7cAKAS"
+          },
+          "DeveloperName": "ckrChecklistViewer"
+        },
+        {
+          "attributes": {
+            "type": "LightningComponentBundle",
+            "url": "/services/data/v68.0/tooling/sobjects/LightningComponentBundle/0RbEm000007H7cBKAS"
+          },
+          "DeveloperName": "ckrPublishTemplateVersion"
+        }
+      ],
+      "totalSize": 3,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "CKR_SupportedObject__mdt",
+            "url": "/services/data/v68.0/sobjects/CKR_SupportedObject__mdt/m00Em00000qTR29IAG"
+          },
+          "DeveloperName": "Account"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "project",
+      "deploy",
+      "start"
+    ],
+    "status": 0,
+    "result": {
+      "checkOnly": false,
+      "completedDate": "2026-10-20T19:35:54.000Z",
+      "createdBy": "005Em00000n0GQO",
+      "createdByName": "User User",
+      "createdDate": "2026-10-20T19:35:52.000Z",
+      "details": {
+        "componentSuccesses": [
+          {
+            "changed": true,
+            "componentType": "ApexTrigger",
+            "created": true,
+            "createdDate": "2026-10-20T19:35:54.000Z",
+            "deleted": false,
+            "fileName": "triggers/CKR_AccountTrigger.trigger",
+            "fullName": "CKR_AccountTrigger",
+            "id": "01qEm00000F2pSPIAZ",
+            "success": true
+          },
+          {
+            "changed": true,
+            "componentType": "",
+            "created": false,
+            "createdDate": "2026-10-20T19:35:54.000Z",
+            "deleted": false,
+            "fileName": "package.xml",
+            "fullName": "package.xml",
+            "success": true
+          }
+        ],
+        "runTestResult": {
+          "numFailures": 0,
+          "numTestsRun": 0,
+          "totalTime": 0,
+          "codeCoverage": [],
+          "codeCoverageWarnings": [],
+          "failures": [],
+          "flowCoverage": [],
+          "flowCoverageWarnings": [],
+          "successes": []
+        },
+        "componentFailures": []
+      },
+      "done": true,
+      "id": "0AfEm00000aUGgEKAW",
+      "ignoreWarnings": false,
+      "lastModifiedDate": "2026-10-20T19:35:54.000Z",
+      "numberComponentErrors": 0,
+      "numberComponentsDeployed": 1,
+      "numberComponentsTotal": 1,
+      "numberFiles": "4",
+      "numberTestErrors": 0,
+      "numberTestsCompleted": 0,
+      "numberTestsTotal": 0,
+      "rollbackOnError": true,
+      "runTestsEnabled": false,
+      "startDate": "2026-10-20T19:35:52.000Z",
+      "status": "Succeeded",
+      "success": true,
+      "zipSize": 1005,
+      "files": [
+        {
+          "fullName": "CKR_AccountTrigger",
+          "type": "ApexTrigger",
+          "state": "Created",
+          "filePath": "sfdx-source/reference/main/triggers/CKR_AccountTrigger.trigger"
+        },
+        {
+          "fullName": "CKR_AccountTrigger",
+          "type": "ApexTrigger",
+          "state": "Created",
+          "filePath": "sfdx-source/reference/main/triggers/CKR_AccountTrigger.trigger-meta.xml"
+        }
+      ],
+      "zipFileCount": 3,
+      "deployUrl": "[REDACTED URL]"
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005Em00000n2GZ7IAM"
+          },
+          "Id": "005Em00000n2GZ7IAM"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "apex",
+      "run",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     String key = 'CKREvidence0e78751b0f494c4e99335996af7f28ab';\nExecute Anonymous:     List<Account> accounts = new List<Account>();\nExecute Anonymous:     for (Integer i=0; i<1; i++) accounts.add(new Account(\nExecute Anonymous:       Name=key+'-'+i, Rating='Cold', OwnerId='005Em00000n2GZ7IAM'));\nExecute Anonymous:     insert accounts;\nExecute Anonymous:     for (Integer i=0; i<1; i++) {\nExecute Anonymous:       CKR_ChecklistTemplate__c template = new CKR_ChecklistTemplate__c(\nExecute Anonymous:         Name=key+'-'+i, CKR_DeveloperName__c=key+'_'+i,\nExecute Anonymous:         CKR_TargetObjectApiName__c='Account', CKR_SupportedObjectDeveloperName__c='Account', CKR_Active__c=true);\nExecute Anonymous:       insert template;\nExecute Anonymous:       CKR_ChecklistTemplateVersion__c version = new CKR_ChecklistTemplateVersion__c(\nExecute Anonymous:         CKR_ChecklistTemplate__c=template.Id, CKR_Status__c='Draft',\nExecute Anonymous:         CKR_VersionNumber__c=1, CKR_CompletionAccessMode__c='EditAccess');\nExecute Anonymous:       insert version;\nExecute Anonymous:       insert new CKR_ChecklistTemplateItem__c(CKR_ChecklistTemplateVersion__c=version.Id,\nExecute Anonymous:         CKR_Label__c='Evidence required item', CKR_Required__c=true, CKR_ExplanationInputType__c='Text', CKR_SortOrder__c=1);\nExecute Anonymous:       insert new CKR_ChecklistGateRule__c(CKR_ChecklistTemplateVersion__c=version.Id,\nExecute Anonymous:         CKR_Active__c=true, CKR_ProtectedActionType__c='SpecificFieldValueChange',\nExecute Anonymous:         CKR_TargetFieldApiName__c='Rating', CKR_TargetValue__c='Hot',\nExecute Anonymous:         CKR_ErrorMessage__c=key+' requires completion', CKR_SortOrder__c=i);\nExecute Anonymous:       ((CKR_IChecklistTemplateVersionService)CKR_AppFactory.getInstance(CKR_IChecklistTemplateVersionService.class)).publish(version.Id);\nExecute Anonymous:       if (1 == 200) {\nExecute Anonymous:         List<CKR_ChecklistInstance__c> complete = new List<CKR_ChecklistInstance__c>();\nExecute Anonymous:         for (Integer j=0; j<100; j++) complete.add(new CKR_ChecklistInstance__c(\nExecute Anonymous:           CKR_ChecklistTemplate__c=template.Id, CKR_ChecklistTemplateVersion__c=version.Id,\nExecute Anonymous:           CKR_ParentObjectApiName__c='Account', CKR_ParentRecordId__c=String.valueOf(accounts[j].Id),\nExecute Anonymous:           CKR_UniqueKey__c=accounts[j].Id+'|'+template.Id, CKR_IsComplete__c=true));\nExecute Anonymous:         insert complete;\nExecute Anonymous:       }\nExecute Anonymous:     }\nExecute Anonymous:   \n12:36:08.704 (704691299)|USER_INFO|[EXTERNAL]|005Em00000n0GQO|[REDACTED]|(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)|GMT-07:00\n12:36:08.704 (704719720)|EXECUTION_STARTED\n12:36:08.704 (704740120)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n12:36:08.704 (836294026)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pSP|CKR_AccountTrigger on Account trigger event BeforeInsert|__sfdc_trigger/CKR_AccountTrigger\n12:36:08.843 (843719368)|CUMULATIVE_LIMIT_USAGE\n12:36:08.843 (843719368)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 1 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:08.843 (843719368)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:08.704 (843852669)|CODE_UNIT_FINISHED|CKR_AccountTrigger on Account trigger event BeforeInsert|__sfdc_trigger/CKR_AccountTrigger\n12:36:08.704 (854800754)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector\n12:36:08.704 (889051025)|CODE_UNIT_FINISHED|DuplicateDetector\n12:36:08.704 (1142601491)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pKR|CKR_ChecklistTemplateVersionTrigger on CKR_ChecklistTemplateVersion trigger event BeforeInsert|__sfdc_trigger/CKR_ChecklistTemplateVersionTrigger\n12:36:09.260 (1260889735)|CUMULATIVE_LIMIT_USAGE\n12:36:09.260 (1260889735)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 0 out of 100\n  Number of query rows: 0 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 3 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 3 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:09.260 (1260889735)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:08.704 (1261039266)|CODE_UNIT_FINISHED|CKR_ChecklistTemplateVersionTrigger on CKR_ChecklistTemplateVersion trigger event BeforeInsert|__sfdc_trigger/CKR_ChecklistTemplateVersionTrigger\n12:36:08.704 (1332416232)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:CKR_ChecklistTemplateItem:new\n12:36:08.704 (1332480393)|CODE_UNIT_FINISHED|Validation:CKR_ChecklistTemplateItem:new\n12:36:08.704 (1392433911)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:CKR_ChecklistGateRule:new\n12:36:08.704 (1392477532)|CODE_UNIT_FINISHED|Validation:CKR_ChecklistGateRule:new\n12:36:08.704 (1609503437)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pKR|CKR_ChecklistTemplateVersionTrigger on CKR_ChecklistTemplateVersion trigger event BeforeUpdate|__sfdc_trigger/CKR_ChecklistTemplateVersionTrigger\n12:36:09.609 (1609952713)|CUMULATIVE_LIMIT_USAGE\n12:36:09.609 (1609952713)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 5 out of 100\n  Number of query rows: 4 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 7 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 6 out of 10000\n  Maximum CPU time: 59 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:09.609 (1609952713)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:08.704 (1610084644)|CODE_UNIT_FINISHED|CKR_ChecklistTemplateVersionTrigger on CKR_ChecklistTemplateVersion trigger event BeforeUpdate|__sfdc_trigger/CKR_ChecklistTemplateVersionTrigger\n12:36:09.731 (1731887032)|CODE_UNIT_STARTED|[EXTERNAL]|DuplicateDetector\n12:36:09.731 (1744702879)|CODE_UNIT_FINISHED|DuplicateDetector\n12:36:09.744 (1744910322)|CUMULATIVE_LIMIT_USAGE\n12:36:09.744 (1744910322)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 5 out of 100\n  Number of query rows: 4 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 8 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 7 out of 10000\n  Maximum CPU time: 59 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:09.744 (1744910322)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:09.731 (1744946102)|CODE_UNIT_FINISHED|execute_anonymous_apex\n12:36:09.731 (1744956962)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v68.0/sobjects/Account/001Em00001ltP4dIAE"
+          },
+          "Id": "001Em00001ltP4dIAE"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "update",
+      "record"
+    ],
+    "name": "FIELD_CUSTOM_VALIDATION_EXCEPTION",
+    "message": "CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion",
+    "exitCode": 1,
+    "context": "Update",
+    "data": {
+      "message": "CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion",
+      "errorCode": "FIELD_CUSTOM_VALIDATION_EXCEPTION",
+      "fields": []
+    },
+    "stack": "FIELD_CUSTOM_VALIDATION_EXCEPTION: CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion\n    at SfCommandError.from (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:48:16)\n    at Update.catch (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:332:47)\n    at Update._run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:187:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Config.runCommand (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:422:25)\n    at async run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:97:16)\n    at async [REDACTED USER]:15:1",
+    "cause": "FIELD_CUSTOM_VALIDATION_EXCEPTION: CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion\n    at HttpApi.getError (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:315:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:127:33\n    at async Update.run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:82:28)\n    at async Update._run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:183:22)\n    at async Config.runCommand (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:422:25)\n    at async run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:97:16)\n    at async [REDACTED USER]:15:1 {\n  data: {\n    message: 'CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion',\n    errorCode: 'FIELD_CUSTOM_VALIDATION_EXCEPTION',\n    fields: []\n  },\n  errorCode: 'FIELD_CUSTOM_VALIDATION_EXCEPTION'\n}",
+    "warnings": [],
+    "code": "1",
+    "status": 1,
+    "commandName": "Update"
+  },
+  {
+    "command": [
+      "apex",
+      "run",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:       String key='CKREvidence0e78751b0f494c4e99335996af7f28ab_0';\nExecute Anonymous:       CKR_ChecklistTemplate__c template=[SELECT Id FROM CKR_ChecklistTemplate__c WHERE CKR_DeveloperName__c=:key];\nExecute Anonymous:       CKR_ChecklistInstanceCreateRequest request=new CKR_ChecklistInstanceCreateRequest();\nExecute Anonymous:       request.parentRecordId='001Em00001ltP4dIAE'; request.parentObjectApiName='Account'; request.templateId=template.Id;\nExecute Anonymous:       CKR_ChecklistInstanceCreateResult created=((CKR_IChecklistInstanceService)CKR_AppFactory.getInstance(CKR_IChecklistInstanceService.class)).createFromTemplate(request);\nExecute Anonymous:       System.Assert.isTrue(created.success, String.join(created.messages,'; '));\nExecute Anonymous:       CKR_ChecklistInstanceItem__c item=[SELECT Id FROM CKR_ChecklistInstanceItem__c WHERE CKR_ChecklistInstance__c=:created.checklistInstanceId LIMIT 1];\nExecute Anonymous:       CKR_ChecklistViewerController.updateChecklistItem(item.Id,true,null,null,null,null,null,null);\nExecute Anonymous:       CKR_ChecklistInstance__c instance=[SELECT CKR_IsComplete__c FROM CKR_ChecklistInstance__c WHERE Id=:created.checklistInstanceId];\nExecute Anonymous:       System.Assert.isTrue(instance.CKR_IsComplete__c, 'Completion must reach the gate');\nExecute Anonymous:     \n12:36:29.521 (521815617)|USER_INFO|[EXTERNAL]|005Em00000n0GQO|[REDACTED]|(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)|GMT-07:00\n12:36:29.521 (521846727)|EXECUTION_STARTED\n12:36:29.521 (521869307)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n12:36:29.521 (1440323803)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pKO|CKR_ChecklistInstanceItemTrigger on CKR_ChecklistInstanceItem trigger event BeforeUpdate|__sfdc_trigger/CKR_ChecklistInstanceItemTrigger\n12:36:30.451 (1451769045)|CUMULATIVE_LIMIT_USAGE\n12:36:30.451 (1451769045)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 7 out of 100\n  Number of query rows: 7 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 3 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 3 out of 10000\n  Maximum CPU time: 88 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:30.451 (1451769045)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:29.521 (1451944447)|CODE_UNIT_FINISHED|CKR_ChecklistInstanceItemTrigger on CKR_ChecklistInstanceItem trigger event BeforeUpdate|__sfdc_trigger/CKR_ChecklistInstanceItemTrigger\n12:36:29.521 (1483770149)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pKO|CKR_ChecklistInstanceItemTrigger on CKR_ChecklistInstanceItem trigger event BeforeUpdate|__sfdc_trigger/CKR_ChecklistInstanceItemTrigger\n12:36:30.484 (1484283164)|CUMULATIVE_LIMIT_USAGE\n12:36:30.484 (1484283164)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 7 out of 100\n  Number of query rows: 7 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 4 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 4 out of 10000\n  Maximum CPU time: 88 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:30.484 (1484283164)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:29.521 (1484547247)|CODE_UNIT_FINISHED|CKR_ChecklistInstanceItemTrigger on CKR_ChecklistInstanceItem trigger event BeforeUpdate|__sfdc_trigger/CKR_ChecklistInstanceItemTrigger\n12:36:30.902 (1902153962)|CUMULATIVE_LIMIT_USAGE\n12:36:30.902 (1902153962)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 11 out of 100\n  Number of query rows: 11 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 6 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 7 out of 10000\n  Maximum CPU time: 149 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:36:30.902 (1902153962)|CUMULATIVE_LIMIT_USAGE_END\n\n12:36:30.902 (1902203513)|CODE_UNIT_FINISHED|execute_anonymous_apex\n12:36:30.902 (1902226323)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "update",
+      "record"
+    ],
+    "status": 0,
+    "result": {
+      "id": "001Em00001ltP4dIAE",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Account",
+            "url": "/services/data/v68.0/sobjects/Account/001Em00001ltP4dIAE"
+          },
+          "Rating": "Hot"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "org",
+      "display",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "id": "00DEm00000YAPZRMA5",
+      "devHubId": "[REDACTED USER]",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://java-computing-7003-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "status": "Active",
+      "expirationDate": "2026-10-23",
+      "createdBy": "[REDACTED USER]",
+      "edition": "Developer",
+      "orgName": "Syntax & Syllogism",
+      "createdDate": "2026-10-20T19:31:28.000+0000",
+      "signupUsername": "[REDACTED]",
+      "alias": "checkr-install"
+    },
+    "warnings": [
+      "Secrets are now hidden from 'sf org display' command output. Use the 'sf org auth' commands instead. As a temporary workaround, you can set SF_TEMP_SHOW_SECRETS=true to render these secrets. This workaround will be removed in an upcoming release."
+    ]
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [],
+      "totalSize": 0,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "org",
+      "assign",
+      "permset"
+    ],
+    "status": 0,
+    "result": {
+      "successes": [
+        {
+          "name": "[REDACTED]",
+          "value": "CKR_AuditMaintenance"
+        }
+      ],
+      "failures": []
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "apex",
+      "run",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "success": true,
+      "compiled": true,
+      "compileProblem": "",
+      "exceptionMessage": "",
+      "exceptionStackTrace": "",
+      "line": -1,
+      "column": -1,
+      "logs": "68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO\nExecute Anonymous: \nExecute Anonymous:     String prefix='CKREvidence0e78751b0f494c4e99335996af7f28ab%';\nExecute Anonymous:     List<CKR_ChecklistTemplate__c> templates=[SELECT Id, CKR_CurrentPublishedVersion__c FROM CKR_ChecklistTemplate__c WHERE CKR_DeveloperName__c LIKE :prefix];\nExecute Anonymous:     Set<Id> ids=new Map<Id, CKR_ChecklistTemplate__c>(templates).keySet();\nExecute Anonymous:     delete [SELECT Id FROM CKR_ChecklistAuditEvent__c WHERE CKR_ChecklistInstance__r.CKR_ChecklistTemplate__c IN :ids];\nExecute Anonymous:     delete [SELECT Id FROM CKR_ChecklistInstance__c WHERE CKR_ChecklistTemplate__c IN :ids];\nExecute Anonymous:     for (CKR_ChecklistTemplate__c template:templates) template.CKR_CurrentPublishedVersion__c=null;\nExecute Anonymous:     update templates;\nExecute Anonymous:     // Master-detail cascade is reserved for removing this isolated fixture graph.\nExecute Anonymous:     delete templates;\nExecute Anonymous:     delete [SELECT Id FROM Account WHERE Name LIKE :prefix];\nExecute Anonymous:   \n12:37:11.45 (45329919)|USER_INFO|[EXTERNAL]|005Em00000n0GQO|[REDACTED]|(GMT-07:00) Pacific Daylight Time (America/Los_Angeles)|GMT-07:00\n12:37:11.45 (45355379)|EXECUTION_STARTED\n12:37:11.45 (45380729)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex\n12:37:11.45 (374742199)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pKL|CKR_ChecklistAuditEventGuard on CKR_ChecklistAuditEvent trigger event BeforeDelete|__sfdc_trigger/CKR_ChecklistAuditEventGuard\n12:37:11.393 (393331670)|CUMULATIVE_LIMIT_USAGE\n12:37:11.393 (393331670)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 2 out of 100\n  Number of query rows: 3 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 1 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 2 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:37:11.393 (393331670)|CUMULATIVE_LIMIT_USAGE_END\n\n12:37:11.45 (393464411)|CODE_UNIT_FINISHED|CKR_ChecklistAuditEventGuard on CKR_ChecklistAuditEvent trigger event BeforeDelete|__sfdc_trigger/CKR_ChecklistAuditEventGuard\n12:37:12.322 (1322620200)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pKN|CKR_ChecklistInstanceGuard on CKR_ChecklistInstance trigger event BeforeDelete|__sfdc_trigger/CKR_ChecklistInstanceGuard\n12:37:12.323 (1323022733)|CUMULATIVE_LIMIT_USAGE\n12:37:12.323 (1323022733)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 3 out of 100\n  Number of query rows: 4 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 2 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 3 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:37:12.323 (1323022733)|CUMULATIVE_LIMIT_USAGE_END\n\n12:37:12.322 (1323117073)|CODE_UNIT_FINISHED|CKR_ChecklistInstanceGuard on CKR_ChecklistInstance trigger event BeforeDelete|__sfdc_trigger/CKR_ChecklistInstanceGuard\n12:37:12.322 (1572269161)|CODE_UNIT_STARTED|[EXTERNAL]|01qEm00000F2pKP|CKR_ChecklistTemplateGuard on CKR_ChecklistTemplate trigger event BeforeDelete|__sfdc_trigger/CKR_ChecklistTemplateGuard\n12:37:12.622 (1622269052)|CUMULATIVE_LIMIT_USAGE\n12:37:12.622 (1622269052)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 4 out of 100\n  Number of query rows: 4 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 4 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 5 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:37:12.622 (1622269052)|CUMULATIVE_LIMIT_USAGE_END\n\n12:37:12.322 (1622399642)|CODE_UNIT_FINISHED|CKR_ChecklistTemplateGuard on CKR_ChecklistTemplate trigger event BeforeDelete|__sfdc_trigger/CKR_ChecklistTemplateGuard\n12:37:13.164 (2164267844)|CUMULATIVE_LIMIT_USAGE\n12:37:13.164 (2164267844)|LIMIT_USAGE_FOR_NS|(default)|\n  Number of SOQL queries: 5 out of 100\n  Number of query rows: 5 out of 50000\n  Number of SOSL queries: 0 out of 20\n  Number of DML statements: 5 out of 150\n  Number of Publish Immediate DML: 0 out of 150\n  Number of DML rows: 6 out of 10000\n  Maximum CPU time: 0 out of 10000\n  Maximum heap size: 0 out of 10000000\n  Number of callouts: 0 out of 100\n  Number of Email Invocations: 0 out of 10\n  Number of future calls: 0 out of 50\n  Number of queueable jobs added to the queue: 0 out of 50\n  Number of Mobile Apex push calls: 0 out of 10\n\n12:37:13.164 (2164267844)|CUMULATIVE_LIMIT_USAGE_END\n\n12:37:12.322 (2164312755)|CODE_UNIT_FINISHED|execute_anonymous_apex\n12:37:12.322 (2164327815)|EXECUTION_FINISHED\n"
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSetAssignment",
+            "url": "/services/data/v68.0/sobjects/PermissionSetAssignment/0PaEm00000g66FRKAY"
+          },
+          "Id": "0PaEm00000g66FRKAY"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "delete",
+      "record"
+    ],
+    "status": 0,
+    "result": {
+      "id": "0PaEm00000g66FRKAY",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "PermissionSetAssignment",
+            "url": "/services/data/v68.0/sobjects/PermissionSetAssignment/0PaEm00000g4UNsKAM"
+          },
+          "Id": "0PaEm00000g4UNsKAM"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "delete",
+      "record"
+    ],
+    "status": 0,
+    "result": {
+      "id": "0PaEm00000g4UNsKAM",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v68.0/sobjects/User/005Em00000n2GZ7IAM"
+          },
+          "Id": "005Em00000n2GZ7IAM"
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "data",
+      "update",
+      "record"
+    ],
+    "status": 0,
+    "result": {
+      "id": "005Em00000n2GZ7IAM",
+      "success": true,
+      "errors": []
+    },
+    "warnings": []
+  }
+]

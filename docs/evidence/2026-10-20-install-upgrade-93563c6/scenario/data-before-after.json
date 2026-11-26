@@ -1,0 +1,118 @@
+{
+  "seeded": {
+    "templates": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistTemplate__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistTemplate__c/a06Em00000vLByxIAG"
+        },
+        "Id": "a06Em00000vLByxIAG",
+        "CKR_CurrentPublishedVersion__c": "a05Em00000n23YgIAI"
+      }
+    ],
+    "versions": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistTemplateVersion__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistTemplateVersion__c/a05Em00000n23YgIAI"
+        },
+        "Id": "a05Em00000n23YgIAI",
+        "CKR_Status__c": "Published"
+      }
+    ],
+    "instances": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistInstance__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistInstance__c/a03Em00001UpgAcIAJ"
+        },
+        "Id": "a03Em00001UpgAcIAJ",
+        "CKR_IsComplete__c": true
+      }
+    ],
+    "items": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistInstanceItem__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistInstanceItem__c/a02Em00000bRYQZIA4"
+        },
+        "Id": "a02Em00000bRYQZIA4",
+        "CKR_Completed__c": true
+      }
+    ],
+    "auditEvents": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistAuditEvent__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistAuditEvent__c/a00Em00000qTr9iIAC"
+        },
+        "Id": "a00Em00000qTr9iIAC"
+      },
+      {
+        "attributes": {
+          "type": "CKR_ChecklistAuditEvent__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistAuditEvent__c/a00Em00000qTr9jIAC"
+        },
+        "Id": "a00Em00000qTr9jIAC"
+      }
+    ]
+  },
+  "kept": {
+    "templates": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistTemplate__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistTemplate__c/a06Em00000vLByxIAG"
+        },
+        "Id": "a06Em00000vLByxIAG",
+        "CKR_CurrentPublishedVersion__c": "a05Em00000n23YgIAI"
+      }
+    ],
+    "versions": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistTemplateVersion__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistTemplateVersion__c/a05Em00000n23YgIAI"
+        },
+        "Id": "a05Em00000n23YgIAI",
+        "CKR_Status__c": "Published"
+      }
+    ],
+    "instances": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistInstance__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistInstance__c/a03Em00001UpgAcIAJ"
+        },
+        "Id": "a03Em00001UpgAcIAJ",
+        "CKR_IsComplete__c": true
+      }
+    ],
+    "items": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistInstanceItem__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistInstanceItem__c/a02Em00000bRYQZIA4"
+        },
+        "Id": "a02Em00000bRYQZIA4",
+        "CKR_Completed__c": true
+      }
+    ],
+    "auditEvents": [
+      {
+        "attributes": {
+          "type": "CKR_ChecklistAuditEvent__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistAuditEvent__c/a00Em00000qTr9iIAC"
+        },
+        "Id": "a00Em00000qTr9iIAC"
+      },
+      {
+        "attributes": {
+          "type": "CKR_ChecklistAuditEvent__c",
+          "url": "/services/data/v68.0/sobjects/CKR_ChecklistAuditEvent__c/a00Em00000qTr9jIAC"
+        },
+        "Id": "a00Em00000qTr9jIAC"
+      }
+    ]
+  }
+}

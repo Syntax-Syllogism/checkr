@@ -1,0 +1,101 @@
+# --- PUBLIC repo .gitignore. ---
+# The release process copies this over .gitignore on the orphan `release`
+# branch, then `git rm --cached` removes any tracked file matched here.
+# Everything below is therefore EXCLUDED from the public repository.
+#
+# It replaces the private ignore rules, preserves deployable metadata, and
+# excludes AI/agent tooling, working notes, and the release tooling itself.
+
+# === same as private .gitignore: build/runtime/local artifacts ===
+node_modules/
+dist/
+dist-server/
+build/
+lib/
+!scripts/org/lib/
+!scripts/org/lib/**
+*.tsbuildinfo
+coverage/
+coverage.json
+aer-results.xml
+.aer/
+.nyc_output/
+*.xunit.xml
+.eslintcache
+.cache/
+*.log
+npm-error.log
+yarn-error.log
+.env
+.env.*
+!.env.example
+!.env.playwright.example
+.npmrc
+.DS_Store
+.idea/
+.history/
+
+# === same as private .gitignore: Salesforce DX local state ===
+.sfdx/
+.sf/
+.localdevserver/
+.temp/
+deploy-options.json
+**/devhub-auth.txt
+**/*.sfdx-url.txt
+
+# === private-only: AI / agent tooling ===
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.claude/
+.agents/
+.codex/
+.gemini/
+.cursor/
+.rtk/
+.rtk
+
+# === private-only: aloop work-item loop tooling ===
+# Run state plus every loop config (loop.config.mjs and any
+# <name>-loop.config.mjs). Private AI-driven workflow; never ships public.
+.loop/
+*loop.config.mjs
+
+# === private-only: working material ===
+notes/
+memory/
+deep-dive/
+.kanban/
+docs/smoke-reports/
+
+# === private-only: release configuration and legacy scaffolding files ===
+.gitignore.public
+bin/publish.sh
+bin/changelog-prompt.txt
+release.config.mjs
+
+# CheckR local artifacts (keep deployable Salesforce metadata public).
+logs/
+.pmdCache
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+**/lwc/jsconfig.json
+.playwright/
+playwright-report/
+test-results/
+**/__pycache__/
+**/.venv/
+**/venv/
+dependencies/
+temp/
+artifacts/
+
+# Private release verification; reports belong with the private PR.
+scripts/checkPublicTree.mjs
+scripts/release.test.mjs
+
+# Maintainer-only docs
+docs/maintainer/

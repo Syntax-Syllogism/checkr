@@ -1,0 +1,10 @@
+{
+  "ruleEditRejected": true,
+  "oldStatus": "Historical",
+  "publishedCount": 1,
+  "errors": [
+    "CKREvidence16d3ca83fdaf4dfca22273d6e98822e2 v2 requires completion"
+  ],
+  "newBlocked": true,
+  "completedSaved": true
+}

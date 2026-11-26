@@ -1,0 +1,13 @@
+{
+  "name": "SourceConflictError",
+  "status": 1,
+  "message": "270 conflicts detected",
+  "command": [
+    "project",
+    "deploy",
+    "start"
+  ],
+  "detail": {
+    "stderr": " ›   Warning: @syntax-syllogism/apx is a linked ESM module and cannot be \n ›   auto-transpiled. Existing compiled source will be used instead.\n ›   Warning: @syntax-syllogism/warden is a linked ESM module and cannot be \n ›   auto-transpiled. Existing compiled source will be used instead.\n ›   Warning: @salesforce/cli update available from 2.147.7 to 2.154.4.\n"
+  }
+}

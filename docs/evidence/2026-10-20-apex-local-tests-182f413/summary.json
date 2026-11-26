@@ -1,0 +1,82 @@
+{
+  "scenario": "apex-local-tests",
+  "startedAt": "2026-10-20T18:56:19.575Z",
+  "finishedAt": "2026-10-20T18:57:50.153Z",
+  "commit": "182f4131f63a1ae76e884c03f6d764d32296021f",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "AER suite completed",
+      "outcome": "passed",
+      "detail": "100 tests; exit 0"
+    },
+    {
+      "name": "Local Apex tests",
+      "outcome": "passed",
+      "detail": "106 tests; Passed"
+    },
+    {
+      "name": "Overall Apex coverage >= 85%",
+      "outcome": "passed",
+      "detail": "95%"
+    },
+    {
+      "name": "Checkr package Apex coverage >= 75%",
+      "outcome": "passed",
+      "detail": "95.3%"
+    }
+  ],
+  "metrics": {
+    "aerTestsPassed": 100,
+    "aerTestsFailed": 0,
+    "aerTestsRan": 100,
+    "testsPassed": 106,
+    "testsFailed": 0,
+    "aerDifferences": [
+      {
+        "name": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_GateBypassIT.assignedPermissionUpdatesGatedAccount_integrationHappyPath",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_InsertGatingIT.insertingMatchingRecordIsNotGatedByDesign",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_SmokeSeedIT.dataSeedWithoutSmokeUsersFailsClearly",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_SmokeSeedIT.userSeedCreatesMissingPersonasAndReassignsPermissions_integrationHappyPath",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_SmokeSeedIT.userSeedThenDataSeed_integrationHappyPath",
+        "org": true,
+        "aer": "missing"
+      }
+    ],
+    "coveragePercent": 95,
+    "packageCoveragePercent": 95.3,
+    "testsRan": 106
+  }
+}

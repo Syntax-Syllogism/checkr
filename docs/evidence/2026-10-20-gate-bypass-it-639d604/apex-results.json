@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "failRate": "0%",
+    "failing": 0,
+    "hostname": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "orgId": "00DRK00000daXOD2A2",
+    "outcome": "Passed",
+    "passRate": "100%",
+    "passing": 1,
+    "skipped": 0,
+    "testRunId": "707RK0000BVsxA8",
+    "testStartTime": "2026-10-20T01:40:45.000Z",
+    "testsRan": 1,
+    "userId": "005RK00000ifSwfYAE",
+    "username": "[REDACTED]",
+    "commandTime": "147 ms",
+    "testExecutionTime": "993 ms",
+    "testTotalTime": "993 ms"
+  },
+  "tests": [
+    {
+      "Id": "07MRK00000rezz72AA",
+      "QueueItemId": "709RK00000vxXLhYAM",
+      "StackTrace": null,
+      "Message": null,
+      "AsyncApexJobId": "707RK0000BVsxA8YQJ",
+      "MethodName": "assignedPermissionUpdatesGatedAccount_integrationHappyPath",
+      "Outcome": "Pass",
+      "ApexClass": {
+        "Id": "01pRK00001Kjjt0YAB",
+        "Name": "CKR_GateBypassIT",
+        "NamespacePrefix": null
+      },
+      "RunTime": 993,
+      "FullName": "CKR_GateBypassIT.assignedPermissionUpdatesGatedAccount_integrationHappyPath"
+    }
+  ]
+}

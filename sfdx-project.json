@@ -1,0 +1,29 @@
+{
+  "packageDirectories": [
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "sfdx-source/checkr",
+      "default": true,
+      "definitionFile": "config/project-scratch-def.json",
+      "apexTestAccess": {
+        "permissionSets": ["CKR_Admin"]
+      },
+      "package": "checkr",
+      "versionDescription": "CheckR: record-gating checklists for Salesforce"
+    },
+    {
+      "path": "sfdx-source/reference",
+      "default": false
+    }
+  ],
+  "name": "checkr",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "67.0",
+  "packageAliases": {
+    "checkr": "0Hofj0000004ocXCAQ",
+    "checkr@0.1.0-1": "04tfj000000duWzAAI",
+    "checkr@0.1.0-2": "04tfj000000duX0AAI"
+  }
+}

@@ -1,0 +1,807 @@
+{
+  "status": 0,
+  "tests": [
+    {
+      "testName": "CKR_UserModeIT.ckrUser_completesItem_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_completesItem_integrationHappyPath",
+      "passed": true,
+      "duration": 437600076,
+      "durationMs": 437
+    },
+    {
+      "testName": "CKR_DefaultDmlGatewayTest.nullAndEmptyInputs_areIgnoredWithoutThrowing",
+      "className": "CKR_DefaultDmlGatewayTest",
+      "methodName": "nullAndEmptyInputs_areIgnoredWithoutThrowing",
+      "passed": true,
+      "duration": 2983246,
+      "durationMs": 2
+    },
+    {
+      "testName": "CKR_DefaultDmlGatewayTest.basicDmlPaths_integrationHappyPath_insertUpdateAndDeleteRecords",
+      "className": "CKR_DefaultDmlGatewayTest",
+      "methodName": "basicDmlPaths_integrationHappyPath_insertUpdateAndDeleteRecords",
+      "passed": true,
+      "duration": 81180239,
+      "durationMs": 81
+    },
+    {
+      "testName": "CKR_DefaultDmlGatewayTest.doInsert_partialSuccessReportsFailuresWhenNotAllOrNone",
+      "className": "CKR_DefaultDmlGatewayTest",
+      "methodName": "doInsert_partialSuccessReportsFailuresWhenNotAllOrNone",
+      "passed": true,
+      "duration": 16476522,
+      "durationMs": 16
+    },
+    {
+      "testName": "CKR_DefaultDmlGatewayTest.doInsert_allOrNoneThrowsOnFailure",
+      "className": "CKR_DefaultDmlGatewayTest",
+      "methodName": "doInsert_allOrNoneThrowsOnFailure",
+      "passed": true,
+      "duration": 8256897,
+      "durationMs": 8
+    },
+    {
+      "testName": "CKR_AuditRecordGuardTest.blocksEveryRowWithoutPermission",
+      "className": "CKR_AuditRecordGuardTest",
+      "methodName": "blocksEveryRowWithoutPermission",
+      "passed": true,
+      "duration": 1403872,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_DefaultDmlGatewayTest.systemModeGateway_insertsRecords",
+      "className": "CKR_DefaultDmlGatewayTest",
+      "methodName": "systemModeGateway_insertsRecords",
+      "passed": true,
+      "duration": 1746106,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedInstances",
+      "className": "CKR_AuditRecordGuardTest",
+      "methodName": "bulkDeleteProtectsOnlyAuditedInstances",
+      "passed": true,
+      "duration": 28814144,
+      "durationMs": 28
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.anyFieldValueChange_blocksWhenNoCompleteChecklistExists",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "anyFieldValueChange_blocksWhenNoCompleteChecklistExists",
+      "passed": true,
+      "duration": 28159160,
+      "durationMs": 28
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.anyFieldValueChange_allowsWhenCompleteChecklistExists",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "anyFieldValueChange_allowsWhenCompleteChecklistExists",
+      "passed": true,
+      "duration": 4277535,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrReadOnly_cannotCompleteItem_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrReadOnly_cannotCompleteItem_integrationHappyPath",
+      "passed": true,
+      "duration": 318719483,
+      "durationMs": 318
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.specificFieldValueChange_onlyBlocksForConfiguredValue",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "specificFieldValueChange_onlyBlocksForConfiguredValue",
+      "passed": true,
+      "duration": 6906242,
+      "durationMs": 6
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.permissionBypassAuditsBlockedSave",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "permissionBypassAuditsBlockedSave",
+      "passed": true,
+      "duration": 6540073,
+      "durationMs": 6
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.settingBypassAuditsBlockedSave",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "settingBypassAuditsBlockedSave",
+      "passed": true,
+      "duration": 4683564,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.allowedSaveDoesNotAudit",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "allowedSaveDoesNotAudit",
+      "passed": true,
+      "duration": 3550280,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedItems",
+      "className": "CKR_AuditRecordGuardTest",
+      "methodName": "bulkDeleteProtectsOnlyAuditedItems",
+      "passed": true,
+      "duration": 28960763,
+      "durationMs": 28
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrUser_cannotInsertAuditEventDirectly_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_cannotInsertAuditEventDirectly_integrationHappyPath",
+      "passed": true,
+      "duration": 88080779,
+      "durationMs": 88
+    },
+    {
+      "testName": "CKR_AuditRecordGuardTest.triggersAndSystemInsert_integrationHappyPath",
+      "className": "CKR_AuditRecordGuardTest",
+      "methodName": "triggersAndSystemInsert_integrationHappyPath",
+      "passed": true,
+      "duration": 89086897,
+      "durationMs": 89
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.bulkBypassAuditsOnly100BlockedRecordsInOneDml",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "bulkBypassAuditsOnly100BlockedRecordsInOneDml",
+      "passed": true,
+      "duration": 110347517,
+      "durationMs": 110
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.auditFailureSurfaces",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "auditFailureSurfaces",
+      "passed": true,
+      "duration": 4330745,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.evaluationFailureIsNotBypassed",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "evaluationFailureIsNotBypassed",
+      "passed": true,
+      "duration": 3064292,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_DefaultChecklistGateServiceTest.cutoverUsesInstanceVersion",
+      "className": "CKR_DefaultChecklistGateServiceTest",
+      "methodName": "cutoverUsesInstanceVersion",
+      "passed": true,
+      "duration": 9704792,
+      "durationMs": 9
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.supportedObjectSelector_returnsConfiguredAccount",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "supportedObjectSelector_returnsConfiguredAccount",
+      "passed": true,
+      "duration": 1762687,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.defaultGateService_handlesSupportedAndUnsupportedObjects",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "defaultGateService_handlesSupportedAndUnsupportedObjects",
+      "passed": true,
+      "duration": 4192942,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.defaultGateService_handlesEmptyAndBlankRequests",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "defaultGateService_handlesEmptyAndBlankRequests",
+      "passed": true,
+      "duration": 934177,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.auditService_writesThroughSystemDmlGateway",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "auditService_writesThroughSystemDmlGateway",
+      "passed": true,
+      "duration": 1610158,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.gateResultBlocked_buildsExpectedResult",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "gateResultBlocked_buildsExpectedResult",
+      "passed": true,
+      "duration": 331060,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.requestAndResultDtos_initializeAsExpected",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "requestAndResultDtos_initializeAsExpected",
+      "passed": true,
+      "duration": 669137,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyBypassReferencedParents",
+      "className": "CKR_AuditRecordGuardTest",
+      "methodName": "bulkDeleteProtectsOnlyBypassReferencedParents",
+      "passed": true,
+      "duration": 60002637,
+      "durationMs": 60
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.viewerAndInstanceService_returnStarterResponses",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "viewerAndInstanceService_returnStarterResponses",
+      "passed": true,
+      "duration": 18900611,
+      "durationMs": 18
+    },
+    {
+      "testName": "CKR_ChecklistSupportServicesTest.supportedObjectSelector_handlesEmptyInput",
+      "className": "CKR_ChecklistSupportServicesTest",
+      "methodName": "supportedObjectSelector_handlesEmptyInput",
+      "passed": true,
+      "duration": 718514,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.getRecordChecklists_mapsInstancesItemsAndPermissions",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "getRecordChecklists_mapsInstancesItemsAndPermissions",
+      "passed": true,
+      "duration": 4701401,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.getRecordChecklists_returnsEmptyForNullRecordId",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "getRecordChecklists_returnsEmptyForNullRecordId",
+      "passed": true,
+      "duration": 852833,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.updateChecklistItem_requiresCheckboxAndExplanationForCompletion",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "updateChecklistItem_requiresCheckboxAndExplanationForCompletion",
+      "passed": true,
+      "duration": 17973496,
+      "durationMs": 17
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.updateChecklistItem_storesPicklistExplanationAsExplanation",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "updateChecklistItem_storesPicklistExplanationAsExplanation",
+      "passed": true,
+      "duration": 5320681,
+      "durationMs": 5
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.updateChecklistItem_rejectsMissingItemId",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "updateChecklistItem_rejectsMissingItemId",
+      "passed": true,
+      "duration": 654893,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.updateChecklistItem_rejectsPermissionDeniedChecklist",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "updateChecklistItem_rejectsPermissionDeniedChecklist",
+      "passed": true,
+      "duration": 3598795,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_AuditRecordGuardTest.referencedGateRuleDeletion_integrationHappyPath",
+      "className": "CKR_AuditRecordGuardTest",
+      "methodName": "referencedGateRuleDeletion_integrationHappyPath",
+      "passed": true,
+      "duration": 43355063,
+      "durationMs": 43
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.addAdHocItem_insertsOptionalItemAndAuditEvent",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "addAdHocItem_insertsOptionalItemAndAuditEvent",
+      "passed": true,
+      "duration": 4900749,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.addAdHocItem_rejectsBlankLabel",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "addAdHocItem_rejectsBlankLabel",
+      "passed": true,
+      "duration": 618031,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistCreateActionControllerTest.getCreateContext_returnsPublishedTemplates",
+      "className": "CKR_ChecklistCreateActionControllerTest",
+      "methodName": "getCreateContext_returnsPublishedTemplates",
+      "passed": true,
+      "duration": 3642373,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_ChecklistCreateActionControllerTest.getCreateContext_returnsEmptyForUnsupportedObject",
+      "className": "CKR_ChecklistCreateActionControllerTest",
+      "methodName": "getCreateContext_returnsEmptyForUnsupportedObject",
+      "passed": true,
+      "duration": 1250751,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_ChecklistCreateActionControllerTest.createChecklistAction_mapsFlatInputsIntoRequest",
+      "className": "CKR_ChecklistCreateActionControllerTest",
+      "methodName": "createChecklistAction_mapsFlatInputsIntoRequest",
+      "passed": true,
+      "duration": 1501012,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.removeAdHocItem_deletesOnlyAdHocItemsAndAudits",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "removeAdHocItem_deletesOnlyAdHocItemsAndAudits",
+      "passed": true,
+      "duration": 4012461,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_ChecklistCreateActionControllerTest.createChecklist_blocksDuplicateUniqueKeyWithoutDml",
+      "className": "CKR_ChecklistCreateActionControllerTest",
+      "methodName": "createChecklist_blocksDuplicateUniqueKeyWithoutDml",
+      "passed": true,
+      "duration": 2395745,
+      "durationMs": 2
+    },
+    {
+      "testName": "CKR_ChecklistViewerControllerTest.removeAdHocItem_rejectsTemplateItems",
+      "className": "CKR_ChecklistViewerControllerTest",
+      "methodName": "removeAdHocItem_rejectsTemplateItems",
+      "passed": true,
+      "duration": 4164690,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_allowsReadAccessForReadableParent",
+      "className": "CKR_ChecklistPermissionServiceTest",
+      "methodName": "canUpdateChecklistInstances_allowsReadAccessForReadableParent",
+      "passed": true,
+      "duration": 3827458,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_AppFactoryTest.resolvesEveryProductionPort",
+      "className": "CKR_AppFactoryTest",
+      "methodName": "resolvesEveryProductionPort",
+      "passed": true,
+      "duration": 3310950,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_AppFactoryTest.resolvesExpectedDefaultImplementations",
+      "className": "CKR_AppFactoryTest",
+      "methodName": "resolvesExpectedDefaultImplementations",
+      "passed": true,
+      "duration": 670872,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_deniesMissingCustomPermission",
+      "className": "CKR_ChecklistPermissionServiceTest",
+      "methodName": "canUpdateChecklistInstances_deniesMissingCustomPermission",
+      "passed": true,
+      "duration": 3360771,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_AppFactoryTest.rejectsUnregisteredPorts",
+      "className": "CKR_AppFactoryTest",
+      "methodName": "rejectsUnregisteredPorts",
+      "passed": true,
+      "duration": 530190,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_AppFactoryTest.mocksOverrideDefaultsUntilCleared",
+      "className": "CKR_AppFactoryTest",
+      "methodName": "mocksOverrideDefaultsUntilCleared",
+      "passed": true,
+      "duration": 792869,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistTriggerGatewayTest.insertIsNotGated",
+      "className": "CKR_ChecklistTriggerGatewayTest",
+      "methodName": "insertIsNotGated",
+      "passed": true,
+      "duration": 980149,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_allowsGrantedCustomPermission",
+      "className": "CKR_ChecklistPermissionServiceTest",
+      "methodName": "canUpdateChecklistInstances_allowsGrantedCustomPermission",
+      "passed": true,
+      "duration": 3287336,
+      "durationMs": 3
+    },
+    {
+      "testName": "CKR_ChecklistTriggerGatewayTest.handleBefore_appliesBlockingErrors",
+      "className": "CKR_ChecklistTriggerGatewayTest",
+      "methodName": "handleBefore_appliesBlockingErrors",
+      "passed": true,
+      "duration": 1706820,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_ChecklistTriggerGatewayTest.handleBefore_isNullSafe",
+      "className": "CKR_ChecklistTriggerGatewayTest",
+      "methodName": "handleBefore_isNullSafe",
+      "passed": true,
+      "duration": 571671,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_requiresEditAccessForEditMode",
+      "className": "CKR_ChecklistPermissionServiceTest",
+      "methodName": "canUpdateChecklistInstances_requiresEditAccessForEditMode",
+      "passed": true,
+      "duration": 2571345,
+      "durationMs": 2
+    },
+    {
+      "testName": "CKR_ChecklistTriggerGatewayTest.handleBefore_usesDefaultErrorMessageWhenBlank",
+      "className": "CKR_ChecklistTriggerGatewayTest",
+      "methodName": "handleBefore_usesDefaultErrorMessageWhenBlank",
+      "passed": true,
+      "duration": 1378589,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_TestRecordsTest.readsBackFormulaAndReadOnlyFields",
+      "className": "CKR_TestRecordsTest",
+      "methodName": "readsBackFormulaAndReadOnlyFields",
+      "passed": true,
+      "duration": 1677924,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_TestRecordsTest.readsBackTwoLevelRelationships",
+      "className": "CKR_TestRecordsTest",
+      "methodName": "readsBackTwoLevelRelationships",
+      "passed": true,
+      "duration": 2505233,
+      "durationMs": 2
+    },
+    {
+      "testName": "CKR_TestRecordsTest.rejectsUnknownFieldsAndRelationships",
+      "className": "CKR_TestRecordsTest",
+      "methodName": "rejectsUnknownFieldsAndRelationships",
+      "passed": true,
+      "duration": 999460,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_TestRecordsTest.fakeIdUsesTheTypeKeyPrefix",
+      "className": "CKR_TestRecordsTest",
+      "methodName": "fakeIdUsesTheTypeKeyPrefix",
+      "passed": true,
+      "duration": 697287,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_TemplateVersionLifecycleServiceTest.bulkManualPublicationsAreRejected",
+      "className": "CKR_TemplateVersionLifecycleServiceTest",
+      "methodName": "bulkManualPublicationsAreRejected",
+      "passed": true,
+      "duration": 13667411,
+      "durationMs": 13
+    },
+    {
+      "testName": "CKR_TemplateVersionLifecycleServiceTest.historicalCannotBeReopenedOrEdited",
+      "className": "CKR_TemplateVersionLifecycleServiceTest",
+      "methodName": "historicalCannotBeReopenedOrEdited",
+      "passed": true,
+      "duration": 803218,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_TemplateVersionLifecycleServiceTest.draftEditsRemainAllowed",
+      "className": "CKR_TemplateVersionLifecycleServiceTest",
+      "methodName": "draftEditsRemainAllowed",
+      "passed": true,
+      "duration": 463469,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrUser_createsChecklistInstance_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_createsChecklistInstance_integrationHappyPath",
+      "passed": true,
+      "duration": 189297820,
+      "durationMs": 189
+    },
+    {
+      "testName": "CKR_ChecklistGateSelectorTest.historicalAndPublishedRules_integrationHappyPath",
+      "className": "CKR_ChecklistGateSelectorTest",
+      "methodName": "historicalAndPublishedRules_integrationHappyPath",
+      "passed": true,
+      "duration": 102945522,
+      "durationMs": 102
+    },
+    {
+      "testName": "CKR_ChecklistViewerSelectorTest.selectInstancesByParentRecordId_integrationHappyPath_returnsInstancesForTheParent",
+      "className": "CKR_ChecklistViewerSelectorTest",
+      "methodName": "selectInstancesByParentRecordId_integrationHappyPath_returnsInstancesForTheParent",
+      "passed": true,
+      "duration": 139224859,
+      "durationMs": 139
+    },
+    {
+      "testName": "CKR_ChecklistGateSelectorTest.allInstances_integrationHappyPath",
+      "className": "CKR_ChecklistGateSelectorTest",
+      "methodName": "allInstances_integrationHappyPath",
+      "passed": true,
+      "duration": 63436672,
+      "durationMs": 63
+    },
+    {
+      "testName": "CKR_ChecklistGateSelectorTest.blankInputs",
+      "className": "CKR_ChecklistGateSelectorTest",
+      "methodName": "blankInputs",
+      "passed": true,
+      "duration": 599513,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_GateBypassTest.noSwitchReturnsNull",
+      "className": "CKR_GateBypassTest",
+      "methodName": "noSwitchReturnsNull",
+      "passed": true,
+      "duration": 15635059,
+      "durationMs": 15
+    },
+    {
+      "testName": "CKR_GateBypassTest.hierarchySettingIsCached_integrationHappyPath",
+      "className": "CKR_GateBypassTest",
+      "methodName": "hierarchySettingIsCached_integrationHappyPath",
+      "passed": true,
+      "duration": 23880925,
+      "durationMs": 23
+    },
+    {
+      "testName": "CKR_ChecklistViewerSelectorTest.selectItemsByChecklistInstanceIds_integrationHappyPath_returnsSortedItems",
+      "className": "CKR_ChecklistViewerSelectorTest",
+      "methodName": "selectItemsByChecklistInstanceIds_integrationHappyPath_returnsSortedItems",
+      "passed": true,
+      "duration": 106923921,
+      "durationMs": 106
+    },
+    {
+      "testName": "CKR_ChecklistViewerSelectorTest.selectItemsByChecklistInstanceIds_blankInput_returnsEmptyList",
+      "className": "CKR_ChecklistViewerSelectorTest",
+      "methodName": "selectItemsByChecklistInstanceIds_blankInput_returnsEmptyList",
+      "passed": true,
+      "duration": 587564,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_GateBypassTest.profileAndUserOverrideOrg_integrationHappyPath",
+      "className": "CKR_GateBypassTest",
+      "methodName": "profileAndUserOverrideOrg_integrationHappyPath",
+      "passed": true,
+      "duration": 30747285,
+      "durationMs": 30
+    },
+    {
+      "testName": "CKR_TemplateVersionPublishControllerTest.delegatesToPublishService",
+      "className": "CKR_TemplateVersionPublishControllerTest",
+      "methodName": "delegatesToPublishService",
+      "passed": true,
+      "duration": 1188386,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_TemplateVersionPublishControllerTest.surfacesPublishRejection",
+      "className": "CKR_TemplateVersionPublishControllerTest",
+      "methodName": "surfacesPublishRejection",
+      "passed": true,
+      "duration": 1379025,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_ChecklistCreateContextSelectorTest.selectAvailableTemplatesForObject_integrationHappyPath_returnsMatchingPublishedTemplates",
+      "className": "CKR_ChecklistCreateContextSelectorTest",
+      "methodName": "selectAvailableTemplatesForObject_integrationHappyPath_returnsMatchingPublishedTemplates",
+      "passed": true,
+      "duration": 120066371,
+      "durationMs": 120
+    },
+    {
+      "testName": "CKR_ChecklistCreateContextSelectorTest.selectAvailableTemplatesForObject_blankObjectApiName_returnsEmptyList",
+      "className": "CKR_ChecklistCreateContextSelectorTest",
+      "methodName": "selectAvailableTemplatesForObject_blankObjectApiName_returnsEmptyList",
+      "passed": true,
+      "duration": 22077304,
+      "durationMs": 22
+    },
+    {
+      "testName": "CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_snapshotsItemAssigneeAndExplanationMetadata",
+      "className": "CKR_DefaultChecklistInstanceServiceTest",
+      "methodName": "createFromTemplate_snapshotsItemAssigneeAndExplanationMetadata",
+      "passed": true,
+      "duration": 4865155,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_DefaultTemplateVersionServiceTest.publishesAndCutsOver_integrationHappyPath",
+      "className": "CKR_DefaultTemplateVersionServiceTest",
+      "methodName": "publishesAndCutsOver_integrationHappyPath",
+      "passed": true,
+      "duration": 98401587,
+      "durationMs": 98
+    },
+    {
+      "testName": "CKR_ChecklistViewerIT.updateChecklistItem_rollsUpParentCompletion_integrationHappyPath",
+      "className": "CKR_ChecklistViewerIT",
+      "methodName": "updateChecklistItem_rollsUpParentCompletion_integrationHappyPath",
+      "passed": true,
+      "duration": 150651106,
+      "durationMs": 150
+    },
+    {
+      "testName": "CKR_ChecklistCreateActionIT.createChecklist_createsInstanceAndTemplateItems_integrationHappyPath",
+      "className": "CKR_ChecklistCreateActionIT",
+      "methodName": "createChecklist_createsInstanceAndTemplateItems_integrationHappyPath",
+      "passed": true,
+      "duration": 99044153,
+      "durationMs": 99
+    },
+    {
+      "testName": "CKR_ChecklistViewerIT.addAdHocItem_createsOptionalUnlockedItem_integrationHappyPath",
+      "className": "CKR_ChecklistViewerIT",
+      "methodName": "addAdHocItem_createsOptionalUnlockedItem_integrationHappyPath",
+      "passed": true,
+      "duration": 67297219,
+      "durationMs": 67
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrUser_addsEditsButCannotRemoveAuditedAdHocItem_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_addsEditsButCannotRemoveAuditedAdHocItem_integrationHappyPath",
+      "passed": true,
+      "duration": 492455398,
+      "durationMs": 492
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrUser_completingItem_rollsUpInstanceStatus_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_completingItem_rollsUpInstanceStatus_integrationHappyPath",
+      "passed": true,
+      "duration": 225495857,
+      "durationMs": 225
+    },
+    {
+      "testName": "CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_returnsValidationMessagesBeforeSelectors",
+      "className": "CKR_DefaultChecklistInstanceServiceTest",
+      "methodName": "createFromTemplate_returnsValidationMessagesBeforeSelectors",
+      "passed": true,
+      "duration": 725350,
+      "durationMs": 0
+    },
+    {
+      "testName": "CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksInactiveTemplate",
+      "className": "CKR_DefaultChecklistInstanceServiceTest",
+      "methodName": "createFromTemplate_blocksInactiveTemplate",
+      "passed": true,
+      "duration": 2414742,
+      "durationMs": 2
+    },
+    {
+      "testName": "CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksUnpublishedTemplateVersion",
+      "className": "CKR_DefaultChecklistInstanceServiceTest",
+      "methodName": "createFromTemplate_blocksUnpublishedTemplateVersion",
+      "passed": true,
+      "duration": 2947826,
+      "durationMs": 2
+    },
+    {
+      "testName": "CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksDuplicateByParentAndTemplate",
+      "className": "CKR_DefaultChecklistInstanceServiceTest",
+      "methodName": "createFromTemplate_blocksDuplicateByParentAndTemplate",
+      "passed": true,
+      "duration": 4526262,
+      "durationMs": 4
+    },
+    {
+      "testName": "CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksWrongParentObject",
+      "className": "CKR_DefaultChecklistInstanceServiceTest",
+      "methodName": "createFromTemplate_blocksWrongParentObject",
+      "passed": true,
+      "duration": 2133283,
+      "durationMs": 2
+    },
+    {
+      "testName": "CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_marksZeroRequiredItemsComplete",
+      "className": "CKR_DefaultChecklistInstanceServiceTest",
+      "methodName": "createFromTemplate_marksZeroRequiredItemsComplete",
+      "passed": true,
+      "duration": 8226889,
+      "durationMs": 8
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrUser_cannotSetIsCompleteDirectly_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_cannotSetIsCompleteDirectly_integrationHappyPath",
+      "passed": true,
+      "duration": 164988284,
+      "durationMs": 164
+    },
+    {
+      "testName": "CKR_DefaultTemplateVersionServiceTest.emptyAndMissingVersionRejected_integrationHappyPath",
+      "className": "CKR_DefaultTemplateVersionServiceTest",
+      "methodName": "emptyAndMissingVersionRejected_integrationHappyPath",
+      "passed": true,
+      "duration": 24043643,
+      "durationMs": 24
+    },
+    {
+      "testName": "CKR_DefaultTemplateVersionServiceTest.directStatusAndPublishedEditsRejected_integrationHappyPath",
+      "className": "CKR_DefaultTemplateVersionServiceTest",
+      "methodName": "directStatusAndPublishedEditsRejected_integrationHappyPath",
+      "passed": true,
+      "duration": 34358437,
+      "durationMs": 34
+    },
+    {
+      "testName": "CKR_DefaultTemplateVersionServiceTest.pointerFailureRollsBack_integrationHappyPath",
+      "className": "CKR_DefaultTemplateVersionServiceTest",
+      "methodName": "pointerFailureRollsBack_integrationHappyPath",
+      "passed": true,
+      "duration": 41929726,
+      "durationMs": 41
+    },
+    {
+      "testName": "CKR_DefaultTemplateVersionServiceTest.publishesThroughMockedPorts",
+      "className": "CKR_DefaultTemplateVersionServiceTest",
+      "methodName": "publishesThroughMockedPorts",
+      "passed": true,
+      "duration": 1785046,
+      "durationMs": 1
+    },
+    {
+      "testName": "CKR_DefaultTemplateVersionServiceTest.reparentingImmutableChildrenRejected_integrationHappyPath",
+      "className": "CKR_DefaultTemplateVersionServiceTest",
+      "methodName": "reparentingImmutableChildrenRejected_integrationHappyPath",
+      "passed": true,
+      "duration": 46807652,
+      "durationMs": 46
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrUser_cannotForgeItemGateFields_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_cannotForgeItemGateFields_integrationHappyPath",
+      "passed": true,
+      "duration": 80297369,
+      "durationMs": 80
+    },
+    {
+      "testName": "CKR_UserModeIT.ckrUser_canReadEverySelectorField_integrationHappyPath",
+      "className": "CKR_UserModeIT",
+      "methodName": "ckrUser_canReadEverySelectorField_integrationHappyPath",
+      "passed": true,
+      "duration": 40846045,
+      "durationMs": 40
+    }
+  ],
+  "stdout": "PASS CKR_UserModeIT.ckrUser_completesItem_integrationHappyPath\nPASS CKR_DefaultDmlGatewayTest.nullAndEmptyInputs_areIgnoredWithoutThrowing\nPASS CKR_DefaultDmlGatewayTest.basicDmlPaths_integrationHappyPath_insertUpdateAndDeleteRecords\nPASS CKR_DefaultDmlGatewayTest.doInsert_partialSuccessReportsFailuresWhenNotAllOrNone\nPASS CKR_DefaultDmlGatewayTest.doInsert_allOrNoneThrowsOnFailure\nPASS CKR_AuditRecordGuardTest.blocksEveryRowWithoutPermission\nPASS CKR_DefaultDmlGatewayTest.systemModeGateway_insertsRecords\nPASS CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedInstances\nPASS CKR_DefaultChecklistGateServiceTest.anyFieldValueChange_blocksWhenNoCompleteChecklistExists\nPASS CKR_DefaultChecklistGateServiceTest.anyFieldValueChange_allowsWhenCompleteChecklistExists\nPASS CKR_UserModeIT.ckrReadOnly_cannotCompleteItem_integrationHappyPath\nPASS CKR_DefaultChecklistGateServiceTest.specificFieldValueChange_onlyBlocksForConfiguredValue\nPASS CKR_DefaultChecklistGateServiceTest.permissionBypassAuditsBlockedSave\nPASS CKR_DefaultChecklistGateServiceTest.settingBypassAuditsBlockedSave\nPASS CKR_DefaultChecklistGateServiceTest.allowedSaveDoesNotAudit\nPASS CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedItems\nPASS CKR_UserModeIT.ckrUser_cannotInsertAuditEventDirectly_integrationHappyPath\nPASS CKR_AuditRecordGuardTest.triggersAndSystemInsert_integrationHappyPath\nPASS CKR_DefaultChecklistGateServiceTest.bulkBypassAuditsOnly100BlockedRecordsInOneDml\nPASS CKR_DefaultChecklistGateServiceTest.auditFailureSurfaces\nPASS CKR_DefaultChecklistGateServiceTest.evaluationFailureIsNotBypassed\nPASS CKR_DefaultChecklistGateServiceTest.cutoverUsesInstanceVersion\nPASS CKR_ChecklistSupportServicesTest.supportedObjectSelector_returnsConfiguredAccount\nPASS CKR_ChecklistSupportServicesTest.defaultGateService_handlesSupportedAndUnsupportedObjects\nPASS CKR_ChecklistSupportServicesTest.defaultGateService_handlesEmptyAndBlankRequests\nPASS CKR_ChecklistSupportServicesTest.auditService_writesThroughSystemDmlGateway\nPASS CKR_ChecklistSupportServicesTest.gateResultBlocked_buildsExpectedResult\nPASS CKR_ChecklistSupportServicesTest.requestAndResultDtos_initializeAsExpected\nPASS CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyBypassReferencedParents\nPASS CKR_ChecklistSupportServicesTest.viewerAndInstanceService_returnStarterResponses\nPASS CKR_ChecklistSupportServicesTest.supportedObjectSelector_handlesEmptyInput\nPASS CKR_ChecklistViewerControllerTest.getRecordChecklists_mapsInstancesItemsAndPermissions\nPASS CKR_ChecklistViewerControllerTest.getRecordChecklists_returnsEmptyForNullRecordId\nPASS CKR_ChecklistViewerControllerTest.updateChecklistItem_requiresCheckboxAndExplanationForCompletion\nPASS CKR_ChecklistViewerControllerTest.updateChecklistItem_storesPicklistExplanationAsExplanation\nPASS CKR_ChecklistViewerControllerTest.updateChecklistItem_rejectsMissingItemId\nPASS CKR_ChecklistViewerControllerTest.updateChecklistItem_rejectsPermissionDeniedChecklist\nPASS CKR_AuditRecordGuardTest.referencedGateRuleDeletion_integrationHappyPath\nPASS CKR_ChecklistViewerControllerTest.addAdHocItem_insertsOptionalItemAndAuditEvent\nPASS CKR_ChecklistViewerControllerTest.addAdHocItem_rejectsBlankLabel\nPASS CKR_ChecklistCreateActionControllerTest.getCreateContext_returnsPublishedTemplates\nPASS CKR_ChecklistCreateActionControllerTest.getCreateContext_returnsEmptyForUnsupportedObject\nPASS CKR_ChecklistCreateActionControllerTest.createChecklistAction_mapsFlatInputsIntoRequest\nPASS CKR_ChecklistViewerControllerTest.removeAdHocItem_deletesOnlyAdHocItemsAndAudits\nPASS CKR_ChecklistCreateActionControllerTest.createChecklist_blocksDuplicateUniqueKeyWithoutDml\nPASS CKR_ChecklistViewerControllerTest.removeAdHocItem_rejectsTemplateItems\nPASS CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_allowsReadAccessForReadableParent\nPASS CKR_AppFactoryTest.resolvesEveryProductionPort\nPASS CKR_AppFactoryTest.resolvesExpectedDefaultImplementations\nPASS CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_deniesMissingCustomPermission\nPASS CKR_AppFactoryTest.rejectsUnregisteredPorts\nPASS CKR_AppFactoryTest.mocksOverrideDefaultsUntilCleared\nPASS CKR_ChecklistTriggerGatewayTest.insertIsNotGated\nPASS CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_allowsGrantedCustomPermission\nPASS CKR_ChecklistTriggerGatewayTest.handleBefore_appliesBlockingErrors\nPASS CKR_ChecklistTriggerGatewayTest.handleBefore_isNullSafe\nPASS CKR_ChecklistPermissionServiceTest.canUpdateChecklistInstances_requiresEditAccessForEditMode\nPASS CKR_ChecklistTriggerGatewayTest.handleBefore_usesDefaultErrorMessageWhenBlank\nPASS CKR_TestRecordsTest.readsBackFormulaAndReadOnlyFields\nPASS CKR_TestRecordsTest.readsBackTwoLevelRelationships\nPASS CKR_TestRecordsTest.rejectsUnknownFieldsAndRelationships\nPASS CKR_TestRecordsTest.fakeIdUsesTheTypeKeyPrefix\nPASS CKR_TemplateVersionLifecycleServiceTest.bulkManualPublicationsAreRejected\nPASS CKR_TemplateVersionLifecycleServiceTest.historicalCannotBeReopenedOrEdited\nPASS CKR_TemplateVersionLifecycleServiceTest.draftEditsRemainAllowed\nPASS CKR_UserModeIT.ckrUser_createsChecklistInstance_integrationHappyPath\nPASS CKR_ChecklistGateSelectorTest.historicalAndPublishedRules_integrationHappyPath\nPASS CKR_ChecklistViewerSelectorTest.selectInstancesByParentRecordId_integrationHappyPath_returnsInstancesForTheParent\nPASS CKR_ChecklistGateSelectorTest.allInstances_integrationHappyPath\nPASS CKR_ChecklistGateSelectorTest.blankInputs\nPASS CKR_GateBypassTest.noSwitchReturnsNull\nPASS CKR_GateBypassTest.hierarchySettingIsCached_integrationHappyPath\nPASS CKR_ChecklistViewerSelectorTest.selectItemsByChecklistInstanceIds_integrationHappyPath_returnsSortedItems\nPASS CKR_ChecklistViewerSelectorTest.selectItemsByChecklistInstanceIds_blankInput_returnsEmptyList\nPASS CKR_GateBypassTest.profileAndUserOverrideOrg_integrationHappyPath\nPASS CKR_TemplateVersionPublishControllerTest.delegatesToPublishService\nPASS CKR_TemplateVersionPublishControllerTest.surfacesPublishRejection\nPASS CKR_ChecklistCreateContextSelectorTest.selectAvailableTemplatesForObject_integrationHappyPath_returnsMatchingPublishedTemplates\nPASS CKR_ChecklistCreateContextSelectorTest.selectAvailableTemplatesForObject_blankObjectApiName_returnsEmptyList\nPASS CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_snapshotsItemAssigneeAndExplanationMetadata\nPASS CKR_DefaultTemplateVersionServiceTest.publishesAndCutsOver_integrationHappyPath\nPASS CKR_ChecklistViewerIT.updateChecklistItem_rollsUpParentCompletion_integrationHappyPath\nPASS CKR_ChecklistCreateActionIT.createChecklist_createsInstanceAndTemplateItems_integrationHappyPath\nPASS CKR_ChecklistViewerIT.addAdHocItem_createsOptionalUnlockedItem_integrationHappyPath\nPASS CKR_UserModeIT.ckrUser_addsEditsButCannotRemoveAuditedAdHocItem_integrationHappyPath\nPASS CKR_UserModeIT.ckrUser_completingItem_rollsUpInstanceStatus_integrationHappyPath\nPASS CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_returnsValidationMessagesBeforeSelectors\nPASS CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksInactiveTemplate\nPASS CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksUnpublishedTemplateVersion\nPASS CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksDuplicateByParentAndTemplate\nPASS CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_blocksWrongParentObject\nPASS CKR_DefaultChecklistInstanceServiceTest.createFromTemplate_marksZeroRequiredItemsComplete\nPASS CKR_UserModeIT.ckrUser_cannotSetIsCompleteDirectly_integrationHappyPath\nPASS CKR_DefaultTemplateVersionServiceTest.emptyAndMissingVersionRejected_integrationHappyPath\nPASS CKR_DefaultTemplateVersionServiceTest.directStatusAndPublishedEditsRejected_integrationHappyPath\nPASS CKR_DefaultTemplateVersionServiceTest.pointerFailureRollsBack_integrationHappyPath\nPASS CKR_DefaultTemplateVersionServiceTest.publishesThroughMockedPorts\nPASS CKR_DefaultTemplateVersionServiceTest.reparentingImmutableChildrenRejected_integrationHappyPath\nPASS CKR_UserModeIT.ckrUser_cannotForgeItemGateFields_integrationHappyPath\nPASS CKR_UserModeIT.ckrUser_canReadEverySelectorField_integrationHappyPath\n\nRan 100 tests: 100 passed, 0 failed\n",
+  "stderr": "startup: resolving classes 2/58\n"
+}

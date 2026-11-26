@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_UniqueKey__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description
+  >Unique key parentRecordId|templateId, set by the instance service; blocks a second checklist from the same template on a record.</description>
+    <externalId>true</externalId>
+    <label>Unique Key</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

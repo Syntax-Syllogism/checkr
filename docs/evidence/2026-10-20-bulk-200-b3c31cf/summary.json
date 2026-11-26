@@ -1,0 +1,34 @@
+{
+  "scenario": "bulk-200",
+  "startedAt": "2026-10-20T00:35:18.155Z",
+  "finishedAt": "2026-10-20T00:39:30.843Z",
+  "commit": "b3c31cfaf10667c8c0b3a2324874f437776c5753",
+  "dirty": false,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "200 correct per-record outcomes",
+      "outcome": "passed",
+      "detail": "100 allowed; 100 blocked"
+    },
+    {
+      "name": "SOQL budget <= 6 including partial-save retries",
+      "outcome": "passed",
+      "detail": "2 queries; 78ms CPU"
+    }
+  ],
+  "metrics": {
+    "soqlCount": 2,
+    "cpuMs": 78
+  }
+}

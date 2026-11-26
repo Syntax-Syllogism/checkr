@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_AssigneeUser__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description
+  >Default user assigned to work the checklist item when a checklist instance is created.</description>
+    <label>Assignee User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Assigned Checklist Template Items</relationshipLabel>
+    <relationshipName>AssignedChecklistTemplateItems</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

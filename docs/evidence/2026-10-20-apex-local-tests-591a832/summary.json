@@ -1,0 +1,62 @@
+{
+  "scenario": "apex-local-tests",
+  "startedAt": "2026-10-20T14:43:08.657Z",
+  "finishedAt": "2026-10-20T14:44:53.474Z",
+  "commit": "591a832fa21e3e9adb8424e3d2129abefe4f4b2f",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "failed",
+  "checks": [
+    {
+      "name": "AER suite completed",
+      "outcome": "passed",
+      "detail": "100 tests; exit 0"
+    },
+    {
+      "name": "Local Apex tests",
+      "outcome": "failed",
+      "detail": "103 tests; Failed"
+    },
+    {
+      "name": "Overall Apex coverage >= 75%",
+      "outcome": "failed",
+      "detail": "62%"
+    }
+  ],
+  "metrics": {
+    "aerTestsPassed": 100,
+    "aerTestsFailed": 0,
+    "aerTestsRan": 100,
+    "testsPassed": 102,
+    "testsFailed": 1,
+    "aerDifferences": [
+      {
+        "name": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath",
+        "org": false,
+        "aer": "missing",
+        "orgMessage": "System.DmlException: Operation failed due to fields being inaccessible on Sobject CKR_ChecklistAuditEvent__c, check errors on Exception or Result!"
+      },
+      {
+        "name": "CKR_GateBypassIT.assignedPermissionUpdatesGatedAccount_integrationHappyPath",
+        "org": true,
+        "aer": "missing"
+      },
+      {
+        "name": "CKR_InsertGatingIT.insertingMatchingRecordIsNotGatedByDesign",
+        "org": true,
+        "aer": "missing"
+      }
+    ],
+    "coveragePercent": 62,
+    "testsRan": 103
+  }
+}

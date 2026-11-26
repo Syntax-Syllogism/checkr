@@ -1,0 +1,305 @@
+{
+  "org": "checkr-install (scratch org, package installed)",
+  "key": "WTmvh4frl2",
+  "package": {
+    "name": "checkr",
+    "version": "0.1.0.1",
+    "id": "04tfj000000duWzAAI"
+  },
+  "steps": [
+    {
+      "chapter": "02",
+      "name": "checkr package installed",
+      "outcome": "passed",
+      "detail": "0.1.0.1 04tfj000000duWzAAI"
+    },
+    {
+      "chapter": "02",
+      "name": "CheckR app in the App Launcher",
+      "outcome": "passed",
+      "detail": "CheckR"
+    },
+    {
+      "chapter": "02",
+      "name": "Checklist Templates and Checklist Instances tabs",
+      "outcome": "passed",
+      "detail": "CKR_ChecklistInstance__c, CKR_ChecklistTemplate__c"
+    },
+    {
+      "chapter": "02",
+      "name": "audit and bypass history have no tab",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "02",
+      "name": "five permission sets in the table",
+      "outcome": "passed",
+      "detail": "CKR_Admin, CKR_AuditMaintenance, CKR_GateBypass, CKR_ReadOnly, CKR_User"
+    },
+    {
+      "chapter": "02",
+      "name": "CKR_Admin does not include bypass",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "02",
+      "name": "after the post-install step no profile holds Checkr bypass or audit maintenance",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "02",
+      "name": "ckrChecklistViewer and ckrChecklistCreateAction ship",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "02",
+      "name": "New Checklist and Publish Version quick actions ship",
+      "outcome": "passed",
+      "detail": "Account.CKR_New_Checklist, CKR_ChecklistTemplateVersion__c.CKR_PublishVersion"
+    },
+    {
+      "chapter": "02",
+      "name": "CheckR app ships an Account record page",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "03",
+      "name": "shipped Account supported-object record is active and supports gates",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "03",
+      "name": "Account trigger shim deployed (developer step)",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "04",
+      "name": "create the template with the chapter 4 fields",
+      "outcome": "passed",
+      "detail": "a06Em00000vL5FDIA0"
+    },
+    {
+      "chapter": "04",
+      "name": "create Draft v1 with EditAccess",
+      "outcome": "passed",
+      "detail": "a05Em00000n2Ex9IAE"
+    },
+    {
+      "chapter": "04",
+      "name": "setting Status to Published directly is rejected",
+      "outcome": "passed",
+      "detail": "Use Publish Version to publish a Draft version."
+    },
+    {
+      "chapter": "06",
+      "name": "publishing a version with no items is rejected",
+      "outcome": "passed",
+      "detail": "Execution failed at this code:\n\nSystem.LimitException: Can only throw this exception type from VisualForce or Aura context"
+    },
+    {
+      "chapter": "04",
+      "name": "add required, picklist-explanation and optional items",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "05",
+      "name": "add an AnyFieldValueChange gate rule on Industry",
+      "outcome": "passed",
+      "detail": "a01Em00001lvYmAIAU"
+    },
+    {
+      "chapter": "05",
+      "name": "inserts are not gated (D3)",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "05",
+      "name": "Draft version does not gate a record with no checklist",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "06",
+      "name": "Publish Version: v1 Published with publisher, timestamp and template pointer",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "06",
+      "name": "publishing an already published version is rejected",
+      "outcome": "passed",
+      "detail": "Execution failed at this code:\n\nSystem.LimitException: Can only throw this exception type from VisualForce or Aura context"
+    },
+    {
+      "chapter": "06",
+      "name": "items on a Published version cannot be edited",
+      "outcome": "passed",
+      "detail": "Items and rules on Published or Historical versions are read-only."
+    },
+    {
+      "chapter": "06",
+      "name": "rules on a Published version cannot be edited",
+      "outcome": "passed",
+      "detail": "Items and rules on Published or Historical versions are read-only."
+    },
+    {
+      "chapter": "03",
+      "name": "a record with no checklist is blocked with the rule's message",
+      "outcome": "passed",
+      "detail": "Complete the WTmvh4frl2 Account Onboarding checklist before changing Industry."
+    },
+    {
+      "chapter": "07",
+      "name": "New Checklist offers the Published template",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "07",
+      "name": "a second checklist from the same template on one record fails",
+      "outcome": "passed",
+      "detail": "Execution failed at this code:\n\nSystem.IllegalArgumentException: A checklist instance already exists for this record and template."
+    },
+    {
+      "chapter": "07",
+      "name": "checklist copies the three active template items",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "07",
+      "name": "an explanation-required item does not count without an explanation",
+      "outcome": "passed",
+      "detail": "not complete"
+    },
+    {
+      "chapter": "07",
+      "name": "required items done: checklist complete without the optional item",
+      "outcome": "passed",
+      "detail": "percent 100"
+    },
+    {
+      "chapter": "07",
+      "name": "complete checklist lets the gated save through",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "07",
+      "name": "every change is recorded in the audit history",
+      "outcome": "passed",
+      "detail": "ItemCompleted, AnswerChanged, ExplanationChanged"
+    },
+    {
+      "chapter": "06",
+      "name": "publishing v2 makes v1 Historical; both keep Published On",
+      "outcome": "passed",
+      "detail": "Historical → Published"
+    },
+    {
+      "chapter": "06",
+      "name": "existing checklists still point at v1",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "06",
+      "name": "v1 complete: v2's rules do not apply",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "06",
+      "name": "v1 incomplete: still judged by v1's rules though v1 is Historical",
+      "outcome": "passed",
+      "detail": "Complete the WTmvh4frl2 Account Onboarding checklist before changing Industry."
+    },
+    {
+      "chapter": "06",
+      "name": "no checklist: v1's (Historical) rules no longer apply",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "06",
+      "name": "no checklist: judged by v2's rules",
+      "outcome": "passed",
+      "detail": "Complete the WTmvh4frl2 Account Onboarding checklist before making the Account a customer."
+    },
+    {
+      "chapter": "05",
+      "name": "a change to a value outside the target set is not gated",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "06",
+      "name": "new checklists from New Checklist use v2",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "11",
+      "name": "runbook step 1 query finds the rule from its error text",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "11",
+      "name": "runbook step 2 triage: no checklist, rule on Published version → fix A",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "08",
+      "name": "option 1: CKR_GateBypass lets the save through",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "chapter": "08",
+      "name": "option 1: bypassed save recorded with source and first blocking rule",
+      "outcome": "passed",
+      "detail": "{\"attributes\":{\"type\":\"CKR_GateBypassEvent__c\",\"url\":\"/services/data/v68.0/sobjects/CKR_GateBypassEvent__c/a07Em00002FF89jIAD\"},\"CKR_Source__c\":\"CustomPermission\",\"CKR_GateRule__r\":{\"attributes\":{\"type\":\"CKR_ChecklistGateRule__c\",\"url\":\"/services/data/v68.0/sobjects/CKR_ChecklistGateRule__c/a01Em00001ltYqPIAU\"},\"Name\":\"Customer type gate\"},\"CKR_Details__c\":\"Complete the WTmvh4frl2 Account Onboarding checklist before making the Account a customer.\"}"
+    },
+    {
+      "chapter": "08",
+      "name": "removing the assignment restores the gate",
+      "outcome": "passed",
+      "detail": "Complete the WTmvh4frl2 Account Onboarding checklist before making the Account a customer."
+    },
+    {
+      "chapter": "08",
+      "name": "option 2: a user Checkr Settings row with Bypass Gate lets the save through and is audited",
+      "outcome": "passed",
+      "detail": "CustomSetting, CustomPermission"
+    },
+    {
+      "chapter": "08",
+      "name": "deleting the row restores the gate",
+      "outcome": "passed",
+      "detail": "Complete the WTmvh4frl2 Account Onboarding checklist before making the Account a customer."
+    },
+    {
+      "chapter": "09",
+      "name": "audit history is append-only for CKR_Admin",
+      "outcome": "passed",
+      "detail": "Checkr audit records are append-only. Ask an administrator with Checkr Audit Maintenance."
+    },
+    {
+      "chapter": "11",
+      "name": "a template with audit or bypass history cannot be deleted",
+      "outcome": "passed",
+      "detail": "Gate rules referenced by bypass history cannot be deleted. Export the history and ask Checkr Audit Maintenance to remove the linked bypass events first."
+    }
+  ]
+}

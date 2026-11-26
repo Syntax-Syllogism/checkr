@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description
+  >Registry of parent sObjects that CheckR supports for checklist attachment and optional gate enforcement.</description>
+    <label>Supported Object</label>
+    <pluralLabel>Supported Objects</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

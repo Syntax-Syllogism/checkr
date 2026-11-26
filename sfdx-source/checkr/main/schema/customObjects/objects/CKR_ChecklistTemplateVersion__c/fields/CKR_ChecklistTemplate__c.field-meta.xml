@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_ChecklistTemplate__c</fullName>
+    <description>Parent checklist template identity.</description>
+    <label>Checklist Template</label>
+    <referenceTo>CKR_ChecklistTemplate__c</referenceTo>
+    <relationshipLabel>Checklist Template Versions</relationshipLabel>
+    <relationshipName>ChecklistTemplateVersions</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,25 @@
+export default [
+  {
+    files: ['scripts/**/*.mjs'],
+    languageOptions: {
+      sourceType: 'module',
+      globals: {
+        Buffer: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        URL: 'readonly',
+        clearInterval: 'readonly',
+        setInterval: 'readonly',
+        setTimeout: 'readonly',
+      },
+    },
+    rules: {
+      // Node build and evidence scripts run outside the Lightning runtime.
+      '@lwc/lwc-platform/no-aura-libs': 'off',
+      '@lwc/lwc-platform/no-process-env': 'off',
+      '@lwc/lwc-platform/no-dynamic-import-identifier': 'off',
+      '@lwc/lwc/no-async-operation': 'off',
+      'no-undef': 'error',
+    },
+  },
+];

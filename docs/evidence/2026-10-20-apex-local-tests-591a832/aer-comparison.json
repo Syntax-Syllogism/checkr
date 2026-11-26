@@ -1,0 +1,22 @@
+{
+  "differences": [
+    {
+      "name": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath",
+      "org": false,
+      "aer": "missing",
+      "orgMessage": "System.DmlException: Operation failed due to fields being inaccessible on Sobject CKR_ChecklistAuditEvent__c, check errors on Exception or Result!"
+    },
+    {
+      "name": "CKR_GateBypassIT.assignedPermissionUpdatesGatedAccount_integrationHappyPath",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_InsertGatingIT.insertingMatchingRecordIsNotGatedByDesign",
+      "org": true,
+      "aer": "missing"
+    }
+  ],
+  "orgCount": 103,
+  "aerCount": 100
+}

@@ -1,0 +1,55 @@
+<template>
+  <lightning-quick-action-panel header={panelTitle}>
+    <template if:true={isLoading}>
+      <div class="slds-p-around_medium">
+        <lightning-spinner
+          alternative-text="Loading checklist create action"
+        ></lightning-spinner>
+      </div>
+    </template>
+
+    <template if:false={isLoading}>
+      <div class="slds-p-around_medium">
+        <template if:true={hasTemplates}>
+          <lightning-combobox
+            name="template"
+            label="Checklist Template"
+            value={selectedTemplateVersionId}
+            options={templateOptions}
+            onchange={handleTemplateChange}
+          ></lightning-combobox>
+          <lightning-input
+            class="slds-m-top_medium"
+            type="date"
+            label="Due Date"
+            value={dueDate}
+            onchange={handleDueDateChange}
+          ></lightning-input>
+          <p class="slds-m-top_small slds-text-color_weak">
+            {templateCount} published templates are available for this record.
+          </p>
+        </template>
+        <template if:false={hasTemplates}>
+          <p class="slds-text-color_weak">
+            No eligible templates are available yet.
+          </p>
+        </template>
+      </div>
+    </template>
+
+    <div slot="footer">
+      <lightning-button
+        variant="neutral"
+        label="Cancel"
+        onclick={handleCancel}
+      ></lightning-button>
+      <lightning-button
+        class="slds-m-left_small"
+        variant="brand"
+        label="Create Checklist"
+        onclick={handleCreate}
+        disabled={createDisabled}
+      ></lightning-button>
+    </div>
+  </lightning-quick-action-panel>
+</template>

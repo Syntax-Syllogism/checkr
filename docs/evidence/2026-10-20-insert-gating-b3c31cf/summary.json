@@ -1,0 +1,29 @@
+{
+  "scenario": "insert-gating",
+  "startedAt": "2026-10-20T00:35:18.155Z",
+  "finishedAt": "2026-10-20T00:36:47.248Z",
+  "commit": "b3c31cfaf10667c8c0b3a2324874f437776c5753",
+  "dirty": false,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Insert baseline observed",
+      "outcome": "passed",
+      "detail": "{\"recordId\":\"001RK00002nCEZrYAO\",\"errors\":[],\"blocked\":false}"
+    }
+  ],
+  "metrics": {
+    "insertBlocked": false,
+    "exactErrors": []
+  }
+}

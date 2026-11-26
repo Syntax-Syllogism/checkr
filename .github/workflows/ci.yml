@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          # scripts/aer-capped.mjs ranks test classes by when git first added them.
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install afmt 1.0.0
+        run: |
+          curl --fail --location --retry 3 https://github.com/xixiaofinland/afmt/releases/download/v1.0.0/afmt-v1.0.0-linux-x86_64.tar.gz -o /tmp/afmt.tar.gz
+          mkdir -p /tmp/afmt-bin
+          tar -xzf /tmp/afmt.tar.gz -C /tmp/afmt-bin
+          echo /tmp/afmt-bin >> "$GITHUB_PATH"
+
+      - name: Run full local suite
+        run: npm test
+
+      - name: Install AER (for test selection)
+        env:
+          # Keep in sync with the aer-dist `version:` input below.
+          AER_VERSION: v1.6.23
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/aer.zip" \
+            "https://github.com/octoberswimmer/aer-dist/releases/download/${AER_VERSION}/aer_linux_amd64_${AER_VERSION}.zip"
+          unzip -o -q "$RUNNER_TEMP/aer.zip" aer -d "$RUNNER_TEMP/aer-bin"
+          echo "$RUNNER_TEMP/aer-bin" >> "$GITHUB_PATH"
+
+      # The AER license does not cover CI, so AER stops at 100 tests here. Run
+      # the newest checkr test classes that fit; the local gate
+      # (scripts/gate.mjs) runs the full suite under the developer license.
+      - name: Select AER tests within the CI cap
+        id: aer-cap
+        run: echo "flags=$(node scripts/aer-capped.mjs --print-flags)" >> "$GITHUB_OUTPUT"
+
+      - name: Apex tests (AER, no org)
+        uses: octoberswimmer/aer-dist@v1.5.8
+        env:
+          AER_LICENSE_KEY: ${{ secrets.AER_LICENSE_KEY }}
+        with:
+          source: sfdx-source/checkr
+          flags: ${{ steps.aer-cap.outputs.flags }}
+          # Pin the binary; keep in sync with local (scripts/gate.mjs warns on
+          # drift). v1.6.23 is the latest stable release, passes the full
+          # suite at API 67.0, and counts System.runAs as a DML statement like
+          # a real org. See the AER notes in docs/testing.md.
+          version: v1.6.23
+
+  code-analyzer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Setup Java for PMD and CPD
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Salesforce CLI and Code Analyzer
+        run: |
+          npm install --global @salesforce/cli@2.158.7
+          sf plugins install @salesforce/plugin-code-analyzer@5.13.0 --json
+
+      - name: Run Code Analyzer
+        run: npm run analyze

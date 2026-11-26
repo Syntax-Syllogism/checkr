@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_Actor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User who saved the bypassed record.</description>
+    <label>Actor</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Gate Bypass Events</relationshipLabel>
+    <relationshipName>CKR_GateBypassEvents</relationshipName>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,59 @@
+{
+  "scenario": "bypass",
+  "startedAt": "2026-10-20T01:45:55.430Z",
+  "finishedAt": "2026-10-20T01:50:30.247Z",
+  "commit": "ef9f45b6976f80ff08ea64855a683793f4f88c71",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [
+    {
+      "key": "permission-ef657f43",
+      "license": "Salesforce Platform",
+      "permissionSets": [
+        "CKR_GateBypass"
+      ]
+    },
+    {
+      "key": "setting-3420869f",
+      "license": "Salesforce Platform",
+      "permissionSets": []
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "CustomPermission persists blocked update",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CustomPermission writes exactly one complete bypass event",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "No bypass switch blocks with the gate error",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CustomSetting persists blocked update",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CustomSetting writes exactly one complete bypass event",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description
+  >Audit of saves allowed by a CheckR gate bypass switch.</description>
+    <enableReports>true</enableReports>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Gate Bypass Event</label>
+    <nameField>
+        <displayFormat>GBE-{000000}</displayFormat>
+        <label>Gate Bypass Event Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Gate Bypass Events</pluralLabel>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

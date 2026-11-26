@@ -1,0 +1,66 @@
+{
+  "scenario": "install-smoke",
+  "startedAt": "2026-10-20T19:32:09.241Z",
+  "finishedAt": "2026-10-20T19:37:51.922Z",
+  "commit": "0bf4aa2c0f1a1037ffe1612d4919e3000ba0ba50",
+  "dirty": false,
+  "packageVersion": "0.1.0.1",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://java-computing-7003-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [
+    {
+      "key": "worker-46abe6b9",
+      "license": "Salesforce",
+      "permissionSets": [
+        "CKR_User"
+      ]
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "package version installed",
+      "outcome": "passed",
+      "detail": "0.1.0.1 04tfj000000duWzAAI"
+    },
+    {
+      "name": "packaged permission sets exist",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "packaged LWCs exist",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_SupportedObject__mdt ships the Account record",
+      "outcome": "passed",
+      "detail": "Account"
+    },
+    {
+      "name": "reference trigger shim deployed post-install",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_User blocked with exact gate error",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_User save succeeds after completion",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {
+    "exactError": "CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion"
+  }
+}

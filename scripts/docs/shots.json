@@ -1,0 +1,459 @@
+{
+  "$comment": "Single source of truth for the admin guide screenshots. Read by scripts/docs/capture-screenshots.mjs, which runs the shots in this order; see the usage notes at the top of that script. Images are written to docs/images/admin-guide/<id>.png. The first shot opens the CheckR app so later record pages use its page assignments.",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "deviceScaleFactor": 2,
+  "settleMs": 2500,
+  "redactWaitMs": 800,
+  "redaction": {
+    "$comment": "The scratch org's default admin user is real. The runner swaps its name and username, the org hosts, and org Ids for these placeholders in every text node and input, and blurs the avatar.",
+    "adminName": "CheckR Admin",
+    "adminUsername": "admin@example.com",
+    "orgHost": "example.my.salesforce.com",
+    "patterns": [
+      ["test-[a-z0-9]+@example\\.com", "admin@example.com"],
+      ["00D[A-Za-z0-9]{12}(?:[A-Za-z0-9]{3})?", "00D000000000000"],
+      [
+        "[a-z0-9-]+(?:\\.[a-z0-9-]+)*\\.(?:scratch\\.my\\.salesforce|my\\.salesforce|lightning\\.force|my\\.salesforce-setup|salesforce-setup)\\.com",
+        "example.my.salesforce.com"
+      ]
+    ],
+    "blurSelectors": [
+      ".branding-userprofile-button",
+      ".forceHeaderUserProfileButton",
+      "button.slds-avatar",
+      "span.photoContainer",
+      ".profileTrigger",
+      ".oneUserProfileCardTrigger",
+      "header .uiImage.circular"
+    ]
+  },
+  "shots": [
+    {
+      "id": "templates-list",
+      "title": "Checklist Templates tab in the CheckR app",
+      "steps": [
+        {
+          "goto": "/lightning/app/c__CheckR"
+        },
+        {
+          "goto": "/lightning/r/CKR_ChecklistTemplate__c/{template:Docs_Account_Onboarding}/view"
+        },
+        {
+          "goto": "/lightning/o/CKR_ChecklistTemplate__c/list?filterName=Recent"
+        },
+        {
+          "waitFor": {
+            "role": "link",
+            "name": "Account Onboarding"
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ],
+      "height": 520
+    },
+    {
+      "id": "permission-sets",
+      "title": "CheckR permission sets in Setup",
+      "steps": [
+        {
+          "goto": "/lightning/setup/PermSets/home"
+        },
+        {
+          "waitFor": {
+            "frame": "iframe[title*='Permission Sets']",
+            "text": "CheckR Admin"
+          },
+          "timeout": 45000
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ]
+    },
+    {
+      "id": "supported-object",
+      "title": "The Account supported-object record",
+      "steps": [
+        {
+          "goto": "/lightning/setup/CustomMetadata/page?address=%2F{supportedObject:Account}"
+        },
+        {
+          "waitFor": {
+            "frame": "iframe",
+            "text": "Object API Name"
+          },
+          "timeout": 45000
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ],
+      "height": 700
+    },
+    {
+      "id": "template-record",
+      "title": "Template record page with its versions",
+      "steps": [
+        {
+          "goto": "/lightning/r/CKR_ChecklistTemplate__c/{template:Docs_Account_Onboarding}/view"
+        },
+        {
+          "waitFor": {
+            "text": "Account Onboarding"
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ]
+    },
+    {
+      "id": "version-published",
+      "title": "Published v1 with items and gate rules",
+      "steps": [
+        {
+          "goto": "/lightning/r/CKR_ChecklistTemplateVersion__c/{version:Docs_Account_Onboarding:1}/view"
+        },
+        {
+          "click": {
+            "role": "tab",
+            "name": "Related",
+            "exact": true
+          }
+        },
+        {
+          "waitFor": {
+            "text": "Confirm executive sponsor"
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ],
+      "height": 1100
+    },
+    {
+      "id": "gate-rule",
+      "title": "A gate rule record",
+      "steps": [
+        {
+          "goto": "/lightning/r/CKR_ChecklistGateRule__c/{rule:Direct customer gate:1}/view"
+        },
+        {
+          "waitFor": {
+            "text": "Specific Field Value Change"
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ],
+      "height": 760
+    },
+    {
+      "id": "record-viewer",
+      "title": "Checklist viewer on an Account with an incomplete checklist",
+      "steps": [
+        {
+          "goto": "/lightning/r/Account/{account:Redwood Health}/view"
+        },
+        {
+          "waitFor": {
+            "text": "Confirm executive sponsor"
+          },
+          "timeout": 45000
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ]
+    },
+    {
+      "id": "gate-blocked",
+      "title": "A save blocked by a gate rule",
+      "steps": [
+        {
+          "goto": "/lightning/r/Account/{account:Redwood Health}/view"
+        },
+        {
+          "waitFor": {
+            "text": "Confirm executive sponsor"
+          },
+          "timeout": 45000
+        },
+        {
+          "click": {
+            "role": "button",
+            "name": "Edit",
+            "exact": true
+          }
+        },
+        {
+          "waitFor": {
+            "role": "dialog"
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "click": {
+            "within": {
+              "role": "dialog"
+            },
+            "role": "combobox",
+            "name": "Industry"
+          }
+        },
+        {
+          "click": {
+            "role": "option",
+            "name": "Retail",
+            "exact": true
+          }
+        },
+        {
+          "click": {
+            "within": {
+              "role": "dialog"
+            },
+            "role": "button",
+            "name": "Save",
+            "exact": true
+          }
+        },
+        {
+          "waitFor": {
+            "text": "Complete the Account Onboarding checklist before changing Industry."
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ],
+      "after": [
+        {
+          "press": "Escape"
+        },
+        {
+          "wait": 800
+        }
+      ]
+    },
+    {
+      "id": "create-action",
+      "title": "New Checklist quick action on an Account with no checklist",
+      "steps": [
+        {
+          "goto": "/lightning/r/Account/{account:Northstar Retail}/view"
+        },
+        {
+          "waitFor": {
+            "role": "button",
+            "name": "New Checklist"
+          },
+          "timeout": 45000
+        },
+        {
+          "click": {
+            "role": "button",
+            "name": "New Checklist"
+          }
+        },
+        {
+          "waitFor": {
+            "role": "dialog"
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ],
+      "after": [
+        {
+          "press": "Escape"
+        },
+        {
+          "wait": 800
+        }
+      ]
+    },
+    {
+      "id": "report-audit",
+      "title": "Recent checklist audit activity report",
+      "steps": [
+        {
+          "goto": "/lightning/r/Report/{report:CKR_Recent_Audit_Activity}/view"
+        },
+        {
+          "waitFor": {
+            "frame": "iframe",
+            "text": "Recent checklist audit activity"
+          },
+          "timeout": 60000
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ]
+    },
+    {
+      "id": "report-bypass",
+      "title": "Gate bypasses by actor and object report",
+      "steps": [
+        {
+          "goto": "/lightning/r/Report/{report:CKR_Gate_Bypasses}/view"
+        },
+        {
+          "waitFor": {
+            "frame": "iframe",
+            "text": "Gate bypasses by actor and object"
+          },
+          "timeout": 60000
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ]
+    },
+    {
+      "id": "dashboard",
+      "title": "CheckR Operations dashboard",
+      "steps": [
+        {
+          "goto": "/lightning/r/Dashboard/{dashboard:CKR_Checkr_Operations}/view"
+        },
+        {
+          "waitFor": {
+            "frame": "iframe",
+            "text": "CheckR Operations"
+          },
+          "timeout": 60000
+        },
+        {
+          "wait": 4000
+        },
+        {
+          "capture": true
+        }
+      ]
+    },
+    {
+      "id": "version-draft",
+      "title": "Draft v2 with the Publish Version action",
+      "steps": [
+        {
+          "goto": "/lightning/r/CKR_ChecklistTemplateVersion__c/{version:Docs_Account_Onboarding:2}/view"
+        },
+        {
+          "click": {
+            "role": "tab",
+            "name": "Related",
+            "exact": true
+          }
+        },
+        {
+          "waitFor": {
+            "text": "Confirm data processing agreement"
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ]
+    },
+    {
+      "id": "versions-after-publish",
+      "title": "Template after publishing v2: v1 Historical, v2 Published",
+      "changesOrg": true,
+      "steps": [
+        {
+          "goto": "/lightning/r/CKR_ChecklistTemplateVersion__c/{version:Docs_Account_Onboarding:2}/view"
+        },
+        {
+          "click": {
+            "role": "tab",
+            "name": "Related",
+            "exact": true
+          }
+        },
+        {
+          "waitFor": {
+            "text": "Confirm data processing agreement"
+          }
+        },
+        {
+          "click": {
+            "role": "button",
+            "name": "Publish Version"
+          }
+        },
+        {
+          "wait": 6000
+        },
+        {
+          "goto": "/lightning/r/CKR_ChecklistTemplate__c/{template:Docs_Account_Onboarding}/view"
+        },
+        {
+          "click": {
+            "role": "tab",
+            "name": "Related",
+            "exact": true
+          }
+        },
+        {
+          "waitFor": {
+            "text": "Adds the data processing agreement step."
+          }
+        },
+        {
+          "settle": true
+        },
+        {
+          "capture": true
+        }
+      ]
+    }
+  ]
+}

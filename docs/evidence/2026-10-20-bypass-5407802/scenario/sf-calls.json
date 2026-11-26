@@ -1,0 +1,1693 @@
+[
+  {
+    "command": [
+      "org",
+      "display",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "id": "00DRK00000daXOD2A2",
+      "devHubId": "[REDACTED USER]",
+      "apiVersion": "68.0",
+      "accessToken": "[REDACTED]",
+      "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+      "username": "[REDACTED]",
+      "clientId": "PlatformCLI",
+      "status": "Active",
+      "expirationDate": "2026-11-19",
+      "createdBy": "[REDACTED USER]",
+      "edition": "Developer",
+      "orgName": "Syntax & Syllogism",
+      "createdDate": "2026-10-20T00:25:42.000+0000",
+      "signupUsername": "[REDACTED]",
+      "alias": "checkr-evidence"
+    },
+    "warnings": [
+      "Secrets are now hidden from 'sf org display' command output. Use the 'sf org auth' commands instead. As a temporary workaround, you can set SF_TEMP_SHOW_SECRETS=true to render these secrets. This workaround will be removed in an upcoming release."
+    ]
+  },
+  {
+    "command": [
+      "data",
+      "query",
+      "--target-org"
+    ],
+    "status": 0,
+    "result": {
+      "records": [
+        {
+          "attributes": {
+            "type": "Organization",
+            "url": "/services/data/v68.0/sobjects/Organization/00DRK00000daXOD2A2"
+          },
+          "Id": "00DRK00000daXOD2A2",
+          "OrganizationType": "Developer Edition",
+          "IsSandbox": true
+        }
+      ],
+      "totalSize": 1,
+      "done": true
+    },
+    "warnings": []
+  },
+  {
+    "command": [
+      "project",
+      "deploy",
+      "start"
+    ],
+    "name": "SourceConflictError",
+    "message": "270 conflicts detected",
+    "exitCode": 1,
+    "context": "DeployMetadata",
+    "data": [
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateActionController",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/controllers/CKR_ChecklistCreateActionController.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateActionController",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/controllers/CKR_ChecklistCreateActionController.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerController",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/controllers/CKR_ChecklistViewerController.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerController",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/controllers/CKR_ChecklistViewerController.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TemplateVersionPublishController",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/controllers/CKR_TemplateVersionPublishController.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TemplateVersionPublishController",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/controllers/CKR_TemplateVersionPublishController.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRequest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistGateRequest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRequest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistGateRequest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateResult",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistGateResult.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateResult",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistGateResult.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceCreateRequest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistInstanceCreateRequest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceCreateRequest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistInstanceCreateRequest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceCreateResult",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistInstanceCreateResult.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceCreateResult",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ChecklistInstanceCreateResult.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ParentAccess",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ParentAccess.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ParentAccess",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/dtos/CKR_ParentAccess.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AppFactory",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/factories/CKR_AppFactory.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AppFactory",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/factories/CKR_AppFactory.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AppFactoryException",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/factories/CKR_AppFactoryException.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AppFactoryException",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/factories/CKR_AppFactoryException.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_DefaultDmlGateway.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_DefaultDmlGateway.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultParentAccessGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_DefaultParentAccessGateway.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultParentAccessGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_DefaultParentAccessGateway.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_IDmlGateway.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_IDmlGateway.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IParentAccessGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_IParentAccessGateway.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IParentAccessGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_IParentAccessGateway.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ISystemDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_ISystemDmlGateway.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ISystemDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_ISystemDmlGateway.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SystemModeDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_SystemModeDmlGateway.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SystemModeDmlGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/gateways/CKR_SystemModeDmlGateway.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateContextSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistCreateContextSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateContextSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistCreateContextSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistGateSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistGateSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersionSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistTemplateVersionSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersionSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistTemplateVersionSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistViewerSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ChecklistViewerSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistInstanceSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_DefaultChecklistInstanceSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistInstanceSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_DefaultChecklistInstanceSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistMutationSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_DefaultChecklistMutationSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistMutationSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_DefaultChecklistMutationSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultSupportedObjectSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_DefaultSupportedObjectSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultSupportedObjectSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_DefaultSupportedObjectSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistCreateContextSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistCreateContextSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistCreateContextSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistCreateContextSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistGateSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistGateSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistGateSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistGateSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistInstanceSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistInstanceSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistInstanceSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistInstanceSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistMutationSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistMutationSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistMutationSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistMutationSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistTemplateVersionSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistTemplateVersionSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistTemplateVersionSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistTemplateVersionSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistViewerSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistViewerSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistViewerSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_IChecklistViewerSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ISupportedObjectSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ISupportedObjectSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ISupportedObjectSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_ISupportedObjectSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SelectorBase",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_SelectorBase.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SelectorBase",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_SelectorBase.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObjectSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_SupportedObjectSelector.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObjectSelector",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/selectors/CKR_SupportedObjectSelector.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItemTriggerHandler",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_ChecklistInstanceItemTriggerHandler.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItemTriggerHandler",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_ChecklistInstanceItemTriggerHandler.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistAuditService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistAuditService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistAuditService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistAuditService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistGateService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistGateService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistGateService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistGateService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistInstanceService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistInstanceService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistInstanceService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistInstanceService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistPermissionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistPermissionService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistPermissionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultChecklistPermissionService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultTemplateVersionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultTemplateVersionService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultTemplateVersionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_DefaultTemplateVersionService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistAuditService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistAuditService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistAuditService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistAuditService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistGateService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistGateService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistGateService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistGateService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistInstanceService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistInstanceService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistInstanceService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistInstanceService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistPermissionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistPermissionService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistPermissionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistPermissionService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistTemplateVersionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistTemplateVersionService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IChecklistTemplateVersionService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IChecklistTemplateVersionService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_IService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_IService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ITemplateVersionLifecycleService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_ITemplateVersionLifecycleService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ITemplateVersionLifecycleService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_ITemplateVersionLifecycleService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ServiceBase",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_ServiceBase.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ServiceBase",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_ServiceBase.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TemplateVersionLifecycleService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_TemplateVersionLifecycleService.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TemplateVersionLifecycleService",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/services/CKR_TemplateVersionLifecycleService.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTriggerGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/utilities/CKR_ChecklistTriggerGateway.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTriggerGateway",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/main/classes/utilities/CKR_ChecklistTriggerGateway.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject.Account",
+        "type": "CustomMetadata",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadata/CKR_SupportedObject.Account.md-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/CKR_SupportedObject__mdt.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/fields/CKR_Active__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/fields/CKR_Description__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/fields/CKR_HandlerClassName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/fields/CKR_ObjectApiName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/fields/CKR_ObjectLabelPlural__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/fields/CKR_ObjectLabel__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_SupportedObject__mdt",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customMetadataTypes/objects/CKR_SupportedObject__mdt/fields/CKR_SupportsGates__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/CKR_ChecklistAuditEvent__c.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_Actor__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_ChecklistInstanceItem__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_ChecklistInstance__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_Details__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_EventType__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_NewValue__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_OccurredOn__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistAuditEvent__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistAuditEvent__c/fields/CKR_OldValue__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/CKR_ChecklistGateRule__c.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_Active__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_ChecklistTemplateVersion__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_ErrorMessage__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_ProtectedActionType__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_SortOrder__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_TargetFieldApiName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_TargetValueSet__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/fields/CKR_TargetValue__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRule__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistGateRule__c/validationRules/CKR_DraftVersionOnly.validationRule-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/CKR_ChecklistInstanceItem__c.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/compactLayouts/CKR_Checklist_Item_Details.compactLayout-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_AssigneeUser__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_CheckboxValue__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_ChecklistInstance__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_ChecklistTemplateItem__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_CompletedBy__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_CompletedOn__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_Completed__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_ExplanationInputType__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_ExplanationPicklistValues__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_ExplanationRequired__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_Explanation__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_Label__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_LockedFromTemplate__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_Required__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_SortOrder__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstanceItem__c/fields/CKR_SourceType__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/CKR_ChecklistInstance__c.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_ChecklistTemplateVersion__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_ChecklistTemplate__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_CompletedRequiredItemCount__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_CreatedFromAutoRule__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_DueDate__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_IsComplete__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_IsOverdue__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_ParentObjectApiName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_ParentRecordId__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_PercentComplete__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_RequiredItemCount__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistInstance__c/fields/CKR_UniqueKey__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/CKR_ChecklistTemplateItem__c.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_Active__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_AssigneeUser__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_ChecklistTemplateVersion__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_ExplanationInputType__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_ExplanationPicklistValues__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_ExplanationRequired__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_HelpText__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_Label__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_Required__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/fields/CKR_SortOrder__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItem__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateItem__c/validationRules/CKR_DraftVersionOnly.validationRule-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/CKR_ChecklistTemplateVersion__c.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_AutoCreateEnabled__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_AutoCreateLogic__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_ChecklistTemplate__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_CompletionAccessMode__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_CustomPermissionDeveloperName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_Description__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_PublishedBy__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_PublishedOn__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_Status__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplateVersion__c/fields/CKR_VersionNumber__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplate__c/CKR_ChecklistTemplate__c.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplate__c/fields/CKR_Active__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplate__c/fields/CKR_CurrentPublishedVersion__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplate__c/fields/CKR_Description__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplate__c/fields/CKR_DeveloperName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplate__c/fields/CKR_SupportedObjectDeveloperName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/checkr/main/schema/customObjects/objects/CKR_ChecklistTemplate__c/fields/CKR_TargetObjectApiName__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRuleTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistGateRuleTrigger.trigger-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateRuleTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistGateRuleTrigger.trigger"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItemTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistInstanceItemTrigger.trigger-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstanceItemTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistInstanceItemTrigger.trigger"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItemTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistTemplateItemTrigger.trigger-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateItemTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistTemplateItemTrigger.trigger"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersionTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistTemplateVersionTrigger.trigger-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersionTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/checkr/main/triggers/CKR_ChecklistTemplateVersionTrigger.trigger"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CheckR",
+        "type": "CustomApplication",
+        "filePath": "sfdx-source/checkr/main/ui/applications/CheckR.app-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Checklist_Template_Record_Page",
+        "type": "FlexiPage",
+        "filePath": "sfdx-source/checkr/main/ui/flexipages/CKR_Checklist_Template_Record_Page.flexipage-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Checklist_Template_Version_Record_Page",
+        "type": "FlexiPage",
+        "filePath": "sfdx-source/checkr/main/ui/flexipages/CKR_Checklist_Template_Version_Record_Page.flexipage-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Example_Account_Record_Page",
+        "type": "FlexiPage",
+        "filePath": "sfdx-source/checkr/main/ui/flexipages/CKR_Example_Account_Record_Page.flexipage-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_UtilityBar",
+        "type": "FlexiPage",
+        "filePath": "sfdx-source/checkr/main/ui/flexipages/CKR_UtilityBar.flexipage-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistCreateAction",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistCreateAction/ckrChecklistCreateAction.js-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistCreateAction",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistCreateAction/ckrChecklistCreateAction.html"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistCreateAction",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistCreateAction/ckrChecklistCreateAction.js"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistViewer",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistViewer/ckrChecklistViewer.js-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistViewer",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistViewer/ckrChecklistViewer.css"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistViewer",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistViewer/ckrChecklistViewer.html"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistViewer",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistViewer/ckrChecklistViewer.js"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrChecklistViewer",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrChecklistViewer/ckrChecklistViewerMockData.js"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrPublishTemplateVersion",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrPublishTemplateVersion/ckrPublishTemplateVersion.js-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrPublishTemplateVersion",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrPublishTemplateVersion/ckrPublishTemplateVersion.html"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "ckrPublishTemplateVersion",
+        "type": "LightningComponentBundle",
+        "filePath": "sfdx-source/checkr/main/ui/lwc/ckrPublishTemplateVersion/ckrPublishTemplateVersion.js"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "Account.CKR_New_Checklist",
+        "type": "QuickAction",
+        "filePath": "sfdx-source/checkr/main/ui/quickActions/Account.CKR_New_Checklist.quickAction-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplateVersion__c.CKR_PublishVersion",
+        "type": "QuickAction",
+        "filePath": "sfdx-source/checkr/main/ui/quickActions/CKR_ChecklistTemplateVersion__c.CKR_PublishVersion.quickAction-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistInstance__c",
+        "type": "CustomTab",
+        "filePath": "sfdx-source/checkr/main/ui/tabs/CKR_ChecklistInstance__c.tab-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTemplate__c",
+        "type": "CustomTab",
+        "filePath": "sfdx-source/checkr/main/ui/tabs/CKR_ChecklistTemplate__c.tab-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Admin",
+        "type": "PermissionSet",
+        "filePath": "sfdx-source/checkr/main/user/permissionsets/CKR_Admin.permissionset-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ReadOnly",
+        "type": "PermissionSet",
+        "filePath": "sfdx-source/checkr/main/user/permissionsets/CKR_ReadOnly.permissionset-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_User",
+        "type": "PermissionSet",
+        "filePath": "sfdx-source/checkr/main/user/permissionsets/CKR_User.permissionset-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateActionControllerTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistCreateActionControllerTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateActionControllerTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistCreateActionControllerTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateActionIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistCreateActionIT.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateActionIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistCreateActionIT.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerControllerTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistViewerControllerTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerControllerTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistViewerControllerTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistViewerIT.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_ChecklistViewerIT.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TemplateVersionPublishControllerTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_TemplateVersionPublishControllerTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TemplateVersionPublishControllerTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_TemplateVersionPublishControllerTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_UserModeIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_UserModeIT.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_UserModeIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/controllers/CKR_UserModeIT.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultDmlGatewayTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/gateways/CKR_DefaultDmlGatewayTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultDmlGatewayTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/gateways/CKR_DefaultDmlGatewayTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateContextSelectorTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/selectors/CKR_ChecklistCreateContextSelectorTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistCreateContextSelectorTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/selectors/CKR_ChecklistCreateContextSelectorTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateSelectorTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/selectors/CKR_ChecklistGateSelectorTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistGateSelectorTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/selectors/CKR_ChecklistGateSelectorTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerSelectorTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/selectors/CKR_ChecklistViewerSelectorTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistViewerSelectorTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/selectors/CKR_ChecklistViewerSelectorTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AppFactoryTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_AppFactoryTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AppFactoryTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_AppFactoryTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistPermissionServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_ChecklistPermissionServiceTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistPermissionServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_ChecklistPermissionServiceTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistSupportServicesTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_ChecklistSupportServicesTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistSupportServicesTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_ChecklistSupportServicesTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistGateServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_DefaultChecklistGateServiceTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistGateServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_DefaultChecklistGateServiceTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistInstanceServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_DefaultChecklistInstanceServiceTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultChecklistInstanceServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_DefaultChecklistInstanceServiceTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultTemplateVersionServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_DefaultTemplateVersionServiceTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_DefaultTemplateVersionServiceTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/services/CKR_DefaultTemplateVersionServiceTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTriggerGatewayTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_ChecklistTriggerGatewayTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_ChecklistTriggerGatewayTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_ChecklistTriggerGatewayTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Mocks",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_Mocks.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Mocks",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_Mocks.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TestDataFactory",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_TestDataFactory.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TestDataFactory",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_TestDataFactory.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TestRecords",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_TestRecords.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TestRecords",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_TestRecords.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TestRecordsTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_TestRecordsTest.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_TestRecordsTest",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/checkr/test/classes/utilities/CKR_TestRecordsTest.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CheckrSmokeSeed",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/reference/main/classes/CheckrSmokeSeed.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CheckrSmokeSeed",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/reference/main/classes/CheckrSmokeSeed.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CheckrSmokeUserSeed",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/reference/main/classes/CheckrSmokeUserSeed.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CheckrSmokeUserSeed",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/reference/main/classes/CheckrSmokeUserSeed.cls"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "Contact",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/reference/main/schema/standardObjects/objects/Contact/Contact.object-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "Contact",
+        "type": "CustomObject",
+        "filePath": "sfdx-source/reference/main/schema/standardObjects/objects/Contact/fields/CKR_User__c.field-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AccountTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/reference/main/triggers/CKR_AccountTrigger.trigger-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_AccountTrigger",
+        "type": "ApexTrigger",
+        "filePath": "sfdx-source/reference/main/triggers/CKR_AccountTrigger.trigger"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Smoke_Compliance_Update",
+        "type": "CustomPermission",
+        "filePath": "sfdx-source/reference/main/user/customPermissions/CKR_Smoke_Compliance_Update.customPermission-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_Smoke_Compliance",
+        "type": "PermissionSet",
+        "filePath": "sfdx-source/reference/main/user/permissionsets/CKR_Smoke_Compliance.permissionset-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_InsertGatingIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/reference/test/classes/CKR_InsertGatingIT.cls-meta.xml"
+      },
+      {
+        "state": "Conflict",
+        "fullName": "CKR_InsertGatingIT",
+        "type": "ApexClass",
+        "filePath": "sfdx-source/reference/test/classes/CKR_InsertGatingIT.cls"
+      }
+    ],
+    "stack": "SourceConflictError: 270 conflicts detected\n    at SfCommandError.from (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:48:16)\n    at DeployMetadata.catch (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:332:47)\n    at DeployMetadata.catch (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:293:27)\n    at DeployMetadata._run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:187:29)\n    at async Config.runCommand (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:422:25)\n    at async run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:97:16)\n    at async [REDACTED USER]:15:1",
+    "cause": "undefined",
+    "warnings": [],
+    "code": "SourceConflictError",
+    "status": 1,
+    "commandName": "DeployMetadata"
+  }
+]

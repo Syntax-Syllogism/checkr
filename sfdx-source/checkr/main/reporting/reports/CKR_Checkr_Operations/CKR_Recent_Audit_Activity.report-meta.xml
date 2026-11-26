@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CKR_ChecklistAuditEvent__c$Name</field>
+    </columns>
+    <columns>
+        <field>CKR_ChecklistAuditEvent__c$CKR_ChecklistInstance__c</field>
+    </columns>
+    <columns>
+        <field>CKR_ChecklistAuditEvent__c$CKR_Actor__c</field>
+    </columns>
+    <columns>
+        <field>CKR_ChecklistAuditEvent__c$CKR_OccurredOn__c</field>
+    </columns>
+    <description
+  >Audit events in the last 30 days, grouped by event type.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CKR_ChecklistAuditEvent__c$CKR_EventType__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Recent checklist audit activity</name>
+    <reportType>CKR_Audit_Events__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CKR_ChecklistAuditEvent__c$CKR_OccurredOn__c</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

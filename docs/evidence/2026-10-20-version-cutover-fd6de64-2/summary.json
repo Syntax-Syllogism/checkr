@@ -1,0 +1,41 @@
+{
+  "scenario": "version-cutover",
+  "startedAt": "2026-10-20T01:07:47.870Z",
+  "finishedAt": "2026-10-20T01:08:51.135Z",
+  "commit": "fd6de64530431646d3508b969860d3b3ee6bf458",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Completed v1 instance still saves after v2 publish",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "No-instance record is blocked by v2",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Exactly one Published version and old version Historical",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Published rule edits are rejected",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {}
+}

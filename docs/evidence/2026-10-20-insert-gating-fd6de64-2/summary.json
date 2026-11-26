@@ -1,0 +1,29 @@
+{
+  "scenario": "insert-gating",
+  "startedAt": "2026-10-20T01:07:47.870Z",
+  "finishedAt": "2026-10-20T01:09:24.601Z",
+  "commit": "fd6de64530431646d3508b969860d3b3ee6bf458",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "Inserts remain ungated by design (D3)",
+      "outcome": "passed",
+      "detail": "{\"recordId\":\"001RK00002nCv9IYAS\",\"errors\":[],\"blocked\":false}"
+    }
+  ],
+  "metrics": {
+    "insertBlocked": false,
+    "exactErrors": []
+  }
+}

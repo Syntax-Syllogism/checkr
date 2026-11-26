@@ -1,0 +1,20 @@
+engines:
+  eslint:
+    # Apply Node globals and runtime-specific overrides to scripts only.
+    eslint_config_file: config/code-analyzer-eslint.config.mjs
+  cpd:
+    file_extensions:
+      # CPD's JavaScript lexer cannot read the shebangs in our .mjs scripts.
+      javascript: [".js", ".cjs"]
+  pmd:
+    custom_rulesets:
+      - config/code-analyzer-pmd.xml
+
+rules:
+  pmd:
+    # The custom rule allows CheckR's subject_behaviour test method names.
+    MethodNamingConventions:
+      disabled: true
+    CheckrMethodNamingConventions:
+      severity: Moderate
+      tags: [Recommended]

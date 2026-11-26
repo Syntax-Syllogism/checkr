@@ -1,0 +1,26 @@
+{
+  "scenario": "bypass",
+  "startedAt": "2026-10-20T01:30:07.110Z",
+  "finishedAt": "2026-10-20T01:30:24.388Z",
+  "commit": "54078022d8916f5cafc11725206e4c45c0692546",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [],
+  "outcome": "error",
+  "checks": [
+    {
+      "name": "initialization",
+      "outcome": "failed",
+      "detail": "270 conflicts detected"
+    }
+  ],
+  "metrics": {}
+}

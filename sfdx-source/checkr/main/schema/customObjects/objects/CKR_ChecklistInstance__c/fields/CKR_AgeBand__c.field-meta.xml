@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_AgeBand__c</fullName>
+    <description
+  >Current calendar-day age since creation, grouped for operational reports. Continues aging after completion; the open report excludes completed instances.</description>
+    <formula
+  >IF(TODAY() - DATEVALUE(CreatedDate) &lt;= 7, "1: 0-7 days", IF(TODAY() - DATEVALUE(CreatedDate) &lt;= 30, "2: 8-30 days", "3: 31+ days"))</formula>
+    <label>Age Band</label>
+    <type>Text</type>
+</CustomField>

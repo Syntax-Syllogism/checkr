@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>CKR_GateBypassEvent__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Gate bypass events for CheckR operations.</description>
+    <label>Gate bypass events</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>CKR_GateBypassEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_Actor__c</field>
+            <table>CKR_GateBypassEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_ObjectApiName__c</field>
+            <table>CKR_GateBypassEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_GateRule__c</field>
+            <table>CKR_GateBypassEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_RecordId__c</field>
+            <table>CKR_GateBypassEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_Source__c</field>
+            <table>CKR_GateBypassEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_OccurredOn__c</field>
+            <table>CKR_GateBypassEvent__c</table>
+        </columns>
+        <masterLabel>CKR_GateBypassEvent__c</masterLabel>
+    </sections>
+</ReportType>

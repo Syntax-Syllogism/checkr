@@ -1,0 +1,64 @@
+{
+  "scenario": "audit-integrity",
+  "startedAt": "2026-10-20T02:15:18.570Z",
+  "finishedAt": "2026-10-20T02:21:42.586Z",
+  "commit": "819eee17080d624e21be8e58ac10ae48e73c5ff7",
+  "dirty": true,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [
+    {
+      "key": "audit-5b285d17",
+      "license": "Salesforce Platform",
+      "permissionSets": [
+        "CKR_Admin"
+      ]
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "CKR_Admin cannot update CKR_ChecklistAuditEvent__c",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_Admin cannot delete CKR_ChecklistAuditEvent__c",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_Admin cannot update CKR_GateBypassEvent__c",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_Admin cannot delete CKR_GateBypassEvent__c",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Instance cascade is blocked by the integrity guard",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Maintenance deletes both event types",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "Guard and assigned-maintenance Apex tests pass in Salesforce",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {}
+}

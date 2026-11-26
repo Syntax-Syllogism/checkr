@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset
+  name="CheckR Apex naming"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+>
+  <description>Enforce CheckR's Apex method naming conventions.</description>
+  <rule
+    ref="category/apex/codestyle.xml/MethodNamingConventions"
+    name="CheckrMethodNamingConventions"
+  >
+    <!-- CheckR test methods use subject_behaviour names (docs/testing.md). Production methods stay camelCase. -->
+    <properties>
+      <property
+        name="testPattern"
+        value="[a-z][a-zA-Z0-9]*(_[a-z][a-zA-Z0-9]*)*"
+      />
+    </properties>
+  </rule>
+</ruleset>

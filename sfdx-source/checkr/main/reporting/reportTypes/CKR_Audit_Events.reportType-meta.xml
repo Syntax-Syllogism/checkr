@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>CKR_ChecklistAuditEvent__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Checklist audit events for CheckR operations.</description>
+    <label>Checklist audit events</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>CKR_ChecklistAuditEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_ChecklistInstance__c</field>
+            <table>CKR_ChecklistAuditEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_EventType__c</field>
+            <table>CKR_ChecklistAuditEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_Actor__c</field>
+            <table>CKR_ChecklistAuditEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_OccurredOn__c</field>
+            <table>CKR_ChecklistAuditEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_ChecklistInstance__c.Name</field>
+            <table>CKR_ChecklistAuditEvent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CKR_ChecklistInstance__c.CKR_ChecklistTemplate__c</field>
+            <table>CKR_ChecklistAuditEvent__c</table>
+        </columns>
+        <masterLabel>CKR_ChecklistAuditEvent__c</masterLabel>
+    </sections>
+</ReportType>

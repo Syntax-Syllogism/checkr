@@ -1,0 +1,93 @@
+{
+  "scenario": "install-upgrade",
+  "startedAt": "2026-10-20T20:31:54.591Z",
+  "finishedAt": "2026-10-20T20:39:09.433Z",
+  "commit": "93563c6180264433077fe4ee15ecfe29d26a689e",
+  "dirty": false,
+  "packageVersion": "0.1.0.2",
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://java-computing-7003-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "67.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [
+    {
+      "key": "worker-d4569d8f",
+      "license": "Salesforce",
+      "permissionSets": [
+        "CKR_User"
+      ]
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "starting version installed",
+      "outcome": "passed",
+      "detail": "0.1.0.1 04tfj000000duWzAAI"
+    },
+    {
+      "name": "CKR_User blocked with exact gate error",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_User save succeeds after completion",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "upgraded in place to the new version",
+      "outcome": "passed",
+      "detail": "0.1.0.2 04tfj000000duX0AAI"
+    },
+    {
+      "name": "templates from the first install survive",
+      "outcome": "passed",
+      "detail": "1 before, 1 after"
+    },
+    {
+      "name": "versions from the first install survive",
+      "outcome": "passed",
+      "detail": "1 before, 1 after"
+    },
+    {
+      "name": "instances from the first install survive",
+      "outcome": "passed",
+      "detail": "1 before, 1 after"
+    },
+    {
+      "name": "items from the first install survive",
+      "outcome": "passed",
+      "detail": "1 before, 1 after"
+    },
+    {
+      "name": "auditEvents from the first install survive",
+      "outcome": "passed",
+      "detail": "2 before, 2 after"
+    },
+    {
+      "name": "completed checklist still passes the gate after upgrade",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "gate still blocks an incomplete record after upgrade",
+      "outcome": "passed",
+      "detail": "CKREvidence003b286261364e9ead248d1a98b5bdc2 requires completion"
+    },
+    {
+      "name": "upgrade performed or skipped with a reason",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {
+    "upgradeFrom": "04tfj000000duWzAAI",
+    "exactError": "CKREvidence003b286261364e9ead248d1a98b5bdc2 requires completion",
+    "upgrade": "performed"
+  }
+}

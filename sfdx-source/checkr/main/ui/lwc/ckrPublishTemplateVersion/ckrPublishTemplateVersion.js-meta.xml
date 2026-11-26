@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+  <apiVersion>67.0</apiVersion><isExposed>true</isExposed>
+  <masterLabel>CheckR Publish Template Version</masterLabel>
+  <description
+  >Publish a Draft version and retire its previous Published version atomically.</description>
+  <targets><target>lightning__RecordAction</target></targets>
+  <targetConfigs><targetConfig targets="lightning__RecordAction"><actionType
+      >Action</actionType><objects><object
+        >CKR_ChecklistTemplateVersion__c</object></objects></targetConfig></targetConfigs>
+</LightningComponentBundle>

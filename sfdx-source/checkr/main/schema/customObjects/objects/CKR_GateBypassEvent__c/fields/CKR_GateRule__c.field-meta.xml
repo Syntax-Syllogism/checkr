@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_GateRule__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description
+  >First rule that would have blocked the save. Referenced rules cannot be deleted while bypass history exists, including through template or version cascades.</description>
+    <label>Gate Rule</label>
+    <referenceTo>CKR_ChecklistGateRule__c</referenceTo>
+    <relationshipLabel>Gate Bypass Events</relationshipLabel>
+    <relationshipName>CKR_GateBypassEvents</relationshipName>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,381 @@
+<template>
+  <lightning-card>
+    <div slot="title" class="slds-grid slds-grid_vertical-align-center">
+      <lightning-icon
+        icon-name="utility:success"
+        variant="success"
+        size="small"
+        class="slds-m-right_small"
+      ></lightning-icon>
+      <h2 class="card-header-title">{cardTitle}</h2>
+    </div>
+    <template if:true={shouldShowMockDataToggle}>
+      <div slot="actions" class="viewer-source-toggle">
+        <span class="viewer-source-toggle__label">{dataSourceLabel}</span>
+        <lightning-input
+          type="toggle"
+          label="Use Mock Data"
+          variant="label-hidden"
+          checked={useMockData}
+          onchange={handleDataSourceToggle}
+        ></lightning-input>
+      </div>
+    </template>
+
+    <template if:true={isLoading}>
+      <div class="slds-p-around_medium">
+        <lightning-spinner
+          alternative-text="Loading checklist viewer"
+        ></lightning-spinner>
+      </div>
+    </template>
+
+    <template if:false={isLoading}>
+      <template if:true={hasLoadError}>
+        <div class="slds-p-around_medium">
+          <div
+            class="slds-notify slds-notify_alert slds-alert_error"
+            role="alert"
+          >
+            <span>{loadErrorMessage}</span>
+          </div>
+        </div>
+      </template>
+
+      <template if:true={hasChecklists}>
+        <div class="checklist-sections">
+          <template for:each={checklists} for:item="checklist">
+            <section
+              key={checklist.checklistInstanceId}
+              class="checklist-section"
+              data-checklist-id={checklist.checklistInstanceId}
+              data-checklist-name={checklist.name}
+            >
+              <button
+                class="checklist-section__header"
+                type="button"
+                data-checklist-id={checklist.checklistInstanceId}
+                aria-expanded={checklist.isOpen}
+                aria-controls={checklist.contentId}
+                onclick={handleToggleChecklistSection}
+              >
+                <span class="checklist-section__title">
+                  <lightning-icon
+                    icon-name={checklist.toggleIconName}
+                    size="xx-small"
+                    class="checklist-section__toggle-icon"
+                  ></lightning-icon>
+                  <span class="checklist-section__name">{checklist.name}</span>
+                </span>
+                <span class="checklist-header-metrics">
+                  <span
+                    class="checklist-header-metric checklist-header-metric_required"
+                  >
+                    <span class="checklist-header-metric__count"
+                      >{checklist.requiredCompletionCountLabel}</span
+                    >
+                  </span>
+                  <span class="checklist-header-metric">
+                    <span class="checklist-header-metric__count"
+                      >{checklist.totalCompletionCountLabel}</span
+                    >
+                  </span>
+                </span>
+              </button>
+
+              <template if:true={checklist.isOpen}>
+                <div
+                  id={checklist.contentId}
+                  class="checklist-section__body slds-p-horizontal_small slds-p-bottom_small"
+                >
+                  <template if:false={checklist.canEditItems}>
+                    <div
+                      class="slds-notify slds-notify_alert slds-alert_warning slds-m-bottom_small"
+                      role="alert"
+                    >
+                      <span>{checklist.permissionMessage}</span>
+                    </div>
+                  </template>
+
+                  <div class="checklist-grid-header">
+                    <span>Status</span>
+                    <span>Task Name</span>
+                    <span>Details</span>
+                  </div>
+                  <template for:each={checklist.items} for:item="item">
+                    <div
+                      key={item.checklistItemId}
+                      class={item.rowClass}
+                      data-item-id={item.checklistItemId}
+                      data-item-label={item.label}
+                    >
+                      <div class="checklist-item__grid">
+                        <div class="checklist-item__status">
+                          <lightning-input
+                            type="checkbox"
+                            label="Complete"
+                            variant="label-hidden"
+                            checked={item.checkboxValue}
+                            disabled={item.isDisabled}
+                            data-item-id={item.checklistItemId}
+                            onchange={handleCheckboxChange}
+                          ></lightning-input>
+                          <template if:true={item.showStatusIcon}>
+                            <lightning-icon
+                              icon-name={item.statusIconName}
+                              variant={item.statusIconVariant}
+                              size="x-small"
+                            ></lightning-icon>
+                          </template>
+                        </div>
+                        <div class="checklist-item__meta">
+                          <lightning-button
+                            class={item.labelClass}
+                            variant="base"
+                            label={item.label}
+                            title={item.label}
+                            data-item-id={item.checklistItemId}
+                            onclick={handleOpenItemDetails}
+                          ></lightning-button>
+                          <p class="checklist-item__required-label">
+                            {item.requiredLabel}
+                          </p>
+                          <template if:true={item.isSaving}>
+                            <p class="slds-text-color_weak slds-m-top_x-small">
+                              {item.saveStatusText}
+                            </p>
+                          </template>
+                        </div>
+                        <div class="checklist-item__interaction">
+                          <template if:true={item.usesTextExplanation}>
+                            <lightning-input
+                              type="text"
+                              label="Explanation"
+                              variant="label-hidden"
+                              value={item.explanation}
+                              placeholder={item.explanationPlaceholder}
+                              disabled={item.isDisabled}
+                              data-item-id={item.checklistItemId}
+                              onblur={handleExplanationBlur}
+                            ></lightning-input>
+                          </template>
+                          <template if:true={item.usesPicklistExplanation}>
+                            <lightning-combobox
+                              label="Explanation"
+                              variant="label-hidden"
+                              value={item.explanation}
+                              options={item.explanationPicklistOptions}
+                              placeholder="Select an option"
+                              disabled={item.isDisabled}
+                              data-item-id={item.checklistItemId}
+                              onchange={handleExplanationPicklistChange}
+                            ></lightning-combobox>
+                          </template>
+                          <div class="checklist-item__action">
+                            <div
+                              class={item.deleteShadeClass}
+                              title={item.deleteTitle}
+                            >
+                              <lightning-button-icon
+                                class={item.deleteButtonClass}
+                                icon-name="utility:delete"
+                                variant={item.deleteButtonVariant}
+                                alternative-text={item.deleteTitle}
+                                title={item.deleteTitle}
+                                disabled={item.deleteDisabled}
+                                data-item-id={item.checklistItemId}
+                                onclick={handleRemoveAdHocItem}
+                              ></lightning-button-icon>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </template>
+
+                  <template if:true={checklist.canEditItems}>
+                    <button
+                      class="checklist-add-row"
+                      type="button"
+                      data-checklist-id={checklist.checklistInstanceId}
+                      onclick={handleOpenAdHocComposer}
+                    >
+                      <span class="checklist-add-row__icon">
+                        <lightning-icon
+                          icon-name="utility:add"
+                          size="x-small"
+                        ></lightning-icon>
+                      </span>
+                      <span class="checklist-add-row__label">Add New</span>
+                    </button>
+                  </template>
+                </div>
+              </template>
+            </section>
+          </template>
+        </div>
+      </template>
+
+      <template if:false={hasChecklists}>
+        <div class="slds-p-around_medium slds-text-color_weak">
+          No checklists are attached to this record yet.
+        </div>
+      </template>
+    </template>
+  </lightning-card>
+
+  <template if:true={hasSelectedItem}>
+    <section
+      aria-modal="true"
+      class="slds-modal slds-fade-in-open checklist-detail-modal"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="slds-modal__container ckr-modal-container">
+        <lightning-quick-action-panel header={selectedItemTitle}>
+          <lightning-record-edit-form
+            class="checklist-detail-form"
+            record-id={selectedItemId}
+            object-api-name="CKR_ChecklistInstanceItem__c"
+            onsuccess={handleItemDetailsSuccess}
+            onerror={handleItemDetailsError}
+          >
+            <div class="checklist-detail-form__grid">
+              <lightning-output-field
+                field-name="Name"
+              ></lightning-output-field>
+              <lightning-input-field
+                field-name="CKR_Label__c"
+              ></lightning-input-field>
+              <lightning-input-field
+                field-name="CKR_Required__c"
+              ></lightning-input-field>
+              <lightning-input-field
+                field-name="CKR_CheckboxValue__c"
+              ></lightning-input-field>
+              <lightning-input-field
+                field-name="CKR_AssigneeUser__c"
+              ></lightning-input-field>
+              <lightning-input-field
+                field-name="CKR_Completed__c"
+              ></lightning-input-field>
+            </div>
+          </lightning-record-edit-form>
+          <div slot="footer" class="checklist-detail-modal__footer">
+            <lightning-button
+              label="Close"
+              onclick={handleCloseItemDetails}
+            ></lightning-button>
+            <lightning-button
+              variant="brand"
+              label="Save"
+              onclick={handleSaveItemDetails}
+            ></lightning-button>
+          </div>
+        </lightning-quick-action-panel>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+
+  <template if:true={hasActiveAdHocChecklist}>
+    <section
+      aria-modal="true"
+      class="slds-modal slds-fade-in-open checklist-detail-modal"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div class="slds-modal__container">
+        <lightning-quick-action-panel header="Add Checklist Item">
+          <div class="ad-hoc-modal">
+            <lightning-input
+              label="Item Label"
+              placeholder="New Item Label"
+              value={activeAdHocChecklist.newAdHocLabel}
+              disabled={activeAdHocChecklist.isSaving}
+              data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+              data-field-name="label"
+              onchange={handleAdHocDraftChange}
+            ></lightning-input>
+            <div class="ad-hoc-modal__options">
+              <lightning-combobox
+                label="Explanation Type"
+                value={activeAdHocChecklist.newAdHocExplanationInputType}
+                options={activeAdHocChecklist.explanationInputTypeOptions}
+                disabled={activeAdHocChecklist.isSaving}
+                data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+                data-field-name="explanationInputType"
+                onchange={handleAdHocDraftChange}
+              ></lightning-combobox>
+              <lightning-input
+                type="checkbox"
+                label="Explanation Required"
+                checked={activeAdHocChecklist.newAdHocExplanationRequired}
+                disabled={activeAdHocChecklist.isSaving}
+                data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+                data-field-name="explanationRequired"
+                onchange={handleAdHocDraftChange}
+              ></lightning-input>
+            </div>
+            <template
+              if:true={activeAdHocChecklist.showAdHocExplanationPicklistValues}
+            >
+              <div class="composer-picklist-section">
+                <div class="composer-picklist-entry">
+                  <lightning-input
+                    label="Picklist Option"
+                    placeholder="Add option"
+                    value={activeAdHocChecklist.newAdHocPicklistOptionDraft}
+                    disabled={activeAdHocChecklist.isSaving}
+                    data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+                    data-field-name="picklistOptionDraft"
+                    onchange={handleAdHocDraftChange}
+                    onkeydown={handlePicklistOptionKeydown}
+                  ></lightning-input>
+                  <lightning-button-icon
+                    variant="border-filled"
+                    icon-name="utility:add"
+                    alternative-text="Add Picklist Option"
+                    title="Add Picklist Option"
+                    disabled={activeAdHocChecklist.isSaving}
+                    data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+                    onclick={handleAddPicklistOption}
+                  ></lightning-button-icon>
+                </div>
+                <div class="composer-picklist-pills">
+                  <template
+                    for:each={activeAdHocChecklist.newAdHocPicklistOptions}
+                    for:item="option"
+                  >
+                    <lightning-pill
+                      key={option.key}
+                      label={option.label}
+                      name={option.value}
+                      data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+                      onremove={handleRemovePicklistOption}
+                    ></lightning-pill>
+                  </template>
+                </div>
+              </div>
+            </template>
+          </div>
+          <div slot="footer" class="ad-hoc-modal__footer">
+            <lightning-button
+              label="Cancel"
+              data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+              onclick={handleCancelAdHoc}
+            ></lightning-button>
+            <lightning-button
+              variant="brand"
+              label={activeAdHocChecklist.addButtonLabel}
+              disabled={activeAdHocChecklist.isSaving}
+              data-checklist-id={activeAdHocChecklist.checklistInstanceId}
+              onclick={handleAddAdHocItem}
+            ></lightning-button>
+          </div>
+        </lightning-quick-action-panel>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
+</template>

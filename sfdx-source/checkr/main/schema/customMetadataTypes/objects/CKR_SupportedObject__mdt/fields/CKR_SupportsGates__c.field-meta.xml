@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_SupportsGates__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description
+  >Indicates whether this object can participate in gate enforcement.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Supports Gates</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,138 @@
+{
+  "status": 0,
+  "result": {
+    "summary": {
+      "failRate": "0%",
+      "failing": 0,
+      "hostname": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+      "orgId": "00DRK00000daXOD2A2",
+      "outcome": "Passed",
+      "passRate": "100%",
+      "passing": 7,
+      "skipped": 0,
+      "testRunId": "707RK0000BVswaA",
+      "testStartTime": "2026-10-20T02:58:24.000Z",
+      "testsRan": 7,
+      "userId": "005RK00000ifSwfYAE",
+      "username": "[REDACTED]",
+      "commandTime": "134 ms",
+      "testExecutionTime": "3334 ms",
+      "testTotalTime": "3334 ms"
+    },
+    "tests": [
+      {
+        "Id": "07MRK00000rezvz2AA",
+        "QueueItemId": "709RK00000vxkvdYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707RK0000BVswaAYQR",
+        "MethodName": "blocksEveryRowWithoutPermission",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pRK00001KjsuhYAB",
+          "Name": "CKR_AuditRecordGuardTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 24,
+        "FullName": "CKR_AuditRecordGuardTest.blocksEveryRowWithoutPermission"
+      },
+      {
+        "Id": "07MRK00000rezw02AA",
+        "QueueItemId": "709RK00000vxkvdYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707RK0000BVswaAYQR",
+        "MethodName": "bulkDeleteProtectsOnlyAuditedInstances",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pRK00001KjsuhYAB",
+          "Name": "CKR_AuditRecordGuardTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 78,
+        "FullName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedInstances"
+      },
+      {
+        "Id": "07MRK00000rezw12AA",
+        "QueueItemId": "709RK00000vxkvdYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707RK0000BVswaAYQR",
+        "MethodName": "bulkDeleteProtectsOnlyAuditedItems",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pRK00001KjsuhYAB",
+          "Name": "CKR_AuditRecordGuardTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 27,
+        "FullName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyAuditedItems"
+      },
+      {
+        "Id": "07MRK00000rezw22AA",
+        "QueueItemId": "709RK00000vxkvdYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707RK0000BVswaAYQR",
+        "MethodName": "bulkDeleteProtectsOnlyBypassReferencedParents",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pRK00001KjsuhYAB",
+          "Name": "CKR_AuditRecordGuardTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 50,
+        "FullName": "CKR_AuditRecordGuardTest.bulkDeleteProtectsOnlyBypassReferencedParents"
+      },
+      {
+        "Id": "07MRK00000rezw32AA",
+        "QueueItemId": "709RK00000vxkvdYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707RK0000BVswaAYQR",
+        "MethodName": "referencedGateRuleDeletion_integrationHappyPath",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pRK00001KjsuhYAB",
+          "Name": "CKR_AuditRecordGuardTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 1008,
+        "FullName": "CKR_AuditRecordGuardTest.referencedGateRuleDeletion_integrationHappyPath"
+      },
+      {
+        "Id": "07MRK00000rezw42AA",
+        "QueueItemId": "709RK00000vxkvdYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707RK0000BVswaAYQR",
+        "MethodName": "triggersAndSystemInsert_integrationHappyPath",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pRK00001KjsuhYAB",
+          "Name": "CKR_AuditRecordGuardTest",
+          "NamespacePrefix": null
+        },
+        "RunTime": 453,
+        "FullName": "CKR_AuditRecordGuardTest.triggersAndSystemInsert_integrationHappyPath"
+      },
+      {
+        "Id": "07MRK00000rf9by2AA",
+        "QueueItemId": "709RK00000vxkveYAA",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "707RK0000BVswaAYQR",
+        "MethodName": "assignedMaintenanceAllowsChanges_integrationHappyPath",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01pRK00001KjsufYAB",
+          "Name": "CKR_AuditMaintenanceIT",
+          "NamespacePrefix": null
+        },
+        "RunTime": 1694,
+        "FullName": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath"
+      }
+    ]
+  },
+  "warnings": []
+}

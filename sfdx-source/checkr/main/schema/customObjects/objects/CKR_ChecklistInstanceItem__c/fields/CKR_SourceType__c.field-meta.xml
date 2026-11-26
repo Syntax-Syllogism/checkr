@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_SourceType__c</fullName>
+    <description
+  >Identifies whether this item came from the template or was added ad hoc.</description>
+    <label>Source Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Template</fullName>
+                <default>true</default>
+                <label>Template</label>
+            </value>
+            <value>
+                <fullName>AdHoc</fullName>
+                <default>false</default>
+                <label>Ad Hoc</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

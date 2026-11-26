@@ -1,0 +1,329 @@
+{
+  "classes": [
+    {
+      "name": "CKR_ParentAccessLevel",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistGateRequest",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultChecklistInstanceSelector",
+      "coveredLines": 27,
+      "totalLines": 27,
+      "percent": 100
+    },
+    {
+      "name": "CheckrSmokeUserSeed",
+      "coveredLines": 117,
+      "totalLines": 127,
+      "percent": 92.1259842519685
+    },
+    {
+      "name": "CKR_DefaultChecklistPermissionService",
+      "coveredLines": 55,
+      "totalLines": 65,
+      "percent": 84.61538461538461
+    },
+    {
+      "name": "CKR_ChecklistGateSelector",
+      "coveredLines": 34,
+      "totalLines": 34,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultDmlGateway",
+      "coveredLines": 21,
+      "totalLines": 21,
+      "percent": 100
+    },
+    {
+      "name": "CKR_GateBypass",
+      "coveredLines": 11,
+      "totalLines": 11,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AdHocItemRequest",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistInstanceItemTriggerHandler",
+      "coveredLines": 14,
+      "totalLines": 14,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistItemAuditBuilder",
+      "coveredLines": 47,
+      "totalLines": 48,
+      "percent": 97.91666666666667
+    },
+    {
+      "name": "CKR_SelectorBase",
+      "coveredLines": 6,
+      "totalLines": 6,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ServiceBase",
+      "coveredLines": 17,
+      "totalLines": 20,
+      "percent": 85
+    },
+    {
+      "name": "CKR_GateRuleEvaluator",
+      "coveredLines": 57,
+      "totalLines": 61,
+      "percent": 93.44262295081967
+    },
+    {
+      "name": "CKR_TemplateVersionTriggerHandler",
+      "coveredLines": 10,
+      "totalLines": 10,
+      "percent": 100
+    },
+    {
+      "name": "CKR_TemplateVersionLifecycleService",
+      "coveredLines": 34,
+      "totalLines": 34,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultParentAccessGateway",
+      "coveredLines": 19,
+      "totalLines": 26,
+      "percent": 73.07692307692308
+    },
+    {
+      "name": "CKR_ChecklistRollup",
+      "coveredLines": 15,
+      "totalLines": 15,
+      "percent": 100
+    },
+    {
+      "name": "CheckrSmokeSeed",
+      "coveredLines": 498,
+      "totalLines": 520,
+      "percent": 95.76923076923077
+    },
+    {
+      "name": "CKR_ParentAccess",
+      "coveredLines": 7,
+      "totalLines": 7,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTriggerGateway",
+      "coveredLines": 37,
+      "totalLines": 37,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistItemMutation",
+      "coveredLines": 69,
+      "totalLines": 70,
+      "percent": 98.57142857142857
+    },
+    {
+      "name": "CKR_ChecklistItemUpdateRequest",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistGateResult",
+      "coveredLines": 7,
+      "totalLines": 7,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AppFactoryException",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_TemplateVersionPublishController",
+      "coveredLines": 7,
+      "totalLines": 7,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateVersionSelector",
+      "coveredLines": 24,
+      "totalLines": 24,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistViewerSelector",
+      "coveredLines": 15,
+      "totalLines": 16,
+      "percent": 93.75
+    },
+    {
+      "name": "CKR_DmlMode",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistCreateActionController",
+      "coveredLines": 43,
+      "totalLines": 45,
+      "percent": 95.55555555555556
+    },
+    {
+      "name": "CKR_DefaultTemplateVersionService",
+      "coveredLines": 57,
+      "totalLines": 58,
+      "percent": 98.27586206896552
+    },
+    {
+      "name": "CKR_DefaultChecklistGateService",
+      "coveredLines": 85,
+      "totalLines": 86,
+      "percent": 98.83720930232558
+    },
+    {
+      "name": "CKR_SystemModeDmlGateway",
+      "coveredLines": 12,
+      "totalLines": 21,
+      "percent": 57.142857142857146
+    },
+    {
+      "name": "CKR_ChecklistInstanceCreateResult",
+      "coveredLines": 3,
+      "totalLines": 3,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AuditRetentionSelector",
+      "coveredLines": 42,
+      "totalLines": 45,
+      "percent": 93.33333333333333
+    },
+    {
+      "name": "CKR_ChecklistViewerController",
+      "coveredLines": 176,
+      "totalLines": 189,
+      "percent": 93.12169312169313
+    },
+    {
+      "name": "CKR_DefaultChecklistAuditService",
+      "coveredLines": 25,
+      "totalLines": 26,
+      "percent": 96.15384615384616
+    },
+    {
+      "name": "CKR_DefaultSupportedObjectSelector",
+      "coveredLines": 23,
+      "totalLines": 23,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultChecklistInstanceService",
+      "coveredLines": 131,
+      "totalLines": 135,
+      "percent": 97.03703703703704
+    },
+    {
+      "name": "CKR_AppFactory",
+      "coveredLines": 35,
+      "totalLines": 35,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultChecklistMutationSelector",
+      "coveredLines": 46,
+      "totalLines": 47,
+      "percent": 97.87234042553192
+    },
+    {
+      "name": "CKR_ChecklistCreateContextSelector",
+      "coveredLines": 8,
+      "totalLines": 8,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AuditRecordGuard",
+      "coveredLines": 48,
+      "totalLines": 49,
+      "percent": 97.95918367346938
+    },
+    {
+      "name": "CKR_SupportedObjectSelector",
+      "coveredLines": 5,
+      "totalLines": 5,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistInstanceCreateRequest",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateGuard",
+      "coveredLines": 1,
+      "totalLines": 1,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistAuditEventGuard",
+      "coveredLines": 2,
+      "totalLines": 2,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AccountTrigger",
+      "coveredLines": 4,
+      "totalLines": 4,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateVersionTrigger",
+      "coveredLines": 4,
+      "totalLines": 4,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateItemTrigger",
+      "coveredLines": 3,
+      "totalLines": 3,
+      "percent": 100
+    },
+    {
+      "name": "CKR_GateBypassEventGuard",
+      "coveredLines": 2,
+      "totalLines": 2,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistInstanceGuard",
+      "coveredLines": 1,
+      "totalLines": 1,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistInstanceItemTrigger",
+      "coveredLines": 4,
+      "totalLines": 4,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistGateRuleTrigger",
+      "coveredLines": 3,
+      "totalLines": 3,
+      "percent": 100
+    }
+  ],
+  "overall": 95
+}

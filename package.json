@@ -1,0 +1,91 @@
+{
+  "name": "checkr",
+  "private": true,
+  "version": "0.1.1",
+  "description": "Versioned record checklists with save gates for Salesforce, as an unlocked 2GP package with manually prefixed CKR_ API names.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "analyze": "node scripts/analyze.mjs",
+    "test:analyzer": "node --test scripts/test/analyze.test.mjs",
+    "lint": "eslint **/{aura,lwc}/**/*.js && slds-linter lint \"sfdx-source/checkr/**/lwc/**/*.{html,css}\"",
+    "test": "npm run lint && npm run prettier:verify && npm run format:apex:verify && npm run test:unit && npm run test:unit:inband && npm run lint:md && npm run test:org-harness && npm run test:reporting && npm run test:object-model && npm run test:docs-images && npm run test:system-mode && npm run test:permission-sets && npm run test:aer-cap && npm run test:release && npm run test:analyzer",
+    "test:unit": "sfdx-lwc-jest",
+    "test:apex": "aer test sfdx-source/checkr sfdx-source/reference -p CKR_Admin",
+    "test:unit:watch": "sfdx-lwc-jest --watch",
+    "test:unit:debug": "sfdx-lwc-jest --debug",
+    "test:unit:coverage": "sfdx-lwc-jest --coverage",
+    "test:lwc": "sfdx-lwc-jest",
+    "test:lwc:coverage": "sfdx-lwc-jest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:setup": "node scripts/setupPlaywrightEnv.mjs",
+    "test:e2e:auth": "node scripts/createPlaywrightAuth.mjs",
+    "dev:lwc:local": "sf aer lightning dev component",
+    "dev:lwc": "sf lightning dev app",
+    "dev:lwc:component": "sf lightning dev component",
+    "dev:lwc:checkr": "sf lightning dev app --name CheckR --device-type desktop",
+    "prettier": "prettier --write \"**/*.{cmp,component,css,html,js,json,md,page,xml,yaml,yml}\"",
+    "prettier:verify": "prettier --check \"**/*.{cmp,component,css,html,js,json,md,page,xml,yaml,yml}\"",
+    "format:apex": "afmt -c .afmt.toml --write .",
+    "format:apex:verify": "afmt -c .afmt.toml --check .",
+    "prepare": "husky",
+    "org:evidence": "node scripts/org/harness.mjs",
+    "test:org-harness": "node scripts/org/test/run.mjs",
+    "test:reporting": "node --test scripts/test/reporting.test.mjs",
+    "test:object-model": "node --test scripts/test/object-model.test.mjs",
+    "test:docs-images": "node --test scripts/test/docs-images.test.mjs",
+    "test:system-mode": "node --test scripts/test/system-mode-inventory.test.mjs",
+    "test:permission-sets": "node --test scripts/test/permission-sets.test.mjs",
+    "test:aer-cap": "node --test scripts/test/aer-capped.test.mjs",
+    "test:release": "node --test \"scripts/release*.test.mjs\" \"scripts/release/test/*.test.mjs\"",
+    "release:beta": "node scripts/release/create-beta.mjs",
+    "docs:screenshots": "node scripts/docs/capture-screenshots.mjs",
+    "test:unit:inband": "sfdx-lwc-jest -- --runInBand",
+    "lint:md": "markdownlint-cli2 \"**/*.md\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@lwc/eslint-plugin-lwc": "^3.1.0",
+    "@playwright/test": "^1.54.2",
+    "@prettier/plugin-xml": "^3.4.1",
+    "@salesforce-ux/slds-linter": "^1.2.1",
+    "@salesforce/eslint-config-lwc": "^4.0.0",
+    "@salesforce/eslint-plugin-aura": "^3.0.0",
+    "@salesforce/eslint-plugin-lightning": "^2.0.0",
+    "@salesforce/sfdx-lwc-jest": "^7.0.2",
+    "eslint": "^9.29.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.14.0",
+    "fast-xml-parser": "^5.12.0",
+    "glob": "^13.0.6",
+    "husky": "^9.1.7",
+    "js2xmlparser": "^5.0.0",
+    "lint-staged": "^16.1.2",
+    "markdownlint-cli2": "^0.23.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-apex": "^2.2.6"
+  },
+  "lint-staged": {
+    "**/*.{cmp,component,css,html,js,json,page,xml,yaml,yml}": [
+      "prettier --write"
+    ],
+    "**/*.md": [
+      "prettier --write",
+      "markdownlint-cli2 --fix"
+    ],
+    "**/*.{cls,trigger,apex,apexc}": [
+      "afmt -c .afmt.toml --write"
+    ],
+    "**/{aura,lwc}/**/*.js": [
+      "eslint"
+    ],
+    "**/lwc/**": [
+      "sfdx-lwc-jest -- --bail --findRelatedTests --passWithNoTests"
+    ]
+  }
+}

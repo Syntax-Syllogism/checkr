@@ -1,0 +1,24 @@
+{
+  "differences": [
+    {
+      "name": "CKR_UserModeIT.ckrUser_addsEditsAndRemovesAdHocItem_integrationHappyPath",
+      "org": false,
+      "aer": true,
+      "orgMessage": "System.AuraHandledException: Script-thrown exception"
+    },
+    {
+      "name": "CKR_UserModeIT.ckrUser_completesItem_integrationHappyPath",
+      "org": false,
+      "aer": true,
+      "orgMessage": "System.AuraHandledException: Script-thrown exception"
+    },
+    {
+      "name": "CKR_UserModeIT.ckrUser_completingItem_rollsUpInstanceStatus_integrationHappyPath",
+      "org": false,
+      "aer": true,
+      "orgMessage": "System.AuraHandledException: Script-thrown exception"
+    }
+  ],
+  "orgCount": 73,
+  "aerCount": 73
+}

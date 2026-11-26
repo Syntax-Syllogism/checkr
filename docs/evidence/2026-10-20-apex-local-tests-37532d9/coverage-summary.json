@@ -1,0 +1,275 @@
+{
+  "classes": [
+    {
+      "name": "CKR_DefaultDmlGateway",
+      "coveredLines": 12,
+      "totalLines": 12,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistInstanceCreateResult",
+      "coveredLines": 3,
+      "totalLines": 3,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultParentAccessGateway",
+      "coveredLines": 18,
+      "totalLines": 22,
+      "percent": 81.81818181818181
+    },
+    {
+      "name": "CKR_ChecklistCreateActionController",
+      "coveredLines": 50,
+      "totalLines": 52,
+      "percent": 96.15384615384616
+    },
+    {
+      "name": "CKR_ChecklistTriggerGateway",
+      "coveredLines": 29,
+      "totalLines": 29,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ParentAccess",
+      "coveredLines": 5,
+      "totalLines": 5,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultChecklistInstanceService",
+      "coveredLines": 125,
+      "totalLines": 133,
+      "percent": 93.98496240601504
+    },
+    {
+      "name": "CKR_DefaultChecklistInstanceSelector",
+      "coveredLines": 27,
+      "totalLines": 27,
+      "percent": 100
+    },
+    {
+      "name": "CheckrSmokeSeed",
+      "coveredLines": 498,
+      "totalLines": 520,
+      "percent": 95.76923076923077
+    },
+    {
+      "name": "CKR_DefaultChecklistPermissionService",
+      "coveredLines": 55,
+      "totalLines": 65,
+      "percent": 84.61538461538461
+    },
+    {
+      "name": "CKR_ServiceBase",
+      "coveredLines": 17,
+      "totalLines": 20,
+      "percent": 85
+    },
+    {
+      "name": "CKR_ChecklistViewerController",
+      "coveredLines": 305,
+      "totalLines": 320,
+      "percent": 95.3125
+    },
+    {
+      "name": "CKR_ChecklistGateSelector",
+      "coveredLines": 33,
+      "totalLines": 33,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistGateResult",
+      "coveredLines": 7,
+      "totalLines": 7,
+      "percent": 100
+    },
+    {
+      "name": "CKR_SelectorBase",
+      "coveredLines": 6,
+      "totalLines": 6,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultChecklistGateService",
+      "coveredLines": 129,
+      "totalLines": 134,
+      "percent": 96.26865671641791
+    },
+    {
+      "name": "CheckrSmokeUserSeed",
+      "coveredLines": 117,
+      "totalLines": 127,
+      "percent": 92.1259842519685
+    },
+    {
+      "name": "CKR_DefaultChecklistMutationSelector",
+      "coveredLines": 46,
+      "totalLines": 47,
+      "percent": 97.87234042553192
+    },
+    {
+      "name": "CKR_ChecklistInstanceItemTriggerHandler",
+      "coveredLines": 8,
+      "totalLines": 8,
+      "percent": 100
+    },
+    {
+      "name": "CKR_SystemModeDmlGateway",
+      "coveredLines": 6,
+      "totalLines": 12,
+      "percent": 50
+    },
+    {
+      "name": "CKR_ChecklistViewerSelector",
+      "coveredLines": 15,
+      "totalLines": 16,
+      "percent": 93.75
+    },
+    {
+      "name": "CKR_DefaultChecklistAuditService",
+      "coveredLines": 21,
+      "totalLines": 22,
+      "percent": 95.45454545454545
+    },
+    {
+      "name": "CKR_ChecklistCreateContextSelector",
+      "coveredLines": 8,
+      "totalLines": 8,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AppFactory",
+      "coveredLines": 48,
+      "totalLines": 48,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AppFactoryException",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultSupportedObjectSelector",
+      "coveredLines": 23,
+      "totalLines": 23,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistInstanceCreateRequest",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistGateRequest",
+      "coveredLines": 0,
+      "totalLines": 0,
+      "percent": 100
+    },
+    {
+      "name": "CKR_SupportedObjectSelector",
+      "coveredLines": 5,
+      "totalLines": 5,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AccountTrigger",
+      "coveredLines": 4,
+      "totalLines": 4,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistInstanceItemTrigger",
+      "coveredLines": 5,
+      "totalLines": 5,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateVersionSelector",
+      "coveredLines": 24,
+      "totalLines": 24,
+      "percent": 100
+    },
+    {
+      "name": "CKR_TemplateVersionLifecycleService",
+      "coveredLines": 33,
+      "totalLines": 33,
+      "percent": 100
+    },
+    {
+      "name": "CKR_DefaultTemplateVersionService",
+      "coveredLines": 46,
+      "totalLines": 47,
+      "percent": 97.87234042553192
+    },
+    {
+      "name": "CKR_TemplateVersionPublishController",
+      "coveredLines": 7,
+      "totalLines": 7,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateVersionTrigger",
+      "coveredLines": 7,
+      "totalLines": 7,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistGateRuleTrigger",
+      "coveredLines": 3,
+      "totalLines": 3,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateItemTrigger",
+      "coveredLines": 3,
+      "totalLines": 3,
+      "percent": 100
+    },
+    {
+      "name": "CKR_GateBypass",
+      "coveredLines": 11,
+      "totalLines": 11,
+      "percent": 100
+    },
+    {
+      "name": "CKR_AuditRecordGuard",
+      "coveredLines": 46,
+      "totalLines": 47,
+      "percent": 97.87234042553192
+    },
+    {
+      "name": "CKR_AuditRetentionSelector",
+      "coveredLines": 37,
+      "totalLines": 40,
+      "percent": 92.5
+    },
+    {
+      "name": "CKR_ChecklistInstanceGuard",
+      "coveredLines": 1,
+      "totalLines": 1,
+      "percent": 100
+    },
+    {
+      "name": "CKR_GateBypassEventGuard",
+      "coveredLines": 2,
+      "totalLines": 2,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistAuditEventGuard",
+      "coveredLines": 2,
+      "totalLines": 2,
+      "percent": 100
+    },
+    {
+      "name": "CKR_ChecklistTemplateGuard",
+      "coveredLines": 1,
+      "totalLines": 1,
+      "percent": 100
+    }
+  ],
+  "overall": 95
+}

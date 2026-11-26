@@ -1,0 +1,36 @@
+{
+  "differences": [
+    {
+      "name": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_GateBypassIT.assignedPermissionUpdatesGatedAccount_integrationHappyPath",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_InsertGatingIT.insertingMatchingRecordIsNotGatedByDesign",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_SmokeSeedIT.dataSeedWithoutSmokeUsersFailsClearly",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_SmokeSeedIT.userSeedCreatesMissingPersonasAndReassignsPermissions_integrationHappyPath",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_SmokeSeedIT.userSeedThenDataSeed_integrationHappyPath",
+      "org": true,
+      "aer": "missing"
+    }
+  ],
+  "orgCount": 113,
+  "aerCount": 107
+}

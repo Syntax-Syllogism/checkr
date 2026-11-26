@@ -1,0 +1,21 @@
+{
+  "differences": [
+    {
+      "name": "CKR_AuditMaintenanceIT.assignedMaintenanceAllowsChanges_integrationHappyPath",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_GateBypassIT.assignedPermissionUpdatesGatedAccount_integrationHappyPath",
+      "org": true,
+      "aer": "missing"
+    },
+    {
+      "name": "CKR_InsertGatingIT.insertingMatchingRecordIsNotGatedByDesign",
+      "org": true,
+      "aer": "missing"
+    }
+  ],
+  "orgCount": 103,
+  "aerCount": 100
+}

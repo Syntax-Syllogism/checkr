@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_ChecklistTemplateItem__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description
+  >Template item source for template-derived checklist items. Blank for ad hoc items.</description>
+    <label>Checklist Template Item</label>
+    <referenceTo>CKR_ChecklistTemplateItem__c</referenceTo>
+    <relationshipLabel>Checklist Instance Items</relationshipLabel>
+    <relationshipName>ChecklistInstanceItemsByTemplateItem</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

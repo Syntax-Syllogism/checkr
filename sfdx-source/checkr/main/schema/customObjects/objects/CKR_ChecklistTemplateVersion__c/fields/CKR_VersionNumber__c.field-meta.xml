@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_VersionNumber__c</fullName>
+    <description
+  >Incrementing version number scoped to the checklist template.</description>
+    <externalId>false</externalId>
+    <label>Version Number</label>
+    <precision>6</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

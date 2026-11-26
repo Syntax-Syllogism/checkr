@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CKR_Checklist_Item_Details</fullName>
+    <fields>Name</fields>
+    <fields>CKR_Label__c</fields>
+    <fields>CKR_Required__c</fields>
+    <fields>CKR_CheckboxValue__c</fields>
+    <fields>CKR_AssigneeUser__c</fields>
+    <fields>CKR_Completed__c</fields>
+    <label>Checklist Item Details</label>
+</CompactLayout>

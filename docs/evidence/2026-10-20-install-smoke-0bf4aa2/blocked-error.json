@@ -1,0 +1,18 @@
+{
+  "stderr": " ›   Warning: @syntax-syllogism/apx is a linked ESM module and cannot be \n ›   auto-transpiled. Existing compiled source will be used instead.\n ›   Warning: @syntax-syllogism/warden is a linked ESM module and cannot be \n ›   auto-transpiled. Existing compiled source will be used instead.\n ›   Warning: @salesforce/cli update available from \u001b[92m2.147.7\u001b[39m to \u001b[92m2.154.4\u001b[39m.\n",
+  "name": "FIELD_CUSTOM_VALIDATION_EXCEPTION",
+  "message": "CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion",
+  "exitCode": 1,
+  "context": "Update",
+  "data": {
+    "message": "CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion",
+    "errorCode": "FIELD_CUSTOM_VALIDATION_EXCEPTION",
+    "fields": []
+  },
+  "stack": "FIELD_CUSTOM_VALIDATION_EXCEPTION: CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion\n    at SfCommandError.from (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:48:16)\n    at Update.catch (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:332:47)\n    at Update._run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:187:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Config.runCommand (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:422:25)\n    at async run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:97:16)\n    at async [REDACTED USER]:15:1",
+  "cause": "FIELD_CUSTOM_VALIDATION_EXCEPTION: CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion\n    at HttpApi.getError (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:315:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:127:33\n    at async Update.run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:82:28)\n    at async Update._run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:183:22)\n    at async Config.runCommand (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:422:25)\n    at async run (<home>/.nvm/versions/node/v24.14.0/lib/node_modules/@[REDACTED USER]:97:16)\n    at async [REDACTED USER]:15:1 {\n  data: {\n    message: 'CKREvidence0e78751b0f494c4e99335996af7f28ab requires completion',\n    errorCode: 'FIELD_CUSTOM_VALIDATION_EXCEPTION',\n    fields: []\n  },\n  errorCode: 'FIELD_CUSTOM_VALIDATION_EXCEPTION'\n}",
+  "warnings": [],
+  "code": "1",
+  "status": 1,
+  "commandName": "Update"
+}

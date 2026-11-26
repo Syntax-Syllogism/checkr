@@ -1,0 +1,39 @@
+{
+  "scenario": "operational-reporting",
+  "orgAlias": "checkr-evidence",
+  "sourceBaseCommit": "7ce14086c936f885a4b86cab8b7079ce40dd5bf5",
+  "dirty": true,
+  "deployment": {
+    "id": "0AfRK00000uvg8j0AA",
+    "status": "Succeeded",
+    "componentsDeployed": 12,
+    "componentsTotal": 12
+  },
+  "reportExecution": {
+    "exitCode": 0,
+    "compiled": true,
+    "success": true,
+    "reports": [
+      {
+        "name": "Gate bypasses by actor and object",
+        "factCount": 1,
+        "report": "CKR_Gate_Bypasses"
+      },
+      {
+        "name": "Open checklists by template and age",
+        "factCount": 1,
+        "report": "CKR_Open_Checklists"
+      },
+      {
+        "name": "Recent checklist audit activity",
+        "factCount": 1,
+        "report": "CKR_Recent_Audit_Activity"
+      }
+    ]
+  },
+  "limitations": [
+    "Executed as the authenticated admin, without creating reporting fixtures. This proves metadata validity and execution, not populated grouping counts or restricted-user visibility.",
+    "Interactive dashboard rendering was skipped for unattended execution.",
+    "Local AER v1.4.32 differs from CI pin v1.5.4."
+  ]
+}

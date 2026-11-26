@@ -1,0 +1,41 @@
+{
+  "scenario": "gate-block-pass",
+  "startedAt": "2026-10-20T00:35:18.155Z",
+  "finishedAt": "2026-10-20T00:38:58.426Z",
+  "commit": "b3c31cfaf10667c8c0b3a2324874f437776c5753",
+  "dirty": false,
+  "packageVersion": null,
+  "org": {
+    "edition": "Developer Edition",
+    "instanceUrl": "https://dream-customer-7848-dev-ed.scratch.my.salesforce.com",
+    "apiVersion": "66.0",
+    "scratch": true,
+    "sandbox": true,
+    "type": "scratch"
+  },
+  "identities": [
+    {
+      "key": "worker-d30cf691",
+      "license": "Salesforce",
+      "permissionSets": [
+        "CKR_User"
+      ]
+    }
+  ],
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "CKR_User blocked with exact gate error",
+      "outcome": "passed",
+      "detail": ""
+    },
+    {
+      "name": "CKR_User save succeeds after completion",
+      "outcome": "passed",
+      "detail": ""
+    }
+  ],
+  "metrics": {
+    "exactError": "CKREvidencea6ecdb90f0894e15845fc6107a1aa8cb requires completion"
+  }
+}
