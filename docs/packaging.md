@@ -1,9 +1,9 @@
 ---
-title: "Packaging and beta releases"
+title: "Packaging and releases"
 ---
 
-How the `checkr` package is built and versioned, and what a beta needs before
-anyone installs it. Admins installing CheckR want
+How the `checkr` package is built and versioned, and what a version needs
+before it is promoted. Admins installing CheckR want
 [installation](installation.md). Source snapshots are described in
 [release](release.md).
 
@@ -44,17 +44,18 @@ new package and a data migration.
 ## Versions
 
 - `versionNumber` in `sfdx-project.json` is `major.minor.patch.NEXT`, currently
-  `0.1.0.NEXT`. Each `sf package version create` takes the next build number,
-  so betas of 0.1.0 are `0.1.0.1`, `0.1.0.2`, and so on.
+  `0.1.2.NEXT`. Each `sf package version create` takes the next build number,
+  so betas of 0.1.0 are `0.1.0.1`, `0.1.0.2`, and so on. From 0.1.2 on,
+  `major.minor.patch` matches the source release tag it is built from.
 - `sf` records each version as an alias in `packageAliases`, for example
   `checkr@0.1.0-1`. Commit those aliases; they are the record of what exists.
 - The changelog heading for a beta uses the alias form: `## [0.1.0-1] - <date>`.
 - Raise `minor` (or `major`) for a release with breaking changes, and `patch`
   for fixes, before cutting the version. Only one version per
   `major.minor.patch` can be promoted.
-- Beta versions install only in scratch orgs and sandboxes. Promotion
-  (`sf package version promote`) is a separate, manual decision; no script
-  here performs it.
+- Every version starts as a beta, which installs only in scratch orgs and
+  sandboxes. Promoting it (see [Promote a version](#promote-a-version)) makes
+  it installable in production.
 
 ### Code coverage
 
@@ -96,7 +97,7 @@ The script:
    (`https://test.salesforce.com/packaging/installPackage.apexp?p0=<04t>`)
    for sandboxes and scratch orgs;
 4. commits that file and the new `packageAliases` entry on a new
-   `release/beta-<version>` branch. It never pushes or promotes.
+   `chore/package-<version>` branch. It never pushes or promotes.
    `--no-branch` leaves both uncommitted.
 
 `npm run test:release` tests the script with a stubbed `sf` and `git`; it is
@@ -104,12 +105,12 @@ part of `npm test`.
 
 ## Evidence before sharing a version
 
-A beta is not ready to hand to anyone until its release branch has:
+A version is not promoted or shared until its release branch has:
 
 - `docs/evidence/releases/<version>/version.json` from the script;
 - a passing `install-smoke` run of the version, in a fresh scratch org;
-- from the second beta on, a passing `install-upgrade` run from the previous
-  beta;
+- when an earlier promoted version exists, a passing `install-upgrade` run
+  from it;
 - a `CHANGELOG.md` entry for the version, with its `04t` ID.
 
 ```bash
@@ -124,3 +125,18 @@ Creating a scratch org (`--create-scratch`) needs the maintainer's explicit
 confirmation. See [scenario details](evidence/scenarios.md#install-smoke).
 
 Commit the evidence folders on the release branch and open a PR.
+
+## Promote a version
+
+Promotion releases a version for production installs. It cannot be undone,
+and only one version per `major.minor.patch` can be promoted, so promote only
+a version whose evidence is complete:
+
+```bash
+sf package version promote --package <04t> --target-dev-hub devHub --no-prompt --json
+sf package version report --package <04t> --target-dev-hub devHub --json  # IsReleased: true
+```
+
+Then record it: set `released` to `true` in the version's `version.json`, give
+the changelog entry the `login.salesforce.com` install link, and point the
+README and [installation](installation.md) at the new `04t`.

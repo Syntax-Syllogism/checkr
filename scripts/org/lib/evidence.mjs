@@ -110,7 +110,9 @@ export function renderSummary(summary) {
     (check) => `- ${check.outcome}: ${check.name} — ${check.detail ?? ""}`
   );
   return [
-    `# Org evidence: ${summary.scenario}`,
+    "---",
+    `title: "Org evidence: ${summary.scenario}"`,
+    "---",
     "",
     `Outcome: **${summary.outcome}**`,
     "",

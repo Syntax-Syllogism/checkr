@@ -8,7 +8,7 @@
  * - DEVHUB_ALIAS selects the Dev Hub (default `devHub`).
  * - `sf package version create` adds a packageAliases entry to
  *   sfdx-project.json. The script commits that and version.json on a new
- *   `release/beta-<version>` branch; it never pushes or promotes.
+ *   `chore/package-<version>` branch; it never pushes or promotes.
  * - --allow-branch permits a HEAD that is not on origin/master (testing only).
  * - --no-branch leaves the changes uncommitted.
  * - --dry-run runs the git checks and prints the sf commands without calling
@@ -192,7 +192,7 @@ export async function main(
     );
     log("  write docs/evidence/releases/<version>/version.json");
     if (options.branch)
-      log("  commit sfdx-project.json and the evidence on release/beta-<version>");
+      log("  commit sfdx-project.json and the evidence on chore/package-<version>");
     return 0;
   }
 
@@ -225,7 +225,7 @@ export async function main(
   );
 
   if (options.branch) {
-    const branch = `release/beta-${record.version}`;
+    const branch = `chore/package-${record.version}`;
     git(["switch", "-c", branch]);
     git(["add", "sfdx-project.json", folder]);
     git([

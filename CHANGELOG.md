@@ -11,6 +11,26 @@ All notable changes to CheckR are recorded here. The format follows
 ### Added
 
 - Starlight-based documentation site for CheckR
+- Promote package version 0.1.2 (`checkr@0.1.2-1`), the first released version
+  of the unlocked `checkr` package. It installs in production, sandboxes, and
+  scratch orgs.
+  - Subscriber package version: `04tfj000000ntszAAA` (built from `4b303f0`, 94%
+    code coverage).
+  - Install link: <https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000ntszAAA>
+    (use `test.salesforce.com` for a sandbox).
+  - Install evidence: [install-smoke](docs/evidence/2026-11-26-install-smoke-ff31b1b/README.md).
+
+### Changed
+
+- Remove beta wording from the README, installation guide, and release docs,
+  and document promotion in [packaging](docs/packaging.md#promote-a-version).
+- `npm run release:beta` commits on a `chore/package-<version>` branch. The old
+  `release/beta-<version>` name clashed with the `release` branch.
+
+### Fixed
+
+- Call `updateChecklistItem` with a request object in the `gate-block-pass` and
+  `version-cutover` org scenarios.
 
 ## [0.1.1] - 2026-11-26
 

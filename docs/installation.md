@@ -7,10 +7,6 @@ covers installing it, enabling an object, upgrading, and removing it. For the
 admin walkthrough with screenshots, see the [admin guide](admin-guide/README.md).
 For how versions are built, see [packaging](packaging.md).
 
-> **Beta.** CheckR versions are betas until one is promoted. Salesforce installs
-> beta (unpromoted) package versions only in scratch orgs and sandboxes, not in
-> production.
-
 ## Prerequisites
 
 - **Edition:** Enterprise, Unlimited, Performance, or Developer Edition, or a
@@ -24,7 +20,8 @@ For how versions are built, see [packaging](packaging.md).
 
 ## Install
 
-Every beta has a subscriber package version ID (`04t…`). It is recorded in
+Every version has a subscriber package version ID (`04t…`). The current
+version is 0.1.2, `04tfj000000ntszAAA`. Each ID is recorded in
 `docs/evidence/releases/<version>/version.json` and in the
 [changelog](../CHANGELOG.md).
 
@@ -32,12 +29,12 @@ Every beta has a subscriber package version ID (`04t…`). It is recorded in
 Admins Only**:
 
 ```text
-https://test.salesforce.com/packaging/installPackage.apexp?p0=<04t>
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000ntszAAA
 ```
 
-The recorded beta URL uses `test.salesforce.com` for test orgs. For a scratch
-org, replace the host with that org's My Domain URL if needed. Beta versions
-cannot be installed in production or standalone Developer Edition orgs.
+Use `login.salesforce.com` for production and Developer Edition orgs and
+`test.salesforce.com` for sandboxes. For a scratch org, replace the host with
+that org's My Domain URL.
 
 **With the CLI:**
 
@@ -261,14 +258,13 @@ package. Remove things in this order:
    sf package uninstall --package <04t> --target-org <alias> --wait 20 --json
    ```
 
-This order has not yet been run against an installed beta. If the platform
+This order has not yet been run against an installed version. If the platform
 blocks a step, Setup lists the blocking components; remove them and retry.
 
 ## Troubleshooting
 
 | Symptom                                               | Cause and fix                                                                                                                                                                            |
 | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Install fails in production                           | Beta versions install only in sandboxes and scratch orgs. Wait for a promoted version.                                                                                                   |
 | Templates and gate rules exist but nothing is blocked | The object has no trigger shim, its supported-object record is inactive, or `CKR_SupportsGates__c` is off.                                                                               |
 | System Administrators' saves are never blocked        | The install granted their profile `CKR_BypassGate`. Remove it; see [the post-install step](#remove-the-admin-profiles-bypass-and-audit-maintenance).                                     |
 | A retired (inactive) template still blocks saves      | Unchecking Active hides a template from **New Checklist** only. Publish a version with no rules; see the [admin guide](admin-guide/06-publishing-and-new-versions.md#retire-a-template). |

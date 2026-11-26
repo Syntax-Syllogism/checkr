@@ -11,14 +11,15 @@ The public repository is
 
 ## Status
 
-CheckR is in **beta**. The data model and Apex APIs may still change. Beta
-package versions install only in sandboxes and scratch orgs; the latest is
-listed in the [changelog](CHANGELOG.md). Feedback from sandbox evaluations is
-welcome; see [Feedback](#feedback).
+CheckR 0.1.2 is a released package version and installs in production,
+sandboxes, and scratch orgs. Until 1.0, the data model and Apex APIs may still
+change between minor versions; the [changelog](CHANGELOG.md) lists each version
+and its changes. Feedback is welcome; see [Feedback](#feedback).
 
 ## Requirements
 
-- A sandbox or scratch org. Beta versions do not install in production.
+- An Enterprise, Unlimited, Performance, or Developer Edition org, or a sandbox
+  or scratch org of one.
 - A user who can install packages and assign permission sets.
 - A before-save trigger shim, written in your org, for each object whose saves
   you want to gate. See [Enable an object](#2-enable-an-object).
@@ -61,18 +62,21 @@ in the [object model](docs/object-model.md).
 
 ## Install
 
-CheckR installs as the unlocked package `checkr`, with no namespace. Beta
-versions install only in sandboxes and scratch orgs. Each version's `04t` ID is
-in the [changelog](CHANGELOG.md); open the install link in the target org:
+CheckR installs as the unlocked package `checkr`, with no namespace. The
+current version is 0.1.2 (`04tfj000000ntszAAA`); each version's `04t` ID is in
+the [changelog](CHANGELOG.md). Open the install link while logged in to the
+target org:
 
 ```text
-https://test.salesforce.com/packaging/installPackage.apexp?p0=<04t>
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000ntszAAA
 ```
+
+For a sandbox, use `test.salesforce.com` in place of `login.salesforce.com`.
 
 or install with the CLI:
 
 ```bash
-sf package install --package <04t> --target-org <your-org-alias> --security-type AdminsOnly --wait 20 --json
+sf package install --package 04tfj000000ntszAAA --target-org <your-org-alias> --security-type AdminsOnly --wait 20 --json
 ```
 
 Installing for admins grants the System Administrator profile gate bypass and

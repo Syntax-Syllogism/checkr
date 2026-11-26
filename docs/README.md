@@ -27,6 +27,6 @@ the guides below for the details of one area.
 
 - [Testing, gate, and CI](testing.md): the no-org suite, Code Analyzer (`npm run analyze`), `scripts/gate.mjs`, the CI jobs, commit hooks, toolchain pins, and AER known issues.
 - [Org evidence](evidence/README.md): explicit real-org validation and latest runs, with [scenario](evidence/scenarios.md) prerequisites and assertions.
-- [Packaging](packaging.md): the unlocked `checkr` package, why it has no namespace, version numbering, cutting a beta with `npm run release:beta`, and the evidence a version needs.
+- [Packaging](packaging.md): the unlocked `checkr` package, why it has no namespace, version numbering, cutting a beta with `npm run release:beta`, the evidence a version needs, and promotion.
 - [Release](release.md): package versions, the public snapshot, and pre-release verification.
 - [Contributing](../CONTRIBUTING.md), [code of conduct](../CODE_OF_CONDUCT.md), [security policy](../SECURITY.md), [changelog](../CHANGELOG.md), and [license](../LICENSE).

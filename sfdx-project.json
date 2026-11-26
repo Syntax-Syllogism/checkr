@@ -1,8 +1,8 @@
 {
   "packageDirectories": [
     {
-      "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionName": "ver 0.1.2",
+      "versionNumber": "0.1.2.NEXT",
       "path": "sfdx-source/checkr",
       "default": true,
       "definitionFile": "config/project-scratch-def.json",
@@ -24,6 +24,7 @@
   "packageAliases": {
     "checkr": "0Hofj0000004ocXCAQ",
     "checkr@0.1.0-1": "04tfj000000duWzAAI",
-    "checkr@0.1.0-2": "04tfj000000duX0AAI"
+    "checkr@0.1.0-2": "04tfj000000duX0AAI",
+    "checkr@0.1.2-1": "04tfj000000ntszAAA"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "permissionSets": [
+    "CKR_Admin",
+    "CKR_AuditMaintenance",
+    "CKR_GateBypass",
+    "CKR_ReadOnly",
+    "CKR_User"
+  ],
+  "lwc": [
+    "ckrChecklistCreateAction",
+    "ckrChecklistViewer",
+    "ckrPublishTemplateVersion"
+  ],
+  "supportedObjects": [
+    "Account"
+  ]
+}
