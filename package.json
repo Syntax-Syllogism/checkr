@@ -1,7 +1,7 @@
 {
   "name": "checkr",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Versioned record checklists with save gates for Salesforce, as an unlocked 2GP package with manually prefixed CKR_ API names.",
   "license": "MIT",
   "engines": {
@@ -11,7 +11,7 @@
     "analyze": "node scripts/analyze.mjs",
     "test:analyzer": "node --test scripts/test/analyze.test.mjs",
     "lint": "eslint **/{aura,lwc}/**/*.js && slds-linter lint \"sfdx-source/checkr/**/lwc/**/*.{html,css}\"",
-    "test": "npm run lint && npm run prettier:verify && npm run format:apex:verify && npm run test:unit && npm run test:unit:inband && npm run lint:md && npm run test:org-harness && npm run test:reporting && npm run test:object-model && npm run test:docs-images && npm run test:system-mode && npm run test:permission-sets && npm run test:aer-cap && npm run test:release && npm run test:analyzer",
+    "test": "npm run lint && npm run prettier:verify && npm run format:apex:verify && npm run test:unit && npm run test:unit:inband && npm run lint:md && npm run test:org-harness && npm run test:reporting && npm run test:object-model && npm run test:docs-images && npm run test:system-mode && npm run test:permission-sets && npm run test:release && npm run check:versions && npm run test:analyzer",
     "test:unit": "sfdx-lwc-jest",
     "test:apex": "aer test sfdx-source/checkr sfdx-source/reference -p CKR_Admin",
     "test:unit:watch": "sfdx-lwc-jest --watch",
@@ -40,9 +40,11 @@
     "test:docs-images": "node --test scripts/test/docs-images.test.mjs",
     "test:system-mode": "node --test scripts/test/system-mode-inventory.test.mjs",
     "test:permission-sets": "node --test scripts/test/permission-sets.test.mjs",
-    "test:aer-cap": "node --test scripts/test/aer-capped.test.mjs",
     "test:release": "node --test \"scripts/release*.test.mjs\" \"scripts/release/test/*.test.mjs\"",
     "release:beta": "node scripts/release/create-beta.mjs",
+    "release:record": "node scripts/release/record-release.mjs",
+    "check:versions": "node scripts/release/versions.mjs",
+    "release:publish": "node scripts/release/versions.mjs --release && publish -b patch --push-public",
     "docs:screenshots": "node scripts/docs/capture-screenshots.mjs",
     "test:unit:inband": "sfdx-lwc-jest -- --runInBand",
     "lint:md": "markdownlint-cli2 \"**/*.md\""

@@ -8,8 +8,12 @@ import {
 } from "@syntax-syllogism/docs-theme";
 import { fileURLToPath } from "node:url";
 import { remarkRepoFileLinks } from "./src/remark-repo-file-links.mjs";
+import { remarkMermaid } from "./src/remark-mermaid.mjs";
 
 const BASE = "/checkr/docs";
+const MERMAID_CLIENT = fileURLToPath(
+  new URL("./src/mermaid-client.mjs", import.meta.url)
+);
 const DOCS_ROOT = fileURLToPath(new URL("../docs", import.meta.url));
 
 export default defineConfig({
@@ -20,6 +24,7 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [
+        remarkMermaid,
         [
           remarkRepoFileLinks,
           { docsRoot: DOCS_ROOT, publicRepo: "Syntax-Syllogism/checkr" }
@@ -29,6 +34,14 @@ export default defineConfig({
     })
   },
   integrations: [
+    {
+      name: "checkr-mermaid",
+      hooks: {
+        "astro:config:setup": ({ injectScript }) => {
+          injectScript("page", `import ${JSON.stringify(MERMAID_CLIENT)};`);
+        }
+      }
+    },
     starlight({
       ...starlightPreset({
         title: "CheckR",

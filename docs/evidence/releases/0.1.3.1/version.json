@@ -1,0 +1,15 @@
+{
+  "package": "checkr",
+  "version": "0.1.3.1",
+  "subscriberPackageVersionId": "04tfj000000nuPFAAY",
+  "packageVersionId": "05ifj0000006WTRAA2",
+  "alias": "checkr@0.1.3-1",
+  "commit": "b68cbc8f71be62af201acd8724b5abdc2eeeb5d0",
+  "tag": "b68cbc8f71be62af201acd8724b5abdc2eeeb5d0",
+  "createdAt": "2026-11-26T09:31:08.661Z",
+  "released": true,
+  "codeCoverage": 94,
+  "hasPassedCodeCoverageCheck": true,
+  "validationSkipped": false,
+  "installUrl": "https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000nuPFAAY"
+}

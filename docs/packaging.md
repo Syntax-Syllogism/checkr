@@ -43,10 +43,11 @@ new package and a data migration.
 
 ## Versions
 
-- `versionNumber` in `sfdx-project.json` is `major.minor.patch.NEXT`, currently
-  `0.1.2.NEXT`. Each `sf package version create` takes the next build number,
-  so betas of 0.1.0 are `0.1.0.1`, `0.1.0.2`, and so on. From 0.1.2 on,
-  `major.minor.patch` matches the source release tag it is built from.
+- `versionNumber` in `sfdx-project.json` is `major.minor.patch.NEXT`. Each
+  `sf package version create` takes the next build number, so betas of 0.1.0
+  are `0.1.0.1`, `0.1.0.2`, and so on. From 0.1.2 on, `major.minor.patch`
+  matches the source release tag that ships it; see
+  [Keep versions in sync](#keep-versions-in-sync).
 - `sf` records each version as an alias in `packageAliases`, for example
   `checkr@0.1.0-1`. Commit those aliases; they are the record of what exists.
 - The changelog heading for a beta uses the alias form: `## [0.1.0-1] - <date>`.
@@ -72,6 +73,53 @@ installed anywhere, removing it from a later version only deprecates or
 deletes it on upgrade, and subscriber metadata that references it blocks the
 upgrade. Add schema deliberately, and remove unused schema before the first
 version that ships it, as was done for the auto-create fields before 0.1.0.
+
+## Keep versions in sync
+
+One number names a release everywhere: the package version
+(`major.minor.patch` of `versionNumber`), the source tag and `package.json`
+version, the newest released changelog heading, and the `04t` that the README
+and [installation](installation.md) point at. `npm run check:versions` checks
+that they agree and runs in `npm test`. Between releases it allows
+`versionNumber` to be one version ahead of `package.json`, and the promoted
+package to be either of them.
+
+Release in this order, one step at a time:
+
+1. **Bump.** On a branch, set `versionNumber` to the next version
+   (`0.1.3.NEXT`) and `versionName` to match (`ver 0.1.3`). Use the next patch
+   for fixes; for a minor or major bump, release the source with `-b minor` or
+   `-b major` in step 6. Merge the PR. `release:beta` refuses a `versionNumber`
+   that is already promoted.
+2. **Cut.** From updated `master`, `npm run release:beta` (see
+   [Cut a beta](#cut-a-beta)).
+3. **Test.** Run `install-smoke` and `install-upgrade` from the previous
+   promoted `04t`, each in a fresh scratch org (see
+   [Evidence](#evidence-before-sharing-a-version)).
+4. **Promote** the beta (see [Promote a version](#promote-a-version)).
+5. **Record.** `npm run release:record -- <04t>` marks the `version.json`
+   released, points the README and installation at the new `04t`, and adds
+   the version to `[Unreleased]` in the changelog. Commit it with the evidence
+   on the `chore/package-<version>` branch and merge the PR.
+6. **Publish.** From updated `master`:
+
+   ```bash
+   npm run release:publish -- --dry-run -m "feat: release <version>"
+   npm run release:publish -- -m "feat: release <version>"
+   ```
+
+   This runs `check:versions -- --release`, which requires the promoted
+   version to be the next patch of `package.json` and its `04t` to be in
+   `[Unreleased]`, then `publish -b patch --push-public`, so the source tag
+   and changelog heading match the package.
+
+7. **Website.** The site's daily `update-product-versions` workflow reads the
+   new GitHub release and its `version.json`; run it by hand to update at
+   once.
+
+Changes that touch only the docs or tooling do not need a release: merge them
+to `master` and they ship with the next one. The docs site rebuilds on each
+source release.
 
 ## Cut a beta
 
@@ -137,6 +185,5 @@ sf package version promote --package <04t> --target-dev-hub devHub --no-prompt -
 sf package version report --package <04t> --target-dev-hub devHub --json  # IsReleased: true
 ```
 
-Then record it: set `released` to `true` in the version's `version.json`, give
-the changelog entry the `login.salesforce.com` install link, and point the
-README and [installation](installation.md) at the new `04t`.
+Then record it with `npm run release:record -- <04t>` (step 5 of
+[Keep versions in sync](#keep-versions-in-sync)).

@@ -21,7 +21,7 @@ For how versions are built, see [packaging](packaging.md).
 ## Install
 
 Every version has a subscriber package version ID (`04t…`). The current
-version is 0.1.2, `04tfj000000ntszAAA`. Each ID is recorded in
+version is 0.1.3, `04tfj000000nuPFAAY`. Each ID is recorded in
 `docs/evidence/releases/<version>/version.json` and in the
 [changelog](../CHANGELOG.md).
 
@@ -29,7 +29,7 @@ version is 0.1.2, `04tfj000000ntszAAA`. Each ID is recorded in
 Admins Only**:
 
 ```text
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000ntszAAA
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04tfj000000nuPFAAY
 ```
 
 Use `login.salesforce.com` for production and Developer Edition orgs and
